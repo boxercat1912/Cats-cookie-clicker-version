@@ -3806,7 +3806,7 @@ Game.Launch=function()
 			
 			for (var i in Game.customMouseCpsMult) {mult*=Game.customMouseCpsMult[i]();}
 			
-			var out=mult*Game.ComputeCps(1,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add);
+			var out=mult*Game.ComputeCps(1,Game.Has('Reinforced pinkie finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add);
 			
 			if (Game.hasBuff('Cursed finger')) out=Game.buffs['Cursed finger'].power;
 			return out;
@@ -7387,9 +7387,9 @@ Game.Launch=function()
 			mult*=Game.GetTieredCpsMult(me);
 			mult*=Game.magicCpS('Cursor');
 			mult*=Game.eff('cursorCps');
-			return Game.ComputeCps(0.2,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
+			return Game.ComputeCps(0.2,Game.Has('Reinforced pinkie finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
 		},function(){
-			if (this.amount>=1) Game.Unlock(['Reinforced index finger','Carpal tunnel prevention cream']);
+			if (this.amount>=1) Game.Unlock(['Reinforced pinkie finger','Carpal tunnel prevention cream']);
 			if (this.amount>=10) Game.Unlock('Ambidextrous');
 			if (this.amount>=25) Game.Unlock('Thousand fingers');
 			if (this.amount>=50) Game.Unlock('Million fingers');
@@ -8211,7 +8211,7 @@ Game.Launch=function()
 		//define upgrades
 		//WARNING : do NOT add new upgrades in between, this breaks the saves. Add them at the end !
 		var order=100;//this is used to set the order in which the items are listed
-		new Game.Upgrade('Reinforced index finger','The mouse and cursors are <b>twice</b> as efficient.<q>prod prod</q>',100,[0,0]);Game.MakeTiered(Game.last,1,0);
+		new Game.Upgrade('Reinforced pinkie finger','The mouse and cursors are <b>twice</b> as efficient.<q>prod prod</q>',100,[0,0]);Game.MakeTiered(Game.last,1,0);
 		new Game.Upgrade('Carpal tunnel prevention cream','The mouse and cursors are <b>twice</b> as efficient.<q>it... it hurts to click...</q>',500,[0,1]);Game.MakeTiered(Game.last,2,0);
 		new Game.Upgrade('Ambidextrous','The mouse and cursors are <b>twice</b> as efficient.<q>Look ma, both hands!</q>',10000,[0,2]);Game.MakeTiered(Game.last,3,0);
 		new Game.Upgrade('Thousand fingers','The mouse and cursors gain <b>+0.1</b> cookies for each non-cursor object owned.<q>clickity</q>',100000,[0,13]);Game.MakeTiered(Game.last,4,0);
