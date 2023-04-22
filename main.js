@@ -7369,7 +7369,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 1 seconds.',0,0,{},15,function(me){
+		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 5 seconds.',0,0,{},15,function(me){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		0.1;
 			if (Game.Has('Million fingers')) add+=		0.5;
@@ -7387,7 +7387,7 @@ Game.Launch=function()
 			mult*=Game.GetTieredCpsMult(me);
 			mult*=Game.magicCpS('Cursor');
 			mult*=Game.eff('cursorCps');
-			return Game.ComputeCps(0.1,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
+			return Game.ComputeCps(0.2,Game.Has('Reinforced index finger')+Game.Has('Carpal tunnel prevention cream')+Game.Has('Ambidextrous'),add)*mult;
 		},function(){
 			if (this.amount>=1) Game.Unlock(['Reinforced index finger','Carpal tunnel prevention cream']);
 			if (this.amount>=10) Game.Unlock('Ambidextrous');
