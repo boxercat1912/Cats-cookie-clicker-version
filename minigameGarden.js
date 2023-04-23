@@ -1041,7 +1041,7 @@ M.launch=function()
 			'convert':{
 				name:'Sacrifice garden',
 				icon:2,
-				desc:'A swarm of sugar hornets comes down on your garden, <span class="red">destroying every plant as well as every seed you\'ve unlocked</span> - leaving only a Baker\'s wheat seed.<br>In exchange, they will grant you <span class="green"><b>10</b> sugar lumps</span>.<br>This action is only available with a complete seed log.',
+				desc:'A swarm of sugar hornets comes down on your garden, <span class="red">destroying every plant as well as every seed you\'ve unlocked</span> - leaving only a Baker\'s wheat seed.<br>In exchange, they will grant you <span class="green"><b>10</b> Unicorn Hair</span>.<br>This action is only available with a complete seed log.',
 				func:function(){PlaySound('snd/toneTick.mp3');M.askConvert();},
 				isDisplayed:function(){if (M.plantsUnlockedN>=M.plantsN) return true; else return false;},
 			},
@@ -1134,11 +1134,11 @@ M.launch=function()
 		}
 		
 		M.cursor=1;
-		M.hideCursor=function()
+		M.hideUnicornHorn=function()
 		{
 			M.cursor=0;
 		}
-		M.showCursor=function()
+		M.showUnicornHorn=function()
 		{
 			M.cursor=1;
 		}
@@ -1309,8 +1309,8 @@ M.launch=function()
 						else {it.l.classList.remove('on');}
 					}
 				}}(me));
-				AddEvent(me.l,'mouseover',M.hideCursor);
-				AddEvent(me.l,'mouseout',M.showCursor);
+				AddEvent(me.l,'mouseover',M.hideUnicornHorn);
+				AddEvent(me.l,'mouseout',M.showUnicornHorn);
 				if (me.unlocked) me.l.classList.remove('locked');
 			}
 			
@@ -1329,8 +1329,8 @@ M.launch=function()
 			{
 				var me=M.tools[i];
 				AddEvent(l('gardenTool-'+me.id),'click',me.func);
-				AddEvent(l('gardenTool-'+me.id),'mouseover',M.hideCursor);
-				AddEvent(l('gardenTool-'+me.id),'mouseout',M.showCursor);
+				AddEvent(l('gardenTool-'+me.id),'mouseover',M.hideUnicornHorn);
+				AddEvent(l('gardenTool-'+me.id),'mouseout',M.showUnicornHorn);
 			}
 
 			var str='';
@@ -1354,11 +1354,11 @@ M.launch=function()
 					M.toCompute=true;M.soil=me.id;M.computeStepT();
 					for (var i in M.soils){var it=M.soils[i];if (it.id==M.soil){l('gardenSoil-'+it.id).classList.add('on');}else{l('gardenSoil-'+it.id).classList.remove('on');}}
 				}}(me));
-				AddEvent(l('gardenSoil-'+me.id),'mouseover',M.hideCursor);
-				AddEvent(l('gardenSoil-'+me.id),'mouseout',M.showCursor);
+				AddEvent(l('gardenSoil-'+me.id),'mouseover',M.hideUnicornHorn);
+				AddEvent(l('gardenSoil-'+me.id),'mouseout',M.showUnicornHorn);
 			}
 			
-			M.cursorL=l('gardenCursor');
+			M.cursorL=l('gardenUnicornHorn');
 		}
 		M.buildPlot=function()
 		{
@@ -1498,7 +1498,7 @@ M.launch=function()
 		M.askConvert=function()
 		{
 			if (M.plantsUnlockedN<M.plantsN) return false;
-			Game.Prompt('<h3>Sacrifice garden</h3><div class="block">Do you REALLY want to sacrifice your garden to the sugar hornets?<br><small>You will be left with an empty plot and only the Baker\'s wheat seed unlocked.<br>In return, you will gain <b>10 sugar lumps</b>.</small></div>',[['Yes!','Game.ClosePrompt();Game.ObjectsById['+M.parent.id+'].minigame.convert();'],'No']);
+			Game.Prompt('<h3>Sacrifice garden</h3><div class="block">Do you REALLY want to sacrifice your garden to the sugar hornets?<br><small>You will be left with an empty plot and only the Baker\'s wheat seed unlocked.<br>In return, you will gain <b>10 Unicorn Hair</b>.</small></div>',[['Yes!','Game.ClosePrompt();Game.ObjectsById['+M.parent.id+'].minigame.convert();'],'No']);
 		}
 		M.convert=function()
 		{
@@ -1508,7 +1508,7 @@ M.launch=function()
 			M.unlockSeed(M.plants['bakerWheat']);
 			
 			Game.gainLumps(10);
-			Game.Notify('Sacrifice!','You\'ve sacrificed your garden to the sugar hornets, destroying your crops and your knowledge of seeds.<br>In the remains, you find <b>10 sugar lumps</b>.',[29,14],12);
+			Game.Notify('Sacrifice!','You\'ve sacrificed your garden to the sugar hornets, destroying your crops and your knowledge of seeds.<br>In the remains, you find <b>10 Unicorn Hair</b>.',[29,14],12);
 			
 			Game.Win('Seedless to nay');
 			M.convertTimes++;
@@ -1608,7 +1608,7 @@ M.launch=function()
 			'.gardenTile:hover .gardenTileIcon{animation:pucker 0.3s;}'+
 			'.noFancy .gardenTile:hover .gardenTileIcon{animation:none;}'+
 		'#gardenDrag{pointer-events:none;position:absolute;left:0px;top:0px;right:0px;bottom:0px;overflow:hidden;z-index:1000000001;}'+
-		'#gardenCursor{transition:transform 0.1s;display:none;pointer-events:none;width:48px;height:48px;position:absolute;background:url(img/gardenPlants.png?v='+Game.version+');}'+
+		'#gardenUnicornHorn{transition:transform 0.1s;display:none;pointer-events:none;width:48px;height:48px;position:absolute;background:url(img/gardenPlants.png?v='+Game.version+');}'+
 		'.gardenSeed{cursor:pointer;display:inline-block;width:40px;height:40px;position:relative;}'+
 		'.gardenSeed.locked{display:none;}'+
 		'.gardenSeedIcon{pointer-events:none;transform:translate(0,0);display:inline-block;position:absolute;left:-4px;top:-4px;width:48px;height:48px;background:url(img/gardenPlants.png?v='+Game.version+');}'+
@@ -1630,7 +1630,7 @@ M.launch=function()
 		'</style>';
 		str+='<div id="gardenBG"></div>';
 		str+='<div id="gardenContent">';
-		str+='<div id="gardenDrag"><div id="gardenCursor" class="shadowFilter"></div></div>';
+		str+='<div id="gardenDrag"><div id="gardenUnicornHorn" class="shadowFilter"></div></div>';
 			
 			str+='<div id="gardenPanel" class="framed">';
 				str+='<div class="title gardenPanelLabel">Tools</div><div class="line"></div>';

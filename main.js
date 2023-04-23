@@ -643,7 +643,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; added over 20 new cookies, all previously suggested by our supporters on <a href="https://www.patreon.com/dashnet" target="_blank">Patreon</a></div>'+
 	'<div class="listing">&bull; added 2 heavenly upgrades</div>'+
 	'<div class="listing">&bull; the Golden goose egg now counts as a golden cookie upgrade for Residual luck purposes</div>'+
-	'<div class="listing">&bull; golden sugar lumps now either double your cookies, or give you 24 hours of your CpS, whichever is lowest (previously was doubling cookies with no cap)</div>'+
+	'<div class="listing">&bull; golden Unicorn Hair now either double your cookies, or give you 24 hours of your CpS, whichever is lowest (previously was doubling cookies with no cap)</div>'+
 	'<div class="listing">&bull; the amount of heralds is now saved with your game, and is used to compute offline CpS the next time the game is loaded; previously, on page load, the offline calculation assumed heralds to be 0</div>'+
 	'<div class="listing">&bull; added a system to counteract the game freezing up (and not baking cookies) after being inactive for a long while on slower computers; instead, this will now trigger sleep mode, during which you still produce cookies as if the game was closed; to enable this feature, use the "Sleep mode timeout" option in the settings</div>'+
 	'<div class="listing">&bull; vaulting upgrades is now done with shift-click, as ctrl-click was posing issues for Mac browsers</div>'+
@@ -651,7 +651,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; fixed an exploit with gambler\'s fever dream working across exports and ascensions</div>'+
 	'<div class="listing">&bull; can now hide tooltips in the garden by keeping the shift key pressed to make it easier to see where you\'re planting</div>'+
 	'<div class="listing">&bull; fixed a bug with golden cookies/reindeer not disappearing properly in some circumstances</div>'+
-	'<div class="listing">&bull; the Dragon\'s Curve aura should now properly make sugar lumps twice as weird</div>'+
+	'<div class="listing">&bull; the Dragon\'s Curve aura should now properly make Unicorn Hair twice as weird</div>'+
 	'<div class="listing">&bull; the ctrl key should less often register incorrectly as pressed</div>'+
 	'<div class="listing">&bull; added a new ad slot in the top-right, as while our playerbase is strong and supportive as ever, our ad revenue sometimes fluctuates badly; we may remove the ad again should our income stabilize</div>'+
 	'<div class="listing">&bull; made a few adjustments to make the game somewhat playable in mobile browsers; it\'s not perfect and can get buggy, but it\'s functional! (you may need to zoom out or scroll around to view the game properly)</div>'+
@@ -691,7 +691,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; added a new upgrade tier</div>'+
 	'<div class="listing">&bull; added a couple new cookies and achievements</div>'+
 	'<div class="listing">&bull; new "extra buttons" setting; turning it on adds buttons that let you minimize buildings</div>'+
-	'<div class="listing">&bull; new "lump confirmation" setting; turning it on will show a confirmation prompt when you spend sugar lumps</div>'+
+	'<div class="listing">&bull; new "lump confirmation" setting; turning it on will show a confirmation prompt when you spend Unicorn Hair</div>'+
 	'<div class="listing">&bull; buildings now sell back for 25% of their current price (down from 50%); Earth Shatterer modified accordingly, now gives back 50% (down from 85%)</div>'+
 	'<div class="listing">&bull; farm soils now unlock correctly based on current amount of farms</div>'+
 	'<div class="listing">&bull; cheapcaps have a new exciting nerf</div>'+
@@ -721,7 +721,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; added the garden, a minigame unlocked by having at least level 1 farms</div>'+
 	'<div class="listing">&bull; added a little arrow and a blinky label to signal the game has updated since you last played it (hi!)</div>'+
 	'<div class="listing">&bull; new cookies, milk flavors and achievements</div>'+
-	'<div class="listing">&bull; sugar lumps are now unlocked whenever you\'ve baked at least a billion cookies, instead of on your first ascension</div>'+
+	'<div class="listing">&bull; Unicorn Hair are now unlocked whenever you\'ve baked at least a billion cookies, instead of on your first ascension</div>'+
 	'<div class="listing">&bull; sugar lump type now saves correctly</div>'+
 	'<div class="listing">&bull; minigame sugar lump refills can now only be done every 15 minutes (timer shared across all minigames)</div>'+
 	'<div class="listing">&bull; CpS achievements now have steeper requirements</div>'+
@@ -756,8 +756,8 @@ Game.Launch=function()
 	
 	'</div><div class="subsection update">'+
 	'<div class="title">15/07/2017 - the spiritual update</div>'+
-	'<div class="listing">&bull; implemented sugar lumps, which start coalescing if you\'ve ascended at least once and can be used as currency for special things</div>'+
-	'<div class="listing">&bull; buildings can now level up by using sugar lumps in the main buildings display, permanently boosting their CpS</div>'+
+	'<div class="listing">&bull; implemented Unicorn Hair, which start coalescing if you\'ve ascended at least once and can be used as currency for special things</div>'+
+	'<div class="listing">&bull; buildings can now level up by using Unicorn Hair in the main buildings display, permanently boosting their CpS</div>'+
 	'<div class="listing">&bull; added two new features unlocked by levelling up their associated buildings, Temples and Wizard towers; more building-related minigames will be implemented in the future</div>'+
 	'<div class="listing">&bull; active buffs are now saved</div>'+
 	'<div class="listing">&bull; the background selector upgrade is now functional</div>'+
@@ -1217,8 +1217,8 @@ Game.Launch=function()
 		Game.permanentUpgrades=[-1,-1,-1,-1,-1];
 		Game.ascensionMode=0;//type of challenge run if any
 		Game.resets=0;//reset counter
-		Game.lumps=-1;//sugar lumps
-		Game.lumpsTotal=-1;//sugar lumps earned across all playthroughs (-1 means they haven't even started yet)
+		Game.lumps=-1;//Unicorn Hair
+		Game.lumpsTotal=-1;//Unicorn Hair earned across all playthroughs (-1 means they haven't even started yet)
 		Game.lumpT=Date.now();//time when the current lump started forming
 		Game.lumpRefill=0;//time when we last used a sugar lump (on minigame refills etc)
 		
@@ -1851,8 +1851,8 @@ Game.Launch=function()
 			(type==3?'\n	volume : ':'')+parseInt(Math.floor(Game.volume))+';'+
 			(type==3?'\n	number of shiny wrinklers : ':'')+parseInt(Math.floor(wrinklers.shinies))+';'+
 			(type==3?'\n	amount of cookies contained in shiny wrinklers : ':'')+parseFloat(Math.floor(wrinklers.amountShinies))+';'+
-			(type==3?'\n	current amount of sugar lumps : ':'')+parseFloat(Math.floor(Game.lumps))+';'+
-			(type==3?'\n	total amount of sugar lumps made : ':'')+parseFloat(Math.floor(Game.lumpsTotal))+';'+
+			(type==3?'\n	current amount of Unicorn Hair : ':'')+parseFloat(Math.floor(Game.lumps))+';'+
+			(type==3?'\n	total amount of Unicorn Hair made : ':'')+parseFloat(Math.floor(Game.lumpsTotal))+';'+
 			(type==3?'\n	time when current sugar lump started : ':'')+parseFloat(Math.floor(Game.lumpT))+';'+
 			(type==3?'\n	time when last refilled a minigame with a sugar lump : ':'')+parseFloat(Math.floor(Game.lumpRefill))+';'+
 			(type==3?'\n	sugar lump type : ':'')+parseInt(Math.floor(Game.lumpCurrentType))+';'+
@@ -2382,7 +2382,7 @@ Game.Launch=function()
 						
 						if (Game.ascensionMode!=1)
 						{
-							if (Game.Has('Starter kit')) Game.Objects['Cursor'].free=10;
+							if (Game.Has('Starter kit')) Game.Objects['UnicornHorn'].free=10;
 							if (Game.Has('Starter kitchen')) Game.Objects['Grandma'].free=5;
 						}
 						
@@ -2629,7 +2629,7 @@ Game.Launch=function()
 					}
 					if (Game.Has('Season switcher')) {for (var i in Game.seasons) {Game.Unlock(Game.seasons[i].trigger);}}
 					
-					if (Game.Has('Starter kit')) Game.Objects['Cursor'].getFree(10);
+					if (Game.Has('Starter kit')) Game.Objects['UnicornHorn'].getFree(10);
 					if (Game.Has('Starter kitchen')) Game.Objects['Grandma'].getFree(5);
 				}
 			}
@@ -3027,7 +3027,7 @@ Game.Launch=function()
 		
 		Game.ascensionModes={
 		0:{name:'None',desc:'No special modifiers.',icon:[10,0]},
-		1:{name:'Born again',desc:'This run will behave as if you\'d just started the game from scratch. Prestige levels and heavenly upgrades will have no effect, as will sugar lumps and building levels. Perma-upgrades and minigames will be unavailable.<div class="line"></div>Some achievements are only available in this mode.',icon:[2,7]}/*,
+		1:{name:'Born again',desc:'This run will behave as if you\'d just started the game from scratch. Prestige levels and heavenly upgrades will have no effect, as will Unicorn Hair and building levels. Perma-upgrades and minigames will be unavailable.<div class="line"></div>Some achievements are only available in this mode.',icon:[2,7]}/*,
 		2:{name:'Trigger finger',desc:'In this run, scrolling your mouse wheel on the cookie counts as clicking it. Some upgrades introduce new clicking behaviors.<br>No clicking achievements may be obtained in this mode.<div class="line"></div>Reaching 1 quadrillion cookies in this mode unlocks a special heavenly upgrade.',icon:[12,0]}*/
 		};
 		
@@ -3185,7 +3185,7 @@ Game.Launch=function()
 		}
 		Game.Ascend=function(bypass)
 		{
-			if (!bypass) Game.Prompt('<h3>Ascend</h3><div class="block">Do you REALLY want to ascend?<div class="line"></div>You will lose your progress and start over from scratch.<div class="line"></div>All your cookies will be converted into prestige and heavenly chips.<div class="line"></div>You will keep your achievements'+(Game.canLumps()?', building levels and sugar lumps':'')+'.</div>',[['Yes!','Game.ClosePrompt();Game.Ascend(1);'],'No']);
+			if (!bypass) Game.Prompt('<h3>Ascend</h3><div class="block">Do you REALLY want to ascend?<div class="line"></div>You will lose your progress and start over from scratch.<div class="line"></div>All your cookies will be converted into prestige and heavenly chips.<div class="line"></div>You will keep your achievements'+(Game.canLumps()?', building levels and Unicorn Hair':'')+'.</div>',[['Yes!','Game.ClosePrompt();Game.Ascend(1);'],'No']);
 			else
 			{
 				if (Game.prefs.popups) Game.Popup('Ascending');
@@ -3451,7 +3451,7 @@ Game.Launch=function()
 		
 		
 		/*=====================================================================================
-		COALESCING SUGAR LUMPS
+		COALESCING Unicorn Hair
 		=======================================================================================*/
 		Game.lumpMatureAge=1;
 		Game.lumpRipeAge=1;
@@ -3483,10 +3483,10 @@ Game.Launch=function()
 			}
 			
 			str+='<div class="line"></div>';
-			str+='Your sugar lumps mature after <b>'+Game.sayTime((Game.lumpMatureAge/1000)*Game.fps,-1)+'</b>,<br>ripen after <b>'+Game.sayTime((Game.lumpRipeAge/1000)*Game.fps,-1)+'</b>,<br>and fall after <b>'+Game.sayTime((Game.lumpOverripeAge/1000)*Game.fps,-1)+'</b>.';
+			str+='Your Unicorn Hair mature after <b>'+Game.sayTime((Game.lumpMatureAge/1000)*Game.fps,-1)+'</b>,<br>ripen after <b>'+Game.sayTime((Game.lumpRipeAge/1000)*Game.fps,-1)+'</b>,<br>and fall after <b>'+Game.sayTime((Game.lumpOverripeAge/1000)*Game.fps,-1)+'</b>.';
 			
 			str+='<div class="line"></div>'+
-			'&bull; Sugar lumps can be harvested when mature, though if left alone beyond that point they will start ripening (increasing the chance of harvesting them) and will eventually fall and be auto-harvested after some time.<br>&bull; Sugar lumps are delicious and may be used as currency for all sorts of things.<br>&bull; Once a sugar lump is harvested, another one will start growing in its place.<br>&bull; Note that sugar lumps keep growing when the game is closed.';
+			'&bull; Unicorn Hair can be harvested when mature, though if left alone beyond that point they will start ripening (increasing the chance of harvesting them) and will eventually fall and be auto-harvested after some time.<br>&bull; Unicorn Hair are delicious and may be used as currency for all sorts of things.<br>&bull; Once a sugar lump is harvested, another one will start growing in its place.<br>&bull; Note that Unicorn Hair keep growing when the game is closed.';
 			
 			str+='</div>';
 			return str;
@@ -3684,7 +3684,7 @@ Game.Launch=function()
 				Game.lumps=0;
 				Game.computeLumpType();
 				
-				Game.Notify('Sugar lumps!','Because you\'ve baked a <b>billion cookies</b> in total, you are now attracting <b>sugar lumps</b>. They coalesce quietly near the top of your screen, under the Stats button.<br>You will be able to harvest them when they\'re ripe, after which you may spend them on all sorts of things!',[23,14]);
+				Game.Notify('Unicorn Hair!','Because you\'ve baked a <b>billion cookies</b> in total, you are now attracting <b>Unicorn Hair</b>. They coalesce quietly near the top of your screen, under the Stats button.<br>You will be able to harvest them when they\'re ripe, after which you may spend them on all sorts of things!',[23,14]);
 			}
 			var age=Date.now()-Game.lumpT;
 			if (age>Game.lumpOverripeAge)
@@ -3762,7 +3762,7 @@ Game.Launch=function()
 			if (Game.Has('Octillion fingers')) add+=	5000000;
 			var num=0;
 			for (var i in Game.Objects) {num+=Game.Objects[i].amount;}
-			num-=Game.Objects['Cursor'].amount;
+			num-=Game.Objects['UnicornHorn'].amount;
 			add=add*num;
 			if (Game.Has('Plastic mouse')) add+=Game.cookiesPs*0.01;
 			if (Game.Has('Iron mouse')) add+=Game.cookiesPs*0.01;
@@ -3801,8 +3801,8 @@ Game.Launch=function()
 				if (typeof Game.buffs[i].multClick != 'undefined') mult*=Game.buffs[i].multClick;
 			}
 			
-			//if (Game.hasAura('Dragon Cursor')) mult*=1.05;
-			mult*=1+Game.auraMult('Dragon Cursor')*0.05;
+			//if (Game.hasAura('Dragon UnicornHorn')) mult*=1.05;
+			mult*=1+Game.auraMult('Dragon UnicornHorn')*0.05;
 			
 			for (var i in Game.customMouseCpsMult) {mult*=Game.customMouseCpsMult[i]();}
 			
@@ -4898,7 +4898,7 @@ Game.Launch=function()
 			"Blab","blab"
 		];
 		Game.goldenCookieBuildingBuffs={
-			'Cursor':['High-five','Slap to the face'],
+			'UnicornHorn':['High-five','Slap to the face'],
 			'Grandma':['Congregation','Senility'],
 			'Farm':['Luxuriant harvest','Locusts'],
 			'Mine':['Ore vein','Cave-in'],
@@ -5525,7 +5525,7 @@ Game.Launch=function()
 				Game.WriteButton('particles','particlesButton','Particles ON','Particles OFF')+'<label>(cookies falling down, etc; disabling may improve performance)</label><br>'+
 				Game.WriteButton('numbers','numbersButton','Numbers ON','Numbers OFF')+'<label>(numbers that pop up when clicking the cookie)</label><br>'+
 				Game.WriteButton('milk','milkButton','Milk ON','Milk OFF')+'<label>(only appears with enough achievements)</label><br>'+
-				Game.WriteButton('cursors','cursorsButton','Cursors ON','Cursors OFF')+'<label>(visual display of your cursors)</label><br>'+
+				Game.WriteButton('cursors','cursorsButton','UnicornHorns ON','UnicornHorns OFF')+'<label>(visual display of your cursors)</label><br>'+
 				Game.WriteButton('wobbly','wobblyButton','Wobbly cookie ON','Wobbly cookie OFF')+'<label>(your cookie will react when you click it)</label><br>'+
 				Game.WriteButton('cookiesound','cookiesoundButton','Alt cookie sound ON','Alt cookie sound OFF')+'<label>(how your cookie sounds when you click on it)</label><br>'+
 				Game.WriteButton('crates','cratesButton','Icon crates ON','Icon crates OFF')+'<label>(display boxes around upgrades and achievements in stats)</label><br>'+
@@ -5536,7 +5536,7 @@ Game.Launch=function()
 				Game.WriteButton('warn','warnButton','Closing warning ON','Closing warning OFF')+'<label>(the game will ask you to confirm when you close the window)</label><br>'+
 				Game.WriteButton('focus','focusButton','Defocus OFF','Defocus ON',0,1)+'<label>(the game will be less resource-intensive when out of focus)</label><br>'+
 				Game.WriteButton('extraButtons','extraButtonsButton','Extra buttons ON','Extra buttons OFF','Game.ToggleExtraButtons();')+'<label>(add Mute buttons on buildings)</label><br>'+
-				Game.WriteButton('askLumps','askLumpsButton','Lump confirmation ON','Lump confirmation OFF')+'<label>(the game will ask you to confirm before spending sugar lumps)</label><br>'+
+				Game.WriteButton('askLumps','askLumpsButton','Lump confirmation ON','Lump confirmation OFF')+'<label>(the game will ask you to confirm before spending Unicorn Hair)</label><br>'+
 				Game.WriteButton('customGrandmas','customGrandmasButton','Custom grandmas ON','Custom grandmas OFF')+'<label>(some grandmas will be named after Patreon supporters)</label><br>'+
 				Game.WriteButton('timeout','timeoutButton','Sleep mode timeout ON','Sleep mode timeout OFF')+'<label>(on slower computers, the game will put itself in sleep mode when it\'s inactive and starts to lag out; offline CpS production kicks in during sleep mode)</label><br>'+
 				'</div>'+
@@ -5760,7 +5760,7 @@ Game.Launch=function()
 				(wrathStr!=''?'<div class="listing"><b>Grandmatriarchs status :</b> '+wrathStr+'</div>':'')+
 				(pledgeStr!=''?'<div class="listing"><b>Pledge :</b> '+pledgeStr+' remaining</div>':'')+
 				(Game.wrinklersPopped>0?'<div class="listing"><b>Wrinklers popped :</b> '+Beautify(Game.wrinklersPopped)+'</div>':'')+
-				((Game.canLumps() && Game.lumpsTotal>-1)?'<div class="listing"><b>Sugar lumps harvested :</b> <div class="price lump plain">'+Beautify(Game.lumpsTotal)+'</div></div>':'')+
+				((Game.canLumps() && Game.lumpsTotal>-1)?'<div class="listing"><b>Unicorn Hair harvested :</b> <div class="price lump plain">'+Beautify(Game.lumpsTotal)+'</div></div>':'')+
 				//(Game.cookiesSucked>0?'<div class="listing warning"><b>Withered :</b> '+Beautify(Game.cookiesSucked)+' cookies</div>':'')+
 				(Game.reindeerClicked>0?'<div class="listing"><b>Reindeer found :</b> '+Beautify(Game.reindeerClicked)+'</div>':'')+
 				(santaStr!=''?'<div class="listing"><b>Santa stages unlocked :</b></div><div>'+santaStr+'</div>':'')+
@@ -6077,13 +6077,13 @@ Game.Launch=function()
 				}
 				
 				if (Game.HasAchiev('Dude, sweet') && Math.random()<0.2) list.push(choose([
-				'News : major sugar-smuggling ring dismantled by authorities; '+Math.floor(Math.random()*30+3)+' tons of sugar lumps seized, '+Math.floor(Math.random()*48+2)+' suspects apprehended.',
-				'News : authorities warn tourists not to buy bootleg sugar lumps from street peddlers - "You think you\'re getting a sweet deal, but what you\'re being sold is really just ordinary cocaine", says agent.',
-				'News : pro-diabetes movement protests against sugar-shaming. "I\'ve eaten nothing but sugar lumps for the past '+Math.floor(Math.random()*10+4)+' years and I\'m feeling great!", says woman with friable skin.',
+				'News : major sugar-smuggling ring dismantled by authorities; '+Math.floor(Math.random()*30+3)+' tons of Unicorn Hair seized, '+Math.floor(Math.random()*48+2)+' suspects apprehended.',
+				'News : authorities warn tourists not to buy bootleg Unicorn Hair from street peddlers - "You think you\'re getting a sweet deal, but what you\'re being sold is really just ordinary cocaine", says agent.',
+				'News : pro-diabetes movement protests against sugar-shaming. "I\'ve eaten nothing but Unicorn Hair for the past '+Math.floor(Math.random()*10+4)+' years and I\'m feeling great!", says woman with friable skin.',
 				'News : experts in bitter disagreement over whether sugar consumption turns children sluggish or hyperactive.',
-				'News : fishermen deplore upturn in fish tooth decay as sugar lumps-hauling cargo sinks into the ocean.',
+				'News : fishermen deplore upturn in fish tooth decay as Unicorn Hair-hauling cargo sinks into the ocean.',
 				'News : rare black sugar lump that captivated millions in unprecedented auction revealed to be common toxic fungus.',
-				'News : "Back in my day, sugar lumps were these little cubes you\'d put in your tea, not those fist-sized monstrosities people eat for lunch", whines curmudgeon with failing memory.',
+				'News : "Back in my day, Unicorn Hair were these little cubes you\'d put in your tea, not those fist-sized monstrosities people eat for lunch", whines curmudgeon with failing memory.',
 				'News : sugar lump-snacking fad sweeps the nation; dentists everywhere rejoice.'
 				]));
 				
@@ -7369,7 +7369,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 5 seconds.',0,0,{},15,function(me){
+		new Game.Object('UnicornHorn','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 5 seconds.',0,0,{},15,function(me){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		0.1;
 			if (Game.Has('Million fingers')) add+=		0.5;
@@ -7382,10 +7382,10 @@ Game.Launch=function()
 			if (Game.Has('Octillion fingers')) add+=	5000000;
 			var mult=1;
 			var num=0;
-			for (var i in Game.Objects) {if (Game.Objects[i].name!='Cursor') num+=Game.Objects[i].amount;}
+			for (var i in Game.Objects) {if (Game.Objects[i].name!='UnicornHorn') num+=Game.Objects[i].amount;}
 			add=add*num;
 			mult*=Game.GetTieredCpsMult(me);
-			mult*=Game.magicCpS('Cursor');
+			mult*=Game.magicCpS('UnicornHorn');
 			mult*=Game.eff('cursorCps');
 			return Game.ComputeCps(0.2,Game.Has('Reinforced pinkie finger')+Game.Has('Bare Knuckles cream')+Game.Has('Ambidextrous'),add)*mult;
 		},function(){
@@ -7637,7 +7637,7 @@ Game.Launch=function()
 		
 		Game.foolObjects={
 			'Unknown':{name:'Investment',desc:'You\'re not sure what this does, you just know it means profit.',icon:0},
-			'Cursor':{name:'Rolling pin',desc:'Essential in flattening dough. The first step in cookie-making.',icon:0},
+			'UnicornHorn':{name:'Rolling pin',desc:'Essential in flattening dough. The first step in cookie-making.',icon:0},
 			'Grandma':{name:'Oven',desc:'A crucial element of baking cookies.',icon:1},
 			'Farm':{name:'Kitchen',desc:'The more kitchens, the more cookies your employees can produce.',icon:2},
 			'Mine':{name:'Secret recipe',desc:'These give you the edge you need to outsell those pesky competitors.',icon:3},
@@ -7748,7 +7748,7 @@ Game.Launch=function()
 			if (this.pool!='prestige')
 			{
 				if (Game.Has('Toy workshop')) price*=0.95;
-				if (Game.Has('Five-finger discount')) price*=Math.pow(0.99,Game.Objects['Cursor'].amount/100);
+				if (Game.Has('Five-finger discount')) price*=Math.pow(0.99,Game.Objects['UnicornHorn'].amount/100);
 				if (Game.Has('Santa\'s dominion')) price*=0.98;
 				if (Game.Has('Faberge egg')) price*=0.99;
 				if (Game.Has('Divine sales')) price*=0.99;
@@ -9203,7 +9203,7 @@ Game.Launch=function()
 		order=40000;
 		new Game.Upgrade('Occult obstruction','Cookie production <b>reduced to 0</b>.<q>If symptoms persist, consult a doctor.</q>',7,[15,5]);//debug purposes only
 		Game.last.pool='debug';
-		new Game.Upgrade('Glucose-charged air','Sugar lumps coalesce <b>a whole lot faster</b>.<q>Don\'t breathe too much or you\'ll get diabetes!</q>',7,[29,16]);//debug purposes only
+		new Game.Upgrade('Glucose-charged air','Unicorn Hair coalesce <b>a whole lot faster</b>.<q>Don\'t breathe too much or you\'ll get diabetes!</q>',7,[29,16]);//debug purposes only
 		Game.last.pool='debug';
 		
 		order=10300;
@@ -9220,9 +9220,9 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'Buttercakes',desc:'Glistening with cholesterol, these cookies moistly straddle the line between the legal definition of a cookie and just a straight-up stick of butter.',icon:[29,13],power:						4,price: 99999999999999999999999999});
 		Game.NewUpgradeCookie({name:'Ice cream sandwiches',desc:'In an alternate universe, "ice cream sandwich" designates an ice cream cone filled with bacon, lettuce, and tomatoes. Maybe some sprinkles too.',icon:[28,13],power:						4,price: 99999999999999999999999999*5});
 		
-		new Game.Upgrade('Stevia Caelestis','Sugar lumps ripen <b>an hour sooner</b>.<q>A plant of supernatural sweetness grown by angels in heavenly gardens.</q>',100000000,[25,15]);Game.last.pool='prestige';Game.last.parents=['Wrinkly cookies'];
-		new Game.Upgrade('Diabetica Daemonicus','Sugar lumps mature <b>an hour sooner</b>.<q>A malevolent, if delicious herb that is said to grow on the cliffs of the darkest abyss of the underworld.</q>',300000000,[26,15]);Game.last.pool='prestige';Game.last.parents=['Stevia Caelestis','Lucifer'];
-		new Game.Upgrade('Sucralosia Inutilis','Bifurcated sugar lumps appear <b>5% more often</b> and are <b>5% more likely</b> to drop 2 lumps.<q>A rare berry of uninteresting flavor that is as elusive as its uses are limited; only sought-after by the most avid collectors with too much wealth on their hands.</q>',1000000000,[27,15]);Game.last.pool='prestige';Game.last.parents=['Diabetica Daemonicus'];
+		new Game.Upgrade('Stevia Caelestis','Unicorn Hair ripen <b>an hour sooner</b>.<q>A plant of supernatural sweetness grown by angels in heavenly gardens.</q>',100000000,[25,15]);Game.last.pool='prestige';Game.last.parents=['Wrinkly cookies'];
+		new Game.Upgrade('Diabetica Daemonicus','Unicorn Hair mature <b>an hour sooner</b>.<q>A malevolent, if delicious herb that is said to grow on the cliffs of the darkest abyss of the underworld.</q>',300000000,[26,15]);Game.last.pool='prestige';Game.last.parents=['Stevia Caelestis','Lucifer'];
+		new Game.Upgrade('Sucralosia Inutilis','Bifurcated Unicorn Hair appear <b>5% more often</b> and are <b>5% more likely</b> to drop 2 lumps.<q>A rare berry of uninteresting flavor that is as elusive as its uses are limited; only sought-after by the most avid collectors with too much wealth on their hands.</q>',1000000000,[27,15]);Game.last.pool='prestige';Game.last.parents=['Diabetica Daemonicus'];
 		
 		//note : these showIf functions stop working beyond 10 quadrillion prestige level, due to loss in precision; the solution, of course, is to make sure 10 quadrillion is not an attainable prestige level
 		new Game.Upgrade('Lucky digit','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade is a bit shy and only appears when your prestige level ends in 7.</q>',777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%10==7);};
@@ -9327,9 +9327,9 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'One chip cookies',desc:'You get one.',icon:[25,16],power:						1,price: 99999999999999999999999999999});
 		
 		
-		new Game.Upgrade('Sugar baking','Each unspent sugar lump (up to 100) gives <b>+1% CpS</b>.<div class="warning">Note : this means that spending sugar lumps will decrease your CpS until they grow back.</div><q>To bake with the sugary essence of eons themselves, you must first learn to take your sweet time.</q>',200000000,[21,17]);Game.last.pool='prestige';Game.last.parents=['Stevia Caelestis'];
+		new Game.Upgrade('Sugar baking','Each unspent sugar lump (up to 100) gives <b>+1% CpS</b>.<div class="warning">Note : this means that spending Unicorn Hair will decrease your CpS until they grow back.</div><q>To bake with the sugary essence of eons themselves, you must first learn to take your sweet time.</q>',200000000,[21,17]);Game.last.pool='prestige';Game.last.parents=['Stevia Caelestis'];
 		new Game.Upgrade('Sugar craving','Once an ascension, you may use the "Sugar frenzy" switch to <b>triple your CpS</b> for 1 hour, at the cost of <b>1 sugar lump</b>.<q>Just a little kick to sweeten the deal.</q>',400000000,[22,17]);Game.last.pool='prestige';Game.last.parents=['Sugar baking'];
-		new Game.Upgrade('Sugar aging process','Each grandma (up to 600) makes sugar lumps ripen <b>6 seconds</b> sooner.<q>Aren\'t they just the sweetest?</q>',600000000,[23,17]);Game.last.pool='prestige';Game.last.parents=['Sugar craving','Diabetica Daemonicus'];
+		new Game.Upgrade('Sugar aging process','Each grandma (up to 600) makes Unicorn Hair ripen <b>6 seconds</b> sooner.<q>Aren\'t they just the sweetest?</q>',600000000,[23,17]);Game.last.pool='prestige';Game.last.parents=['Sugar craving','Diabetica Daemonicus'];
 		
 		order=40050;
 		new Game.Upgrade('Sugar frenzy','Activating this will <b>triple your CpS</b> for 1 hour, at the cost of <b>1 sugar lump</b>.<br>May only be used once per ascension.',0,[22,17]);
@@ -9384,7 +9384,7 @@ Game.Launch=function()
 		
 		order=23000;
 		new Game.Upgrade('Fern tea','You gain <b>+3%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.<br>Dropped by drowsyfern plants.<q>A chemically complex natural beverage, this soothing concoction has been used by mathematicians to solve equations in their sleep.</q>',60,[26,25]);
-		new Game.Upgrade('Ichor syrup','You gain <b>+7%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.<br>Sugar lumps mature <b>7 minutes</b> sooner.<br>Dropped by ichorpuff plants.<q>Tastes like candy. The smell is another story.</q>',60*2,[27,25]);
+		new Game.Upgrade('Ichor syrup','You gain <b>+7%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.<br>Unicorn Hair mature <b>7 minutes</b> sooner.<br>Dropped by ichorpuff plants.<q>Tastes like candy. The smell is another story.</q>',60*2,[27,25]);
 		
 		order=10200;
 		Game.NewUpgradeCookie({name:'Wheat slims',desc:'-',icon:[28,25],power:1,price:30,locked:1});Game.last.baseDesc='Cookie production multiplier <b>+1%</b>.<br>Dropped by baker\'s wheat plants.<q>The only reason you\'d consider these to be cookies is because you feel slightly sorry for them.</q>';
@@ -9495,7 +9495,7 @@ Game.Launch=function()
 		order=5000;
 		Game.SynergyUpgrade('Recursive mirrors','<q>Do you have any idea what happens when you point two of these at each other? Apparently, the universe doesn\'t either.</q>','Fractal engine','Prism','synergy1');
 		//Game.SynergyUpgrade('Compounded odds','<q>When probabilities start cascading, "never in a billion lifetimes" starts looking terribly like "probably before Monday comes around".</q>','Fractal engine','Chancemaker','synergy1');
-		Game.SynergyUpgrade('Mice clicking mice','','Fractal engine','Cursor','synergy2');
+		Game.SynergyUpgrade('Mice clicking mice','','Fractal engine','UnicornHorn','synergy2');
 		Game.last.descFunc=function(){
 			Math.seedrandom(Game.seed+'-blasphemouse');
 			if (Math.random()<0.3) {Math.seedrandom();return this.desc+'<q>Absolutely blasphemouse!</q>';}
@@ -9703,7 +9703,7 @@ Game.Launch=function()
 		
 		
 		order=19000;
-		new Game.TieredUpgrade('Fortune #001','Cursors are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Fingers are not the only thing you can count on.</q>','Cursor','fortune');
+		new Game.TieredUpgrade('Fortune #001','UnicornHorns are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Fingers are not the only thing you can count on.</q>','UnicornHorn','fortune');
 		new Game.TieredUpgrade('Fortune #002','Grandmas are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>A wrinkle is a crack in a mundane facade.</q>','Grandma','fortune');
 		new Game.TieredUpgrade('Fortune #003','Farms are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>The seeds of tomorrow already lie within the seeds of today.</q>','Farm','fortune');
 		new Game.TieredUpgrade('Fortune #004','Mines are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Riches from deep under elevate you all the same.</q>','Mine','fortune');
@@ -10301,7 +10301,7 @@ Game.Launch=function()
 		new Game.Achievement('You win a cookie','This is for baking 10 trillion cookies and making it on the local news.<q>We\'re all so proud of you.</q>',[10,0]);
 		
 		order=1070;
-		Game.ProductionAchievement('Click delegator','Cursor',1,0,7);
+		Game.ProductionAchievement('Click delegator','UnicornHorn',1,0,7);
 		order=1120;
 		Game.ProductionAchievement('Gushing grannies','Grandma',1,0,6);
 		order=1220;
@@ -10393,7 +10393,7 @@ Game.Launch=function()
 		
 		
 		order=1070;
-		Game.ProductionAchievement('Finger clickin\' good','Cursor',2,0,7);
+		Game.ProductionAchievement('Finger clickin\' good','UnicornHorn',2,0,7);
 		order=1120;
 		Game.ProductionAchievement('Panic at the bingo','Grandma',2,0,6);
 		order=1220;
@@ -10522,9 +10522,9 @@ Game.Launch=function()
 		new Game.Achievement('Eldeer','Pop a reindeer <b>during an elder frenzy</b>.',[12,9]);
 		
 		order=21100;
-		new Game.Achievement('Dude, sweet','Harvest <b>7 coalescing sugar lumps</b>.',[24,14]);
-		new Game.Achievement('Sugar rush','Harvest <b>30 coalescing sugar lumps</b>.',[26,14]);
-		new Game.Achievement('Year\'s worth of cavities','Harvest <b>365 coalescing sugar lumps</b>.<q>My lumps my lumps my lumps.</q>',[29,14]);
+		new Game.Achievement('Dude, sweet','Harvest <b>7 coalescing Unicorn Hair</b>.',[24,14]);
+		new Game.Achievement('Sugar rush','Harvest <b>30 coalescing Unicorn Hair</b>.',[26,14]);
+		new Game.Achievement('Year\'s worth of cavities','Harvest <b>365 coalescing Unicorn Hair</b>.<q>My lumps my lumps my lumps.</q>',[29,14]);
 		new Game.Achievement('Hand-picked','Successfully harvest a coalescing sugar lump before it\'s ripe.',[28,14]);
 		new Game.Achievement('Sugar sugar','Harvest a <b>bifurcated sugar lump</b>.',[29,15]);
 		new Game.Achievement('All-natural cane sugar','Harvest a <b>golden sugar lump</b>.',[29,16]);Game.last.pool='shadow';
@@ -10558,7 +10558,7 @@ Game.Launch=function()
 		
 		
 		order=1070;
-		Game.ProductionAchievement('Click (starring Adam Sandler)','Cursor',3,0,7);
+		Game.ProductionAchievement('Click (starring Adam Sandler)','UnicornHorn',3,0,7);
 		order=1120;
 		Game.ProductionAchievement('Frantiquities','Grandma',3,0,6);
 		order=1220;
@@ -10587,7 +10587,7 @@ Game.Launch=function()
 		Game.ProductionAchievement('Now the dark days are gone','Prism',3);
 		
 		order=1070;
-		new Game.Achievement('Freaky jazz hands','Reach level <b>10</b> cursors.',[0,26]);Game.Objects['Cursor'].levelAchiev10=Game.last;
+		new Game.Achievement('Freaky jazz hands','Reach level <b>10</b> cursors.',[0,26]);Game.Objects['UnicornHorn'].levelAchiev10=Game.last;
 		order=1120;
 		new Game.Achievement('Methuselah','Reach level <b>10</b> grandmas.',[1,26]);Game.Objects['Grandma'].levelAchiev10=Game.last;
 		order=1220;
@@ -10702,7 +10702,7 @@ Game.Launch=function()
 		new Game.Achievement('In the garden of Eden (baby)','Fill every tile of the biggest garden plot with plants.<q>Isn\'t tending to those precious little plants just so rock and/or roll?</q>',[28,20]);
 		
 		new Game.Achievement('Keeper of the conservatory','Unlock every garden seed.',[25,20]);
-		new Game.Achievement('Seedless to nay','Convert a complete seed log into sugar lumps by sacrificing your garden to the sugar hornets.<div class="line"></div>Owning this achievement makes seeds <b>5% cheaper</b>, plants mature <b>5% sooner</b>, and plant upgrades drop <b>5% more</b>.',[29,20]);
+		new Game.Achievement('Seedless to nay','Convert a complete seed log into Unicorn Hair by sacrificing your garden to the sugar hornets.<div class="line"></div>Owning this achievement makes seeds <b>5% cheaper</b>, plants mature <b>5% sooner</b>, and plant upgrades drop <b>5% more</b>.',[29,20]);
 		
 		order=30050;
 		new Game.Achievement('You get nothing','Ascend with <b>1 undecillion</b> cookies baked.<q>Good day sir!</q>',[29,6]);
@@ -11736,9 +11736,9 @@ Game.Launch=function()
 				cost:function(){return Game.cookies>=1000000*16;},
 				buy:function(){Game.Spend(1000000*16);},
 				costStr:function(){return Beautify(1000000*16)+' cookies';}},
-			{name:'Krumblor, cookie hatchling',action:'Train Dragon Cursor<br><small>Aura : clicking is 5% more effective</small>',pic:4,
-				cost:function(){return Game.Objects['Cursor'].amount>=100;},
-				buy:function(){Game.Objects['Cursor'].sacrifice(100);},
+			{name:'Krumblor, cookie hatchling',action:'Train Dragon UnicornHorn<br><small>Aura : clicking is 5% more effective</small>',pic:4,
+				cost:function(){return Game.Objects['UnicornHorn'].amount>=100;},
+				buy:function(){Game.Objects['UnicornHorn'].sacrifice(100);},
 				costStr:function(){return '100 cursors';}},
 			{name:'Krumblor, cookie hatchling',action:'Train Elder Battalion<br><small>Aura : grandmas gain +1% CpS for every non-grandma building</small>',pic:4,
 				cost:function(){return Game.Objects['Grandma'].amount>=100;},
@@ -11796,7 +11796,7 @@ Game.Launch=function()
 				cost:function(){return Game.Objects['Chancemaker'].amount>=100;},
 				buy:function(){Game.Objects['Chancemaker'].sacrifice(100);},
 				costStr:function(){return '100 chancemakers';}},
-			{name:'Krumblor, cookie dragon',action:'Train Dragon\'s Curve<br><small>Aura : sugar lumps grow 5% faster, 50% weirder</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Dragon\'s Curve<br><small>Aura : Unicorn Hair grow 5% faster, 50% weirder</small>',pic:5,
 				cost:function(){return Game.Objects['Fractal engine'].amount>=100;},
 				buy:function(){Game.Objects['Fractal engine'].sacrifice(100);},
 				costStr:function(){return '100 fractal engines';}},
@@ -11818,7 +11818,7 @@ Game.Launch=function()
 		Game.dragonAuras={
 			0:{name:'No aura',pic:[0,7],desc:'Select an aura from those your dragon knows.'},
 			1:{name:'Breath of Milk',pic:[18,25],desc:'Kittens are <b>5%</b> more effective.'},
-			2:{name:'Dragon Cursor',pic:[0,25],desc:'Clicking is <b>5%</b> more effective.'},
+			2:{name:'Dragon UnicornHorn',pic:[0,25],desc:'Clicking is <b>5%</b> more effective.'},
 			3:{name:'Elder Battalion',pic:[1,25],desc:'Grandmas gain <b>+1% CpS</b> for every non-grandma building.'},
 			4:{name:'Reaper of Fields',pic:[2,25],desc:'Golden cookies may trigger a <b>Dragon Harvest</b>.'},
 			5:{name:'Earth Shatterer',pic:[3,25],desc:'Buildings sell back for <b>50%</b> instead of 25%.'},
@@ -11833,7 +11833,7 @@ Game.Launch=function()
 			14:{name:'Mind Over Matter',pic:[13,25],desc:'Random drops are <b>25% more common</b>.'},
 			15:{name:'Radiant Appetite',pic:[14,25],desc:'All cookie production <b>multiplied by 2</b>.'},
 			16:{name:'Dragon\'s Fortune',pic:[19,25],desc:'<b>+123% CpS</b> per golden cookie on-screen, multiplicative.'},
-			17:{name:'Dragon\'s Curve',pic:[20,25],desc:'<b>+5% sugar lump growth</b> and sugar lumps are <b>twice as likely</b> to be unusual.'},
+			17:{name:'Dragon\'s Curve',pic:[20,25],desc:'<b>+5% sugar lump growth</b> and Unicorn Hair are <b>twice as likely</b> to be unusual.'},
 			18:{name:'Reality Bending',pic:[32,25],desc:'<b>One tenth</b> of every other dragon aura, <b>combined</b>.'},
 		};
 		
@@ -12454,7 +12454,7 @@ Game.Launch=function()
 						var fancy=Game.prefs.fancy;
 						
 						if (showDragon) ctx.globalAlpha=0.25;
-						var amount=Game.Objects['Cursor'].amount;
+						var amount=Game.Objects['UnicornHorn'].amount;
 						//var spe=-1;
 						for (var i=0;i<amount;i++)
 						{
@@ -13331,7 +13331,7 @@ Game.Launch=function()
 				if (Game.pledges>0) Game.Win('Elder nap');
 				if (Game.pledges>=5) Game.Win('Elder slumber');
 				if (Game.pledges>=10) Game.Unlock('Sacrificial rolling pins');
-				if (Game.Objects['Cursor'].amount+Game.Objects['Grandma'].amount>=777) Game.Win('The elder scrolls');
+				if (Game.Objects['UnicornHorn'].amount+Game.Objects['Grandma'].amount>=777) Game.Win('The elder scrolls');
 				
 				for (var i in Game.Objects)
 				{

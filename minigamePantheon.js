@@ -112,9 +112,9 @@ M.launch=function()
 					if (Game.BuildingsOwned%10==0) return 'Buildings owned : '+Beautify(Game.BuildingsOwned)+'.<br>Effect is active.';
 					else return 'Buildings owned : '+Beautify(Game.BuildingsOwned)+'.<br>Effect is inactive.';
 				},
-				desc1:'Sugar lumps ripen an hour sooner.',
-				desc2:'Sugar lumps ripen 40 minutes sooner.',
-				desc3:'Sugar lumps ripen 20 minutes sooner.',
+				desc1:'Unicorn Hair ripen an hour sooner.',
+				desc2:'Unicorn Hair ripen 40 minutes sooner.',
+				desc3:'Unicorn Hair ripen 20 minutes sooner.',
 				descAfter:'Effect is only active when your total amount of buildings ends with 0.',
 				quote:'You will find that life gets just a little bit sweeter if you can motivate this spirit with tidy numbers and properly-filled tax returns.',
 			},
