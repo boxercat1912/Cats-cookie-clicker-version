@@ -461,7 +461,7 @@ M.launch=function()
 				ageTickR:18,
 				mature:80,
 				children:[],
-				effsStr:'<div class="green">&bull; +4% cookies per click</div><div class="green">&bull; +1% cursor CpS</div><div class="red">&bull; -1% CpS</div>',
+				effsStr:'<div class="green">&bull; +4% cookies per click</div><div class="green">&bull; +1% UnicornHorn CpS</div><div class="red">&bull; -1% CpS</div>',
 				q:'Touching its waxy skin reveals that the interior is hollow and uncomfortably squishy.',
 			},
 			'cheapcap':{
@@ -781,7 +781,7 @@ M.launch=function()
 			var effs={
 				cps:1,
 				click:1,
-				cursorCps:1,
+				UnicornHornCps:1,
 				grandmaCps:1,
 				goldenCookieGain:1,
 				goldenCookieFreq:1,
@@ -856,7 +856,7 @@ M.launch=function()
 							else if (name=='keenmoss') {effs.itemDrops+=0.03*mult;}
 							else if (name=='queenbeet') {effs.goldenCookieEffDur+=0.003*mult;effs.cps*=1-0.02*mult;}
 							else if (name=='queenbeetLump') {effs.cps*=1-0.1*mult;}
-							else if (name=='glovemorel') {effs.click+=0.04*mult;effs.cursorCps+=0.01*mult;effs.cps*=1-0.01*mult;}
+							else if (name=='glovemorel') {effs.click+=0.04*mult;effs.UnicornHornCps+=0.01*mult;effs.cps*=1-0.01*mult;}
 							else if (name=='cheapcap') {effs.upgradeCost*=1-0.002*mult;effs.buildingCost*=1-0.002*mult;}
 							else if (name=='foolBolete') {effs.goldenCookieFreq+=0.02*mult;effs.goldenCookieGain*=1-0.05*mult;effs.goldenCookieDur*=1-0.02*mult;effs.goldenCookieEffDur*=1-0.02*mult;}
 							else if (name=='wrinklegill') {effs.wrinklerSpawn+=0.02*mult;effs.wrinklerEat+=0.01*mult;}
@@ -940,7 +940,7 @@ M.launch=function()
 						var effs={
 							cps:{n:'CpS'},
 							click:{n:'cookies/click'},
-							cursorCps:{n:'cursor CpS'},
+							UnicornHornCps:{n:'UnicornHorn CpS'},
 							grandmaCps:{n:'grandma CpS'},
 							goldenCookieGain:{n:'golden cookie gains'},
 							goldenCookieFreq:{n:'golden cookie frequency'},
@@ -1133,14 +1133,14 @@ M.launch=function()
 			if (Game.cookies>=M.getCost(me)) return true; else return false;
 		}
 		
-		M.cursor=1;
+		M.UnicornHorn=1;
 		M.hideUnicornHorn=function()
 		{
-			M.cursor=0;
+			M.UnicornHorn=0;
 		}
 		M.showUnicornHorn=function()
 		{
-			M.cursor=1;
+			M.UnicornHorn=1;
 		}
 		
 		M.soilTooltip=function(id)
@@ -1358,7 +1358,7 @@ M.launch=function()
 				AddEvent(l('gardenSoil-'+me.id),'mouseout',M.showUnicornHorn);
 			}
 			
-			M.cursorL=l('gardenUnicornHorn');
+			M.UnicornHornL=l('gardenUnicornHorn');
 		}
 		M.buildPlot=function()
 		{
@@ -1595,7 +1595,7 @@ M.launch=function()
 		'#gardenSeeds{}'+
 		'#gardenField{text-align:center;position:absolute;right:0px;top:0px;bottom:0px;overflow-x:auto;overflow:hidden;}'+//width:65%;
 		'#gardenPlot{position:relative;margin:8px auto;}'+
-		'.gardenTile{cursor:pointer;width:'+M.tileSize+'px;height:'+M.tileSize+'px;position:absolute;}'+
+		'.gardenTile{UnicornHorn:pointer;width:'+M.tileSize+'px;height:'+M.tileSize+'px;position:absolute;}'+
 		//'.gardenTile:before{transform:translate(0,0);pointer-events:none;content:\'\';display:block;position:absolute;left:0px;top:0px;right:0px;bottom:0px;margin:6px;border-radius:12px;background:rgba(0,0,0,0.1);box-shadow:0px 0px 4px rgba(255,255,255,0.2),-4px 4px 4px 2px rgba(0,0,0,0.2) inset;}'+
 		//'.gardenTile:hover:before{margin:2px;animation:wobble 0.5s;}'+
 		'.gardenTile:before{transform:translate(0,0);opacity:0.65;transition:opacity 0.2s;pointer-events:none;content:\'\';display:block;position:absolute;left:0px;top:0px;right:0px;bottom:0px;margin:0px;background:url(img/gardenPlots.png);}'+
@@ -1609,7 +1609,7 @@ M.launch=function()
 			'.noFancy .gardenTile:hover .gardenTileIcon{animation:none;}'+
 		'#gardenDrag{pointer-events:none;position:absolute;left:0px;top:0px;right:0px;bottom:0px;overflow:hidden;z-index:1000000001;}'+
 		'#gardenUnicornHorn{transition:transform 0.1s;display:none;pointer-events:none;width:48px;height:48px;position:absolute;background:url(img/gardenPlants.png?v='+Game.version+');}'+
-		'.gardenSeed{cursor:pointer;display:inline-block;width:40px;height:40px;position:relative;}'+
+		'.gardenSeed{UnicornHorn:pointer;display:inline-block;width:40px;height:40px;position:relative;}'+
 		'.gardenSeed.locked{display:none;}'+
 		'.gardenSeedIcon{pointer-events:none;transform:translate(0,0);display:inline-block;position:absolute;left:-4px;top:-4px;width:48px;height:48px;background:url(img/gardenPlants.png?v='+Game.version+');}'+
 			'.gardenSeed:hover .gardenSeedIcon{animation:bounce 0.8s;z-index:1000000001;}'+
@@ -1976,11 +1976,11 @@ M.launch=function()
 	{
 		//run each draw frame
 		
-		if (M.cursorL)
+		if (M.UnicornHornL)
 		{
-			if (!M.cursor || M.seedSelected<0)
+			if (!M.UnicornHorn || M.seedSelected<0)
 			{
-				M.cursorL.style.display='none';
+				M.UnicornHornL.style.display='none';
 			}
 			else
 			{
@@ -1989,9 +1989,9 @@ M.launch=function()
 				var y=Game.mouseY-box.top;
 				var seed=M.plantsById[M.seedSelected];
 				var icon=[0,seed.icon];
-				M.cursorL.style.transform='translate('+(x)+'px,'+(y)+'px)';
-				M.cursorL.style.backgroundPosition=(-icon[0]*48)+'px '+(-icon[1]*48)+'px';
-				M.cursorL.style.display='block';
+				M.UnicornHornL.style.transform='translate('+(x)+'px,'+(y)+'px)';
+				M.UnicornHornL.style.backgroundPosition=(-icon[0]*48)+'px '+(-icon[1]*48)+'px';
+				M.UnicornHornL.style.display='block';
 			}
 		}
 		if (Game.drawT%10==0)

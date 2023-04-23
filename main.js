@@ -749,7 +749,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; Godzamok\'s hunger was made less potent (this is a nerf, very sorry)</div>'+
 	'<div class="listing">&bull; grimoire spell costs and maximum magic work differently</div>'+
 	'<div class="listing">&bull; Spontaneous Edifice has been reworked</div>'+
-	'<div class="listing">&bull; changed unlock levels and prices for some cursor upgrades</div>'+
+	'<div class="listing">&bull; changed unlock levels and prices for some UnicornHorn upgrades</div>'+
 	'<div class="listing">&bull; fixed buggy pantheon slots, hopefully</div>'+
 	'<div class="listing">&bull; fixed "Legacy started a long while ago" showing as "a few seconds ago"</div>'+
 	'<div class="listing">&bull; Cookie Clicker just turned 4. Thank you for sticking with us this long!</div>'+
@@ -923,7 +923,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; there is now a festive new evolving upgrade in store</div>'+
 	'<div class="listing">&bull; reindeer are running amok (catch them if you can!)</div>'+
 	'<div class="listing">&bull; added a new option to warn you when you close the window, so you don\'t lose your un-popped wrinklers</div>'+
-	'<div class="listing">&bull; also added a separate option for displaying cursors</div>'+
+	'<div class="listing">&bull; also added a separate option for displaying UnicornHorns</div>'+
 	'<div class="listing">&bull; all the Halloween features are still there (and having the Spooky cookies achievements makes the Halloween cookies drop much more often)</div>'+
 	'<div class="listing">&bull; oh yeah, we now have <a href="http://www.redbubble.com/people/dashnet" target="_blank">Cookie Clicker shirts, stickers and hoodies</a>! (they\'re really rad)</div>'+
 	
@@ -943,13 +943,13 @@ Game.Launch=function()
 	'<div class="title">15/10/2013 - player-friendly</div>'+
 	'<div class="listing">&bull; heavenly upgrades are now way, way cheaper</div>'+
 	'<div class="listing">&bull; tier 5 building upgrades are 5 times cheaper</div>'+
-	'<div class="listing">&bull; cursors now just plain disappear with Fancy Graphics off, I might add a proper option to toggle only the cursors later</div>'+
+	'<div class="listing">&bull; UnicornHorns now just plain disappear with Fancy Graphics off, I might add a proper option to toggle only the UnicornHorns later</div>'+
 	'<div class="listing">&bull; warning : the Cookie Monster add-on seems to be buggy with this update, you might want to wait until its programmer updates it</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">15/10/2013 - a couple fixes</div>'+
 	'<div class="listing">&bull; golden cookies should no longer spawn embarrassingly often</div>'+
-	'<div class="listing">&bull; cursors now stop moving if Fancy Graphics is turned off</div>'+
+	'<div class="listing">&bull; UnicornHorns now stop moving if Fancy Graphics is turned off</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">14/10/2013 - going for the gold</div>'+
@@ -1010,12 +1010,12 @@ Game.Launch=function()
 	'<div class="title">02/09/2013 - a better way out</div>'+
 	'<div class="listing">&bull; Elder Covenant is even cheaper, and revoking it is cheaper still (also added a new achievement for getting it)</div>'+
 	'<div class="listing">&bull; each grandma upgrade now requires 15 of the matching building</div>'+
-	'<div class="listing">&bull; the dreaded bottom cursor has been fixed with a new cursor display style</div>'+
+	'<div class="listing">&bull; the dreaded bottom UnicornHorn has been fixed with a new UnicornHorn display style</div>'+
 	'<div class="listing">&bull; added an option for faster, cheaper graphics</div>'+
 	'<div class="listing">&bull; base64 encoding has been redone; this might make saving possible again on some older browsers</div>'+
 	'<div class="listing">&bull; shadow achievements now have their own section</div>'+
 	'<div class="listing">&bull; raspberry juice is now named raspberry milk, despite raspberry juice being delicious and going unquestionably well with cookies</div>'+
-	'<div class="listing">&bull; HOTFIX : cursors now click; fancy graphics button renamed; cookies amount now more visible against cursors</div>'+
+	'<div class="listing">&bull; HOTFIX : UnicornHorns now click; fancy graphics button renamed; cookies amount now more visible against UnicornHorns</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">01/09/2013 - sorting things out</div>'+
@@ -1059,7 +1059,7 @@ Game.Launch=function()
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">26/08/2013 - more tweaks</div>'+
-	'<div class="listing">&bull; tweaked a couple cursor upgrades</div>'+
+	'<div class="listing">&bull; tweaked a couple UnicornHorn upgrades</div>'+
 	'<div class="listing">&bull; made time machines less powerful</div>'+
 	'<div class="listing">&bull; added offline mode option</div>'+
 	
@@ -1067,7 +1067,7 @@ Game.Launch=function()
 	'<div class="title">25/08/2013 - tweaks</div>'+
 	'<div class="listing">&bull; rebalanced progression curve (mid- and end-game objects cost more and give more)</div>'+
 	'<div class="listing">&bull; added some more cookie upgrades</div>'+
-	'<div class="listing">&bull; added CpS for cursors</div>'+
+	'<div class="listing">&bull; added CpS for UnicornHorns</div>'+
 	'<div class="listing">&bull; added sell button</div>'+
 	'<div class="listing">&bull; made golden cookie more useful</div>'+
 	
@@ -1160,7 +1160,7 @@ Game.Launch=function()
 		
 		Game.SaveTo='CookieClickerGame';
 		if (Game.beta) Game.SaveTo='CookieClickerGameBeta';
-		l('versionNumber').innerHTML='v. '+Game.version+'<div id="httpsSwitch" style="cursor:pointer;display:inline-block;background:url(img/'+(Game.https?'lockOn':'lockOff')+'.png);width:16px;height:16px;position:relative;top:4px;left:0px;margin:0px -2px;"></div>'+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
+		l('versionNumber').innerHTML='v. '+Game.version+'<div id="httpsSwitch" style="UnicornHorn:pointer;display:inline-block;background:url(img/'+(Game.https?'lockOn':'lockOff')+'.png);width:16px;height:16px;position:relative;top:4px;left:0px;margin:0px -2px;"></div>'+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
 		
 		if (Game.beta) {var me=l('linkVersionBeta');me.parentNode.removeChild(me);}
 		else if (Game.version==1.0466) {var me=l('linkVersionOld');me.parentNode.removeChild(me);}
@@ -1291,7 +1291,7 @@ Game.Launch=function()
 			Game.prefs.milk=1;//display milk
 			Game.prefs.fancy=1;//CSS shadow effects (might be heavy on some browsers)
 			Game.prefs.warn=0;//warn before closing the window
-			Game.prefs.cursors=1;//display cursors
+			Game.prefs.UnicornHorns=1;//display UnicornHorns
 			Game.prefs.focus=1;//make the game refresh less frequently when off-focus
 			Game.prefs.popups=0;//use old-style popups
 			Game.prefs.format=0;//shorten numbers
@@ -1792,7 +1792,7 @@ Game.Launch=function()
 			(Game.prefs.milk?'1':'0')+
 			(Game.prefs.fancy?'1':'0')+
 			(Game.prefs.warn?'1':'0')+
-			(Game.prefs.cursors?'1':'0')+
+			(Game.prefs.UnicornHorns?'1':'0')+
 			(Game.prefs.focus?'1':'0')+
 			(Game.prefs.format?'1':'0')+
 			(Game.prefs.notifs?'1':'0')+
@@ -2082,7 +2082,7 @@ Game.Launch=function()
 						Game.prefs.milk=spl[4]?parseInt(spl[4]):1;
 						Game.prefs.fancy=parseInt(spl[5]);if (Game.prefs.fancy) Game.removeClass('noFancy'); else if (!Game.prefs.fancy) Game.addClass('noFancy');
 						Game.prefs.warn=spl[6]?parseInt(spl[6]):0;
-						Game.prefs.cursors=spl[7]?parseInt(spl[7]):0;
+						Game.prefs.UnicornHorns=spl[7]?parseInt(spl[7]):0;
 						Game.prefs.focus=spl[8]?parseInt(spl[8]):0;
 						Game.prefs.format=spl[9]?parseInt(spl[9]):0;
 						Game.prefs.notifs=spl[10]?parseInt(spl[10]):0;
@@ -5505,7 +5505,7 @@ Game.Launch=function()
 			if (Game.onMenu!='')
 			{
 				str+='<div class="close menuClose" '+Game.clickStr+'="Game.ShowMenu();">x</div>';
-				//str+='<div style="position:absolute;top:8px;right:8px;cursor:pointer;font-size:16px;" '+Game.clickStr+'="Game.ShowMenu();">X</div>';
+				//str+='<div style="position:absolute;top:8px;right:8px;UnicornHorn:pointer;font-size:16px;" '+Game.clickStr+'="Game.ShowMenu();">X</div>';
 			}
 			if (Game.onMenu=='prefs')
 			{
@@ -5514,7 +5514,7 @@ Game.Launch=function()
 				'<div class="title">General</div>'+
 				'<div class="listing"><a class="option" '+Game.clickStr+'="Game.toSave=true;PlaySound(\'snd/tick.mp3\');">Save</a><label>Save manually (the game autosaves every 60 seconds; shortcut : ctrl+S)</label></div>'+
 				'<div class="listing"><a class="option" '+Game.clickStr+'="Game.ExportSave();PlaySound(\'snd/tick.mp3\');">Export save</a><a class="option" '+Game.clickStr+'="Game.ImportSave();PlaySound(\'snd/tick.mp3\');">Import save</a><label>You can use this to backup your save or to transfer it to another computer (shortcut for import : ctrl+O)</label></div>'+
-				'<div class="listing"><a class="option" '+Game.clickStr+'="Game.FileSave();PlaySound(\'snd/tick.mp3\');">Save to file</a><a class="option" style="position:relative;"><input id="FileLoadInput" type="file" style="cursor:pointer;opacity:0;position:absolute;left:0px;top:0px;width:100%;height:100%;" onchange="Game.FileLoad(event);" '+Game.clickStr+'="PlaySound(\'snd/tick.mp3\');"/>Load from file</a><label>Use this to keep backups on your computer</label></div>'+
+				'<div class="listing"><a class="option" '+Game.clickStr+'="Game.FileSave();PlaySound(\'snd/tick.mp3\');">Save to file</a><a class="option" style="position:relative;"><input id="FileLoadInput" type="file" style="UnicornHorn:pointer;opacity:0;position:absolute;left:0px;top:0px;width:100%;height:100%;" onchange="Game.FileLoad(event);" '+Game.clickStr+'="PlaySound(\'snd/tick.mp3\');"/>Load from file</a><label>Use this to keep backups on your computer</label></div>'+
 				
 				'<div class="listing"><a class="option warning" '+Game.clickStr+'="Game.HardReset();PlaySound(\'snd/tick.mp3\');">Wipe save</a><label>Delete all your progress, including your achievements</label></div>'+
 				'<div class="title">Settings</div>'+
@@ -5525,7 +5525,7 @@ Game.Launch=function()
 				Game.WriteButton('particles','particlesButton','Particles ON','Particles OFF')+'<label>(cookies falling down, etc; disabling may improve performance)</label><br>'+
 				Game.WriteButton('numbers','numbersButton','Numbers ON','Numbers OFF')+'<label>(numbers that pop up when clicking the cookie)</label><br>'+
 				Game.WriteButton('milk','milkButton','Milk ON','Milk OFF')+'<label>(only appears with enough achievements)</label><br>'+
-				Game.WriteButton('cursors','cursorsButton','UnicornHorns ON','UnicornHorns OFF')+'<label>(visual display of your cursors)</label><br>'+
+				Game.WriteButton('UnicornHorns','UnicornHornsButton','UnicornHorns ON','UnicornHorns OFF')+'<label>(visual display of your UnicornHorns)</label><br>'+
 				Game.WriteButton('wobbly','wobblyButton','Wobbly cookie ON','Wobbly cookie OFF')+'<label>(your cookie will react when you click it)</label><br>'+
 				Game.WriteButton('cookiesound','cookiesoundButton','Alt cookie sound ON','Alt cookie sound OFF')+'<label>(how your cookie sounds when you click on it)</label><br>'+
 				Game.WriteButton('crates','cratesButton','Icon crates ON','Icon crates OFF')+'<label>(display boxes around upgrades and achievements in stats)</label><br>'+
@@ -5697,7 +5697,7 @@ Game.Launch=function()
 				}
 				var ascensionModeStr='';
 				var icon=Game.ascensionModes[Game.ascensionMode].icon;
-				if (Game.resets>0) ascensionModeStr='<span style="cursor:pointer;" '+Game.getTooltip(
+				if (Game.resets>0) ascensionModeStr='<span style="UnicornHorn:pointer;" '+Game.getTooltip(
 							'<div style="min-width:200px;text-align:center;font-size:11px;">'+Game.ascensionModes[Game.ascensionMode].desc+'</div>'
 							,'top')+'><div class="icon" style="display:inline-block;float:none;transform:scale(0.5);margin:-24px -16px -19px -8px;'+(icon[2]?'background-image:url('+icon[2]+');':'')+'background-position:'+(-icon[0]*48)+'px '+(-icon[1]*48)+'px;"></div>'+Game.ascensionModes[Game.ascensionMode].name+'</span>';
 				
@@ -7369,7 +7369,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('UnicornHorn','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 5 seconds.',0,0,{},15,function(me){
+		new Game.Object('UnicornHorn','UnicornHorn|UnicornHorns|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 5 seconds.',0,0,{},15,function(me){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		0.1;
 			if (Game.Has('Million fingers')) add+=		0.5;
@@ -7386,7 +7386,7 @@ Game.Launch=function()
 			add=add*num;
 			mult*=Game.GetTieredCpsMult(me);
 			mult*=Game.magicCpS('UnicornHorn');
-			mult*=Game.eff('cursorCps');
+			mult*=Game.eff('UnicornHornCps');
 			return Game.ComputeCps(0.2,Game.Has('Reinforced pinkie finger')+Game.Has('Bare Knuckles cream')+Game.Has('Ambidextrous'),add)*mult;
 		},function(){
 			if (this.amount>=1) Game.Unlock(['Reinforced pinkie finger','Bare Knuckles cream']);
@@ -8211,13 +8211,13 @@ Game.Launch=function()
 		//define upgrades
 		//WARNING : do NOT add new upgrades in between, this breaks the saves. Add them at the end !
 		var order=100;//this is used to set the order in which the items are listed
-		new Game.Upgrade('Reinforced pinkie finger','The mouse and cursors are <b>twice</b> as efficient.<q>prod prod</q>',100,[0,0]);Game.MakeTiered(Game.last,1,0);
-		new Game.Upgrade('Bare Knuckles cream','The mouse and cursors are <b>twice</b> as efficient.<q>it... it hurts to click...</q>',500,[0,1]);Game.MakeTiered(Game.last,2,0);
-		new Game.Upgrade('Ambidextrous','The mouse and cursors are <b>twice</b> as efficient.<q>Look ma, both hands!</q>',10000,[0,2]);Game.MakeTiered(Game.last,3,0);
-		new Game.Upgrade('Thousand fingers','The mouse and cursors gain <b>+0.1</b> cookies for each non-cursor object owned.<q>clickity</q>',100000,[0,13]);Game.MakeTiered(Game.last,4,0);
-		new Game.Upgrade('Million fingers','The mouse and cursors gain <b>+0.5</b> cookies for each non-cursor object owned.<q>clickityclickity</q>',10000000,[0,14]);Game.MakeTiered(Game.last,5,0);
-		new Game.Upgrade('Billion fingers','The mouse and cursors gain <b>+5</b> cookies for each non-cursor object owned.<q>clickityclickityclickity</q>',100000000,[0,15]);Game.MakeTiered(Game.last,6,0);
-		new Game.Upgrade('Trillion fingers','The mouse and cursors gain <b>+50</b> cookies for each non-cursor object owned.<q>clickityclickityclickityclickity</q>',1000000000,[0,16]);Game.MakeTiered(Game.last,7,0);
+		new Game.Upgrade('Reinforced pinkie finger','The mouse and UnicornHorns are <b>twice</b> as efficient.<q>prod prod</q>',100,[0,0]);Game.MakeTiered(Game.last,1,0);
+		new Game.Upgrade('Bare Knuckles cream','The mouse and UnicornHorns are <b>twice</b> as efficient.<q>it... it hurts to click...</q>',500,[0,1]);Game.MakeTiered(Game.last,2,0);
+		new Game.Upgrade('Ambidextrous','The mouse and UnicornHorns are <b>twice</b> as efficient.<q>Look ma, both hands!</q>',10000,[0,2]);Game.MakeTiered(Game.last,3,0);
+		new Game.Upgrade('Thousand fingers','The mouse and UnicornHorns gain <b>+0.1</b> cookies for each non-UnicornHorn object owned.<q>clickity</q>',100000,[0,13]);Game.MakeTiered(Game.last,4,0);
+		new Game.Upgrade('Million fingers','The mouse and UnicornHorns gain <b>+0.5</b> cookies for each non-UnicornHorn object owned.<q>clickityclickity</q>',10000000,[0,14]);Game.MakeTiered(Game.last,5,0);
+		new Game.Upgrade('Billion fingers','The mouse and UnicornHorns gain <b>+5</b> cookies for each non-UnicornHorn object owned.<q>clickityclickityclickity</q>',100000000,[0,15]);Game.MakeTiered(Game.last,6,0);
+		new Game.Upgrade('Trillion fingers','The mouse and UnicornHorns gain <b>+50</b> cookies for each non-UnicornHorn object owned.<q>clickityclickityclickityclickity</q>',1000000000,[0,16]);Game.MakeTiered(Game.last,7,0);
 		
 		order=200;
 		new Game.TieredUpgrade('Forwards from grandma','Grandmas are <b>twice</b> as efficient.<q>RE:RE:thought you\'d get a kick out of this ;))</q>','Grandma',1);
@@ -8277,7 +8277,7 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'All-chocolate cookies',desc:'CHOCOVERDOSE.',icon:[9,3],power:												2,	price:	9999999999*5});
 		
 		order=100;
-		new Game.Upgrade('Quadrillion fingers','The mouse and cursors gain <b>+500</b> cookies for each non-cursor object owned.<q>clickityclickityclickityclickityclick</q>',10000000000,[0,17]);Game.MakeTiered(Game.last,8,0);
+		new Game.Upgrade('Quadrillion fingers','The mouse and UnicornHorns gain <b>+500</b> cookies for each non-UnicornHorn object owned.<q>clickityclickityclickityclickityclick</q>',10000000000,[0,17]);Game.MakeTiered(Game.last,8,0);
 		
 		order=200;new Game.TieredUpgrade('Prune juice','Grandmas are <b>twice</b> as efficient.<q>Gets me going.</q>','Grandma',4);
 		order=300;new Game.TieredUpgrade('Genetically-modified cookies','Farms are <b>twice</b> as efficient.<q>All-natural mutations.</q>','Farm',4);
@@ -8388,7 +8388,7 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'Zebra cookies',desc:'...',icon:[1,4],power:									2,	price:	999999999999});
 		
 		order=100;
-		new Game.Upgrade('Quintillion fingers','The mouse and cursors gain <b>+5000</b> cookies for each non-cursor object owned.<q>man, just go click click click click click, it\'s real easy, man.</q>',10000000000000,[0,18]);Game.MakeTiered(Game.last,9,0);
+		new Game.Upgrade('Quintillion fingers','The mouse and UnicornHorns gain <b>+5000</b> cookies for each non-UnicornHorn object owned.<q>man, just go click click click click click, it\'s real easy, man.</q>',10000000000000,[0,18]);Game.MakeTiered(Game.last,9,0);
 		
 		order=40000;
 		new Game.Upgrade('Gold hoard','Golden cookies appear <b>really often</b>.<q>That\'s entirely too many.</q>',7,[10,14]);//debug purposes only
@@ -8458,7 +8458,7 @@ Game.Launch=function()
 		
 		
 		order=100;
-		new Game.Upgrade('Sextillion fingers','The mouse and cursors gain <b>+50000</b> cookies for each non-cursor object owned.<q>sometimes<br>things just<br>click</q>',10000000000000000,[0,19]);Game.MakeTiered(Game.last,10,0);
+		new Game.Upgrade('Sextillion fingers','The mouse and UnicornHorns gain <b>+50000</b> cookies for each non-UnicornHorn object owned.<q>sometimes<br>things just<br>click</q>',10000000000000000,[0,19]);Game.MakeTiered(Game.last,10,0);
 		
 		order=200;new Game.TieredUpgrade('Double-thick glasses','Grandmas are <b>twice</b> as efficient.<q>Oh... so THAT\'s what I\'ve been baking.</q>','Grandma',5);
 		order=300;new Game.TieredUpgrade('Gingerbread scarecrows','Farms are <b>twice</b> as efficient.<q>Staring at your crops with mischievous glee.</q>','Farm',5);
@@ -8630,8 +8630,8 @@ Game.Launch=function()
 		new Game.Upgrade('Kitten managers','You gain <b>more CpS</b> the more milk you have.<q>that\'s not gonna paws any problem, sir</q>',900000000000000000000,Game.GetIcon('Kitten',5));Game.last.kitten=1;Game.MakeTiered(Game.last,5,18);
 		
 		order=100;
-		new Game.Upgrade('Septillion fingers','The mouse and cursors gain <b>+500000</b> cookies for each non-cursor object owned.<q>[cursory flavor text]</q>',10000000000000000000,[12,20]);Game.MakeTiered(Game.last,11,0);
-		new Game.Upgrade('Octillion fingers','The mouse and cursors gain <b>+5000000</b> cookies for each non-cursor object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,19]);Game.MakeTiered(Game.last,12,0);
+		new Game.Upgrade('Septillion fingers','The mouse and UnicornHorns gain <b>+500000</b> cookies for each non-UnicornHorn object owned.<q>[UnicornHorny flavor text]</q>',10000000000000000000,[12,20]);Game.MakeTiered(Game.last,11,0);
+		new Game.Upgrade('Octillion fingers','The mouse and UnicornHorns gain <b>+5000000</b> cookies for each non-UnicornHorn object owned.<q>Turns out you <b>can</b> quite put your finger on it.</q>',10000000000000000000000,[12,19]);Game.MakeTiered(Game.last,12,0);
 		
 		order=150;new Game.Upgrade('Eludium mouse','Clicking gains <b>+1% of your CpS</b>.<q>I rodent do that if I were you.</q>',500000000000000,[11,15]);Game.MakeTiered(Game.last,6,11);
 		new Game.Upgrade('Wishalloy mouse','Clicking gains <b>+1% of your CpS</b>.<q>Clicking is fine and dandy, but don\'t smash your mouse over it. Get your game on. Go play.</q>',50000000000000000,[11,16]);Game.MakeTiered(Game.last,7,11);
@@ -8900,7 +8900,7 @@ Game.Launch=function()
 		new Game.Upgrade('Divine sales','Upgrades are <b>1% cheaper</b>.<q>Everything must go!</q>',99999,[18,7]);Game.last.pool='prestige';Game.last.parents=['Decisive fate'];
 		new Game.Upgrade('Divine bakeries','Cookie upgrades are <b>5 times cheaper</b>.<q>They sure know what they\'re doing.</q>',399999,[17,7]);Game.last.pool='prestige';Game.last.parents=['Divine sales','Divine discount'];
 		
-		new Game.Upgrade('Starter kit','You start with <b>10 cursors</b>.<q>This can come in handy.</q>',50,[0,14]);Game.last.pool='prestige';Game.last.parents=['Tin of british tea biscuits','Box of macarons','Box of brand biscuits','Tin of butter cookies'];
+		new Game.Upgrade('Starter kit','You start with <b>10 UnicornHorns</b>.<q>This can come in handy.</q>',50,[0,14]);Game.last.pool='prestige';Game.last.parents=['Tin of british tea biscuits','Box of macarons','Box of brand biscuits','Tin of butter cookies'];
 		new Game.Upgrade('Starter kitchen','You start with <b>5 grandmas</b>.<q>Where did these come from?</q>',5000,[1,14]);Game.last.pool='prestige';Game.last.parents=['Starter kit'];
 		new Game.Upgrade('Halo gloves','Clicks are <b>10% more powerful</b>.<q>Smite that cookie.</q>',55555,[22,7]);Game.last.pool='prestige';Game.last.parents=['Starter kit'];
 
@@ -9152,7 +9152,7 @@ Game.Launch=function()
 		new Game.Upgrade('Nevercrack mouse','Clicking gains <b>+1% of your CpS</b>.<q>How much beefier can you make a mouse until it\'s considered a rat?</q>',500000000000000000000,[11,18]);Game.MakeTiered(Game.last,9,11);
 		
 		
-		new Game.Upgrade('Five-finger discount','All upgrades are <b>1% cheaper per 100 cursors</b>.<q>Stick it to the man.</q>',555555,[28,7],function(){Game.upgradesToRebuild=1;});Game.last.pool='prestige';Game.last.parents=['Halo gloves','Abaddon'];
+		new Game.Upgrade('Five-finger discount','All upgrades are <b>1% cheaper per 100 UnicornHorns</b>.<q>Stick it to the man.</q>',555555,[28,7],function(){Game.upgradesToRebuild=1;});Game.last.pool='prestige';Game.last.parents=['Halo gloves','Abaddon'];
 		
 		
 		order=5000;
@@ -10105,11 +10105,11 @@ Game.Launch=function()
 		new Game.Achievement('Clickorama','Make <b>1,000,000,000</b> cookies from clicking.',[11,13]);
 		
 		order=1050;
-		new Game.Achievement('Click','Have <b>1</b> cursor.',[0,0]);
-		new Game.Achievement('Double-click','Have <b>2</b> cursors.',[0,6]);
-		new Game.Achievement('Mouse wheel','Have <b>50</b> cursors.',[1,6]);
-		new Game.Achievement('Of Mice and Men','Have <b>100</b> cursors.',[0,1]);
-		new Game.Achievement('The Digital','Have <b>200</b> cursors.',[0,2]);
+		new Game.Achievement('Click','Have <b>1</b> UnicornHorn.',[0,0]);
+		new Game.Achievement('Double-click','Have <b>2</b> UnicornHorns.',[0,6]);
+		new Game.Achievement('Mouse wheel','Have <b>50</b> UnicornHorns.',[1,6]);
+		new Game.Achievement('Of Mice and Men','Have <b>100</b> UnicornHorns.',[0,1]);
+		new Game.Achievement('The Digital','Have <b>200</b> UnicornHorns.',[0,2]);
 		
 		order=1100;
 		new Game.Achievement('Just wrong','Sell a grandma.<q>I thought you loved me.</q>',[10,9]);
@@ -10329,8 +10329,8 @@ Game.Launch=function()
 		new Game.Achievement('Clicknarok','Make <b>1,000,000,000,000,000</b> cookies from clicking.',[11,16]);
 		
 		order=1050;
-		new Game.Achievement('Extreme polydactyly','Have <b>300</b> cursors.',[0,13]);
-		new Game.Achievement('Dr. T','Have <b>400</b> cursors.',[0,14]);
+		new Game.Achievement('Extreme polydactyly','Have <b>300</b> UnicornHorns.',[0,13]);
+		new Game.Achievement('Dr. T','Have <b>400</b> UnicornHorns.',[0,14]);
 		
 		order=1100;Game.TieredAchievement('The old never bothered me anyway','Have <b>250</b> grandmas.','Grandma',6);
 		order=1200;Game.TieredAchievement('Homegrown','Have <b>200</b> farms.','Farm',5);
@@ -10487,13 +10487,13 @@ Game.Launch=function()
 		new Game.Achievement('Clickataclysm','Make <b>10,000,000,000,000,000,000</b> cookies from clicking.',[11,18]);
 		
 		order=1050;
-		new Game.Achievement('Thumbs, phalanges, metacarpals','Have <b>500</b> cursors.<q>& KNUCKLES</q>',[0,15]);
+		new Game.Achievement('Thumbs, phalanges, metacarpals','Have <b>500</b> UnicornHorns.<q>& KNUCKLES</q>',[0,15]);
 		
 		order=6000;
 		new Game.Achievement('Polymath','Own <b>300</b> upgrades and <b>3000</b> buildings.<q>Excellence doesn\'t happen overnight - it usually takes a good couple days.</q>',[29,7]);
 		
 		order=6005;
-		new Game.Achievement('The elder scrolls','Own a combined <b>777</b> grandmas and cursors.<q>Let me guess. Someone stole your cookie.</q>',[10,9]);
+		new Game.Achievement('The elder scrolls','Own a combined <b>777</b> grandmas and UnicornHorns.<q>Let me guess. Someone stole your cookie.</q>',[10,9]);
 		
 		order=30050;
 		new Game.Achievement('To crumbs, you say?','Ascend with <b>1 decillion</b> cookies baked.<q>Very well then.</q>',[29,6]);
@@ -10587,7 +10587,7 @@ Game.Launch=function()
 		Game.ProductionAchievement('Now the dark days are gone','Prism',3);
 		
 		order=1070;
-		new Game.Achievement('Freaky jazz hands','Reach level <b>10</b> cursors.',[0,26]);Game.Objects['UnicornHorn'].levelAchiev10=Game.last;
+		new Game.Achievement('Freaky jazz hands','Reach level <b>10</b> UnicornHorns.',[0,26]);Game.Objects['UnicornHorn'].levelAchiev10=Game.last;
 		order=1120;
 		new Game.Achievement('Methuselah','Reach level <b>10</b> grandmas.',[1,26]);Game.Objects['Grandma'].levelAchiev10=Game.last;
 		order=1220;
@@ -10733,7 +10733,7 @@ Game.Launch=function()
 		
 		
 		order=1050;
-		new Game.Achievement('With her finger and her thumb','Have <b>600</b> cursors.',[0,16]);
+		new Game.Achievement('With her finger and her thumb','Have <b>600</b> UnicornHorns.',[0,16]);
 		
 		order=1100;Game.TieredAchievement('But wait \'til you get older','Have <b>550</b> grandmas.','Grandma',12);
 		order=1200;Game.TieredAchievement('Sharpest tool in the shed','Have <b>500</b> farms.','Farm',11);
@@ -11739,7 +11739,7 @@ Game.Launch=function()
 			{name:'Krumblor, cookie hatchling',action:'Train Dragon UnicornHorn<br><small>Aura : clicking is 5% more effective</small>',pic:4,
 				cost:function(){return Game.Objects['UnicornHorn'].amount>=100;},
 				buy:function(){Game.Objects['UnicornHorn'].sacrifice(100);},
-				costStr:function(){return '100 cursors';}},
+				costStr:function(){return '100 UnicornHorns';}},
 			{name:'Krumblor, cookie hatchling',action:'Train Elder Battalion<br><small>Aura : grandmas gain +1% CpS for every non-grandma building</small>',pic:4,
 				cost:function(){return Game.Objects['Grandma'].amount>=100;},
 				buy:function(){Game.Objects['Grandma'].sacrifice(100);},
@@ -12445,12 +12445,12 @@ Game.Launch=function()
 						ctx.drawImage(Pic('perfectCookie.png'),x,y,s,s);
 					}
 					
-					//cursors
-					if (Game.prefs.cursors)
+					//UnicornHorns
+					if (Game.prefs.UnicornHorns)
 					{
 						ctx.save();
 						ctx.translate(Game.cookieOriginX,Game.cookieOriginY);
-						var pic=Pic('cursor.png');
+						var pic=Pic('UnicornHorn.png');
 						var fancy=Game.prefs.fancy;
 						
 						if (showDragon) ctx.globalAlpha=0.25;
@@ -12486,7 +12486,7 @@ Game.Launch=function()
 							}*/
 						}
 						ctx.restore();
-						Timer.track('cursors');
+						Timer.track('UnicornHorns');
 					}
 				}
 				else
@@ -12651,7 +12651,7 @@ Game.Launch=function()
 								this.dragged=false;
 								this.l=document.createElement('div');
 								this.l.innerHTML=this.id;
-								this.l.style.cssText='cursor:pointer;border-radius:'+(this.s/2)+'px;opacity:0;width:'+this.s+'px;height:'+this.s+'px;background:#999;position:absolute;left:0px;top:0px;z-index:10000000;transform:translate(-1000px,-1000px);';
+								this.l.style.cssText='UnicornHorn:pointer;border-radius:'+(this.s/2)+'px;opacity:0;width:'+this.s+'px;height:'+this.s+'px;background:#999;position:absolute;left:0px;top:0px;z-index:10000000;transform:translate(-1000px,-1000px);';
 								l('sectionLeft').appendChild(this.l);
 								AddEvent(this.l,'mousedown',function(what){return function(){what.dragged=true;};}(this));
 								AddEvent(this.l,'mouseup',function(what){return function(){what.dragged=false;};}(this));
@@ -13053,8 +13053,8 @@ Game.Launch=function()
 			}
 			Game.particlesUpdate();
 			
-			if (Game.mousePointer) l('sectionLeft').style.cursor='pointer';
-			else l('sectionLeft').style.cursor='auto';
+			if (Game.mousePointer) l('sectionLeft').style.UnicornHorn='pointer';
+			else l('sectionLeft').style.UnicornHorn='auto';
 			Game.mousePointer=0;
 			
 			//handle milk and milk accessories

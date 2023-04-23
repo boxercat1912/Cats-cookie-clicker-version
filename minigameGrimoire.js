@@ -377,7 +377,7 @@ M.launch=function()
 		'#grimoireSpells{text-align:center;width:100%;padding:8px;box-sizing:border-box;}'+
 		'.grimoireIcon{pointer-events:none;margin:2px 6px 0px 6px;width:48px;height:48px;opacity:0.8;position:relative;}'+
 		'.grimoirePrice{pointer-events:none;}'+
-		'.grimoireSpell{box-shadow:4px 4px 4px #000;cursor:pointer;position:relative;color:#f33;opacity:0.8;text-shadow:0px 0px 4px #000,0px 0px 6px #000;font-weight:bold;font-size:12px;display:inline-block;width:60px;height:74px;background:url(img/spellBG.png);}'+
+		'.grimoireSpell{box-shadow:4px 4px 4px #000;UnicornHorn:pointer;position:relative;color:#f33;opacity:0.8;text-shadow:0px 0px 4px #000,0px 0px 6px #000;font-weight:bold;font-size:12px;display:inline-block;width:60px;height:74px;background:url(img/spellBG.png);}'+
 		'.grimoireSpell.ready{color:rgba(255,255,255,0.8);opacity:1;}'+
 		'.grimoireSpell.ready:hover{color:#fff;}'+
 		'.grimoireSpell:hover{box-shadow:6px 6px 6px 2px #000;z-index:1000000001;top:-1px;}'+
@@ -391,7 +391,7 @@ M.launch=function()
 		'.grimoireSpell:hover .grimoireIcon{top:-1px;}'+
 		'.grimoireSpell.ready:hover .grimoireIcon{animation-name:bounce;animation-iteration-count:infinite;animation-duration:0.8s;}'+
 		
-		'#grimoireLumpRefill{cursor:pointer;width:48px;height:48px;position:absolute;left:-40px;top:-17px;transform:scale(0.5);z-index:1000;transition:transform 0.05s;}'+
+		'#grimoireLumpRefill{UnicornHorn:pointer;width:48px;height:48px;position:absolute;left:-40px;top:-17px;transform:scale(0.5);z-index:1000;transition:transform 0.05s;}'+
 		'#grimoireLumpRefill:hover{transform:scale(1);}'+
 		'#grimoireLumpRefill:active{transform:scale(0.4);}'+
 		
