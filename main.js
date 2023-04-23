@@ -4906,7 +4906,7 @@ Game.Launch=function()
 			'Bank':['Juicy profits','Recession'],
 			'Temple':['Fervent adoration','Crisis of faith'],
 			'Wizard tower':['Manabloom','Magivores'],
-			'Shipment':['Delicious lifeforms','Black holes'],
+			'spaceship':['Delicious lifeforms','Black holes'],
 			'Alchemy lab':['Breakthrough','Lab disaster'],
 			'Portal':['Righteous cataclysm','Dimensional calamity'],
 			'Time machine':['Golden ages','Time jam'],
@@ -5939,7 +5939,7 @@ Game.Launch=function()
 					'News : "Any sufficiently crude magic is indistinguishable from technology", claims renowned technowizard.'
 					]));
 					
-					if (Game.Objects['Shipment'].amount>0) list.push(choose([
+					if (Game.Objects['spaceship'].amount>0) list.push(choose([
 					'News : new chocolate planet found, becomes target of cookie-trading spaceships!',
 					'News : massive chocolate planet found with 99.8% certified pure dark chocolate core!',
 					'News : space tourism booming as distant planets attract more bored millionaires!',
@@ -6300,7 +6300,7 @@ Game.Launch=function()
 					'Your chefs are working on new secret recipes!'
 					]));
 					
-					if (Game.Objects['Shipment'].amount>0) list.push(choose([
+					if (Game.Objects['spaceship'].amount>0) list.push(choose([
 					'Your supermarkets are bustling with happy, hungry customers.',
 					'Your supermarkets are full of cookie merch!'
 					]));
@@ -7542,7 +7542,7 @@ Game.Launch=function()
 		Game.last.minigameUrl='minigameGrimoire.js';
 		Game.last.minigameName='Grimoire';
 		
-		new Game.Object('Shipment','shipment|shipments|shipped|[X] galaxy fully explored|[X] galaxies fully explored','Brings in fresh cookies from the cookie planet.',9,5,{base:'shipment',xV:16,yV:16,w:64,rows:1,x:0,y:0},40000,function(me){
+		new Game.Object('spaceship','spaceship|spaceships|shipped|[X] galaxy fully explored|[X] galaxies fully explored','Brings in fresh cookies from the cookie planet.',9,5,{base:'spaceship',xV:16,yV:16,w:64,rows:1,x:0,y:0},40000,function(me){
 			var mult=1;
 			mult*=Game.GetTieredCpsMult(me);
 			mult*=Game.magicCpS(me.name);
@@ -7645,7 +7645,7 @@ Game.Launch=function()
 			'Bank':{name:'Investor',desc:'Business folks with a nose for profit, ready to finance your venture as long as there\'s money to be made.',icon:5},
 			'Temple':{name:'Like',desc:'Your social media page is going viral! Amassing likes is the key to a lasting online presence and juicy advertising deals.',icon:9},
 			'Wizard tower':{name:'Meme',desc:'Cookie memes are all the rage! With just the right amount of social media astroturfing, your brand image will be all over the cyberspace.',icon:6},
-			'Shipment':{name:'Supermarket',desc:'A gigantic cookie emporium - your very own retail chain.',icon:7},
+			'spaceship':{name:'Supermarket',desc:'A gigantic cookie emporium - your very own retail chain.',icon:7},
 			'Alchemy lab':{name:'Stock share',desc:'You\'re officially on the stock market, and everyone wants a piece!',icon:8},
 			'Portal':{name:'TV show',desc:'Your cookies have their own sitcom! Hilarious baking hijinks set to the cheesiest laughtrack.',icon:10},
 			'Time machine':{name:'Theme park',desc:'Cookie theme parks, full of mascots and roller-coasters. Build one, build a hundred!',icon:11},
@@ -8240,9 +8240,9 @@ Game.Launch=function()
 		new Game.TieredUpgrade('Ultradrill','Mines are <b>twice</b> as efficient.<q>Finally caved in?</q>','Mine',3);
 		
 		order=600;
-		new Game.TieredUpgrade('Vanilla nebulae','Shipments are <b>twice</b> as efficient.<q>If you removed your space helmet, you could probably smell it!<br>(Note : don\'t do that.)</q>','Shipment',1);
-		new Game.TieredUpgrade('Wormholes','Shipments are <b>twice</b> as efficient.<q>By using these as shortcuts, your ships can travel much faster.</q>','Shipment',2);
-		new Game.TieredUpgrade('Frequent flyer','Shipments are <b>twice</b> as efficient.<q>Come back soon!</q>','Shipment',3);
+		new Game.TieredUpgrade('Vanilla nebulae','spaceships are <b>twice</b> as efficient.<q>If you removed your space helmet, you could probably smell it!<br>(Note : don\'t do that.)</q>','spaceship',1);
+		new Game.TieredUpgrade('Wormholes','spaceships are <b>twice</b> as efficient.<q>By using these as shortcuts, your ships can travel much faster.</q>','spaceship',2);
+		new Game.TieredUpgrade('Frequent flyer','spaceships are <b>twice</b> as efficient.<q>Come back soon!</q>','spaceship',3);
 		
 		order=700;
 		new Game.TieredUpgrade('Antimony','Alchemy labs are <b>twice</b> as efficient.<q>Actually worth a lot of mony.</q>','Alchemy lab',1);
@@ -8283,7 +8283,7 @@ Game.Launch=function()
 		order=300;new Game.TieredUpgrade('Genetically-modified cookies','Farms are <b>twice</b> as efficient.<q>All-natural mutations.</q>','Farm',4);
 		order=500;new Game.TieredUpgrade('Radium reactors','Factories are <b>twice</b> as efficient.<q>Gives your cookies a healthy glow.</q>','Factory',4);
 		order=400;new Game.TieredUpgrade('Ultimadrill','Mines are <b>twice</b> as efficient.<q>Pierce the heavens, etc.</q>','Mine',4);
-		order=600;new Game.TieredUpgrade('Warp drive','Shipments are <b>twice</b> as efficient.<q>To boldly bake.</q>','Shipment',4);
+		order=600;new Game.TieredUpgrade('Warp drive','spaceships are <b>twice</b> as efficient.<q>To boldly bake.</q>','spaceship',4);
 		order=700;new Game.TieredUpgrade('Ambrosia','Alchemy labs are <b>twice</b> as efficient.<q>Adding this to the cookie mix is sure to make them even more addictive!<br>Perhaps dangerously so.<br>Let\'s hope you can keep selling these legally.</q>','Alchemy lab',4);
 		order=800;new Game.TieredUpgrade('Sanity dance','Portals are <b>twice</b> as efficient.<q>We can change if we want to.<br>We can leave our brains behind.</q>','Portal',4);
 		order=900;new Game.TieredUpgrade('Causality enforcer','Time machines are <b>twice</b> as efficient.<q>What happened, happened.</q>','Time machine',4);
@@ -8319,7 +8319,7 @@ Game.Launch=function()
 		Game.GrandmaSynergy('Farmer grandmas','A nice farmer to grow more cookies.','Farm');
 		Game.GrandmaSynergy('Miner grandmas','A nice miner to dig more cookies.','Mine');
 		Game.GrandmaSynergy('Worker grandmas','A nice worker to manufacture more cookies.','Factory');
-		Game.GrandmaSynergy('Cosmic grandmas','A nice thing to... uh... cookies.','Shipment');
+		Game.GrandmaSynergy('Cosmic grandmas','A nice thing to... uh... cookies.','spaceship');
 		Game.GrandmaSynergy('Transmuted grandmas','A nice golden grandma to convert into more cookies.','Alchemy lab');
 		Game.GrandmaSynergy('Altered grandmas','a NiCe GrAnDmA tO bA##########','Portal');
 		Game.GrandmaSynergy('Grandmas\' grandmas','A nice grandma\'s nice grandma to bake double the cookies.','Time machine');
@@ -8464,7 +8464,7 @@ Game.Launch=function()
 		order=300;new Game.TieredUpgrade('Gingerbread scarecrows','Farms are <b>twice</b> as efficient.<q>Staring at your crops with mischievous glee.</q>','Farm',5);
 		order=500;new Game.TieredUpgrade('Recombobulators','Factories are <b>twice</b> as efficient.<q>A major part of cookie recombobulation.</q>','Factory',5);
 		order=400;new Game.TieredUpgrade('H-bomb mining','Mines are <b>twice</b> as efficient.<q>Questionable efficiency, but spectacular nonetheless.</q>','Mine',5);
-		order=600;new Game.TieredUpgrade('Chocolate monoliths','Shipments are <b>twice</b> as efficient.<q>My god. It\'s full of chocolate bars.</q>','Shipment',5);
+		order=600;new Game.TieredUpgrade('Chocolate monoliths','spaceships are <b>twice</b> as efficient.<q>My god. It\'s full of chocolate bars.</q>','spaceship',5);
 		order=700;new Game.TieredUpgrade('Aqua crustulae','Alchemy labs are <b>twice</b> as efficient.<q>Careful with the dosing - one drop too much and you get muffins.<br>And nobody likes muffins.</q>','Alchemy lab',5);
 		order=800;new Game.TieredUpgrade('Brane transplant','Portals are <b>twice</b> as efficient.<q>This refers to the practice of merging higher dimensional universes, or "branes", with our own, in order to facilitate transit (and harvesting of precious cookie dough).</q>','Portal',5);
 		order=900;new Game.TieredUpgrade('Yestermorrow comparators','Time machines are <b>twice</b> as efficient.<q>Fortnights into milleniums.</q>','Time machine',5);
@@ -8639,7 +8639,7 @@ Game.Launch=function()
 		order=300;new Game.TieredUpgrade('Pulsar sprinklers','Farms are <b>twice</b> as efficient.<q>There\'s no such thing as over-watering. The moistest is the bestest.</q>','Farm',6);
 		order=500;new Game.TieredUpgrade('Deep-bake process','Factories are <b>twice</b> as efficient.<q>A patented process increasing cookie yield two-fold for the same amount of ingredients. Don\'t ask how, don\'t take pictures, and be sure to wear your protective suit.</q>','Factory',6);
 		order=400;new Game.TieredUpgrade('Coreforge','Mines are <b>twice</b> as efficient.<q>You\'ve finally dug a tunnel down to the Earth\'s core. It\'s pretty warm down here.</q>','Mine',6);
-		order=600;new Game.TieredUpgrade('Generation ship','Shipments are <b>twice</b> as efficient.<q>Built to last, this humongous spacecraft will surely deliver your cookies to the deep ends of space, one day.</q>','Shipment',6);
+		order=600;new Game.TieredUpgrade('Generation ship','spaceships are <b>twice</b> as efficient.<q>Built to last, this humongous spacecraft will surely deliver your cookies to the deep ends of space, one day.</q>','spaceship',6);
 		order=700;new Game.TieredUpgrade('Origin crucible','Alchemy labs are <b>twice</b> as efficient.<q>Built from the rarest of earths and located at the very deepest of the largest mountain, this legendary crucible is said to retain properties from the big-bang itself.</q>','Alchemy lab',6);
 		order=800;new Game.TieredUpgrade('Deity-sized portals','Portals are <b>twice</b> as efficient.<q>It\'s almost like, say, an elder god could fit through this thing now. Hypothetically.</q>','Portal',6);
 		order=900;new Game.TieredUpgrade('Far future enactment','Time machines are <b>twice</b> as efficient.<q>The far future enactment authorizes you to delve deep into the future - where civilization has fallen and risen again, and cookies are plentiful.</q>','Time machine',6);
@@ -8917,7 +8917,7 @@ Game.Launch=function()
 		order=525;new Game.TieredUpgrade('Way of the wallet','Banks are <b>twice</b> as efficient.<q>This new monetary school of thought is all the rage on the banking scene; follow its precepts and you may just profit from it.</q>','Bank',7);
 		order=550;new Game.TieredUpgrade('Creation myth','Temples are <b>twice</b> as efficient.<q>Stories have been circulating about the origins of the very first cookie that was ever baked; tales of how it all began, in the Dough beyond time and the Ovens of destiny.</q>','Temple',7);
 		order=575;new Game.TieredUpgrade('Cookiemancy','Wizard towers are <b>twice</b> as efficient.<q>There it is; the perfected school of baking magic. From summoning chips to hexing nuts, there is not a single part of cookie-making that hasn\'t been improved tenfold by magic tricks.</q>','Wizard tower',7);
-		order=600;new Game.TieredUpgrade('Dyson sphere','Shipments are <b>twice</b> as efficient.<q>You\'ve found a way to apply your knowledge of cosmic technology to slightly more local endeavors; this gigantic sphere of meta-materials, wrapping the solar system, is sure to kick your baking abilities up a notch.</q>','Shipment',7);
+		order=600;new Game.TieredUpgrade('Dyson sphere','spaceships are <b>twice</b> as efficient.<q>You\'ve found a way to apply your knowledge of cosmic technology to slightly more local endeavors; this gigantic sphere of meta-materials, wrapping the solar system, is sure to kick your baking abilities up a notch.</q>','spaceship',7);
 		order=700;new Game.TieredUpgrade('Theory of atomic fluidity','Alchemy labs are <b>twice</b> as efficient.<q>Pushing alchemy to its most extreme limits, you find that everything is transmutable into anything else - lead to gold, mercury to water; more importantly, you realize that anything can -and should- be converted to cookies.</q>','Alchemy lab',7);
 		order=800;new Game.TieredUpgrade('End of times back-up plan','Portals are <b>twice</b> as efficient.<q>Just in case, alright?</q>','Portal',7);
 		order=900;new Game.TieredUpgrade('Great loop hypothesis','Time machines are <b>twice</b> as efficient.<q>What if our universe is just one instance of an infinite cycle? What if, before and after it, stretched infinite amounts of the same universe, themselves containing infinite amounts of cookies?</q>','Time machine',7);
@@ -8933,7 +8933,7 @@ Game.Launch=function()
 		order=525;new Game.TieredUpgrade('The stuff rationale','Banks are <b>twice</b> as efficient.<q>If not now, when? If not it, what? If not things... stuff?</q>','Bank',8);
 		order=550;new Game.TieredUpgrade('Theocracy','Temples are <b>twice</b> as efficient.<q>You\'ve turned your cookie empire into a perfect theocracy, gathering the adoration of zillions of followers from every corner of the universe.<br>Don\'t let it go to your head.</q>','Temple',8);
 		order=575;new Game.TieredUpgrade('Rabbit trick','Wizard towers are <b>twice</b> as efficient.<q>Using nothing more than a fancy top hat, your wizards have found a way to simultaneously curb rabbit population and produce heaps of extra cookies for basically free!<br>Resulting cookies may or may not be fit for vegans.</q>','Wizard tower',8);
-		order=600;new Game.TieredUpgrade('The final frontier','Shipments are <b>twice</b> as efficient.<q>It\'s been a long road, getting from there to here. It\'s all worth it though - the sights are lovely and the oil prices slightly more reasonable.</q>','Shipment',8);
+		order=600;new Game.TieredUpgrade('The final frontier','spaceships are <b>twice</b> as efficient.<q>It\'s been a long road, getting from there to here. It\'s all worth it though - the sights are lovely and the oil prices slightly more reasonable.</q>','spaceship',8);
 		order=700;new Game.TieredUpgrade('Beige goo','Alchemy labs are <b>twice</b> as efficient.<q>Well now you\'ve done it. Good job. Very nice. That\'s 3 galaxies you\'ve just converted into cookies. Good thing you can hop from universe to universe.</q>','Alchemy lab',8);
 		order=800;new Game.TieredUpgrade('Maddening chants','Portals are <b>twice</b> as efficient.<q>A popular verse goes like so : "jau\'hn madden jau\'hn madden aeiouaeiouaeiou brbrbrbrbrbrbr"</q>','Portal',8);
 		order=900;new Game.TieredUpgrade('Cookietopian moments of maybe','Time machines are <b>twice</b> as efficient.<q>Reminiscing how things could have been, should have been, will have been.</q>','Time machine',8);
@@ -9160,7 +9160,7 @@ Game.Launch=function()
 		Game.SynergyUpgrade('Rain prayer','<q>A deeply spiritual ceremonial involving complicated dance moves and high-tech cloud-busting lasers.</q>','Farm','Temple','synergy2');
 		
 		Game.SynergyUpgrade('Seismic magic','<q>Surprise earthquakes are an old favorite of wizardly frat houses.</q>','Mine','Wizard tower','synergy1');
-		Game.SynergyUpgrade('Asteroid mining','<q>As per the <span>19</span>74 United Cosmic Convention, comets, moons, and inhabited planetoids are no longer legally excavatable.<br>But hey, a space bribe goes a long way.</q>','Mine','Shipment','synergy2');
+		Game.SynergyUpgrade('Asteroid mining','<q>As per the <span>19</span>74 United Cosmic Convention, comets, moons, and inhabited planetoids are no longer legally excavatable.<br>But hey, a space bribe goes a long way.</q>','Mine','spaceship','synergy2');
 		
 		Game.SynergyUpgrade('Quantum electronics','<q>Your machines won\'t even be sure if they\'re on or off!</q>','Factory','Antimatter condenser','synergy1');
 		Game.SynergyUpgrade('Temporal overclocking','<q>Introduce more quickitude in your system for increased speedation of fastness.</q>','Factory','Time machine','synergy2');
@@ -9174,8 +9174,8 @@ Game.Launch=function()
 		Game.SynergyUpgrade('Arcane knowledge','<q>Some things were never meant to be known - only mildly speculated.</q>','Wizard tower','Alchemy lab','synergy1');
 		Game.SynergyUpgrade('Magical botany','<q>Already known in some reactionary newspapers as "the wizard\'s GMOs".</q>','Wizard tower','Farm','synergy2');
 		
-		Game.SynergyUpgrade('Fossil fuels','<q>Somehow better than plutonium for powering rockets.<br>Extracted from the fuels of ancient, fossilized civilizations.</q>','Shipment','Mine','synergy1');
-		Game.SynergyUpgrade('Shipyards','<q>Where carpentry, blind luck, and asbestos insulation unite to produce the most dazzling spaceships on the planet.</q>','Shipment','Factory','synergy2');
+		Game.SynergyUpgrade('Fossil fuels','<q>Somehow better than plutonium for powering rockets.<br>Extracted from the fuels of ancient, fossilized civilizations.</q>','spaceship','Mine','synergy1');
+		Game.SynergyUpgrade('Shipyards','<q>Where carpentry, blind luck, and asbestos insulation unite to produce the most dazzling spaceships on the planet.</q>','spaceship','Factory','synergy2');
 		
 		Game.SynergyUpgrade('Primordial ores','<q>Only when refining the purest metals will you extract the sweetest sap of the earth.</q>','Alchemy lab','Mine','synergy1');
 		Game.SynergyUpgrade('Gold fund','<q>If gold is the backbone of the economy, cookies, surely, are its hip joints.</q>','Alchemy lab','Bank','synergy2');
@@ -9183,7 +9183,7 @@ Game.Launch=function()
 		Game.SynergyUpgrade('Infernal crops','<q>Sprinkle regularly with FIRE.</q>','Portal','Farm','synergy1');
 		Game.SynergyUpgrade('Abysmal glimmer','<q>Someone, or something, is staring back at you.<br>Perhaps at all of us.</q>','Portal','Prism','synergy2');
 		
-		Game.SynergyUpgrade('Relativistic parsec-skipping','<q>People will tell you this isn\'t physically possible.<br>These are people you don\'t want on your ship.</q>','Time machine','Shipment','synergy1');
+		Game.SynergyUpgrade('Relativistic parsec-skipping','<q>People will tell you this isn\'t physically possible.<br>These are people you don\'t want on your ship.</q>','Time machine','spaceship','synergy1');
 		Game.SynergyUpgrade('Primeval glow','<q>From unending times, an ancient light still shines, impossibly pure and fragile in its old age.</q>','Time machine','Prism','synergy2');
 		
 		Game.SynergyUpgrade('Extra physics funding','<q>Time to put your money where your particle colliders are.</q>','Antimatter condenser','Bank','synergy1');
@@ -9304,7 +9304,7 @@ Game.Launch=function()
 		order=525;new Game.TieredUpgrade('Edible money','Banks are <b>twice</b> as efficient.<q>It\'s really quite simple; you make all currency too delicious not to eat, solving world hunger and inflation in one fell swoop!</q>','Bank',9);
 		order=550;new Game.TieredUpgrade('Sick rap prayers','Temples are <b>twice</b> as efficient.<q>With their ill beat and radical rhymes, these way-hip religious tunes are sure to get all the youngins who thought they were 2 cool 4 church back on the pews and praying for more! Wicked!</q>','Temple',9);
 		order=575;new Game.TieredUpgrade('Deluxe tailored wands','Wizard towers are <b>twice</b> as efficient.<q>In this age of science, most skillful wand-makers are now long gone; but thankfully - not all those wanders are lost.</q>','Wizard tower',9);
-		order=600;new Game.TieredUpgrade('Autopilot','Shipments are <b>twice</b> as efficient.<q>Your ships are now fitted with completely robotic crews! It\'s crazy how much money you save when you don\'t have to compensate the families of those lost in space.</q>','Shipment',9);
+		order=600;new Game.TieredUpgrade('Autopilot','spaceships are <b>twice</b> as efficient.<q>Your ships are now fitted with completely robotic crews! It\'s crazy how much money you save when you don\'t have to compensate the families of those lost in space.</q>','spaceship',9);
 		order=700;new Game.TieredUpgrade('The advent of chemistry','Alchemy labs are <b>twice</b> as efficient.<q>You know what? That whole alchemy nonsense was a load of baseless rubbish. Dear god, what were you thinking?</q>','Alchemy lab',9);
 		order=800;new Game.TieredUpgrade('The real world','Portals are <b>twice</b> as efficient.<q>It turns out that our universe is actually the twisted dimension of another, saner plane of reality. Time to hop on over there and loot the place!</q>','Portal',9);
 		order=900;new Game.TieredUpgrade('Second seconds','Time machines are <b>twice</b> as efficient.<q>That\'s twice as many seconds in the same amount of time! What a deal! Also, what in god\'s name!</q>','Time machine',9);
@@ -9414,7 +9414,7 @@ Game.Launch=function()
 		order=525;new Game.TieredUpgrade('Grand supercycles','Banks are <b>twice</b> as efficient.<q>We let the public think these are complicated financial terms when really we\'re just rewarding the bankers with snazzy bicycles for a job well done. It\'s only natural after you built those fancy gold swimming pools for them, where they can take a dip and catch Kondratiev waves.</q>','Bank',10);
 		order=550;new Game.TieredUpgrade('Psalm-reading','Temples are <b>twice</b> as efficient.<q>A theologically dubious and possibly blasphemous blend of fortune-telling and scripture studies.</q>','Temple',10);
 		order=575;new Game.TieredUpgrade('Immobile spellcasting','Wizard towers are <b>twice</b> as efficient.<q>Wizards who master this skill can now cast spells without having to hop and skip and gesticulate embarrassingly, which is much sneakier and honestly quite a relief.</q>','Wizard tower',10);
-		order=600;new Game.TieredUpgrade('Restaurants at the end of the universe','Shipments are <b>twice</b> as efficient.<q>Since the universe is spatially infinite, and therefore can be construed to have infinite ends, you\'ve opened an infinite chain of restaurants where your space truckers can rest and partake in some home-brand cookie-based meals.</q>','Shipment',10);
+		order=600;new Game.TieredUpgrade('Restaurants at the end of the universe','spaceships are <b>twice</b> as efficient.<q>Since the universe is spatially infinite, and therefore can be construed to have infinite ends, you\'ve opened an infinite chain of restaurants where your space truckers can rest and partake in some home-brand cookie-based meals.</q>','spaceship',10);
 		order=700;new Game.TieredUpgrade('On second thought','Alchemy labs are <b>twice</b> as efficient.<q>Disregard that last upgrade, alchemy is where it\'s at! Your eggheads just found a way to transmute children\'s nightmares into rare metals!</q>','Alchemy lab',10);
 		order=800;new Game.TieredUpgrade('Dimensional garbage gulper','Portals are <b>twice</b> as efficient.<q>So we\'ve been looking for a place to dispose of all the refuse that\'s been accumulating since we started baking - burnt cookies, failed experiments, unruly workers - and well, we figured rather than sell it to poor countries like we\'ve been doing, we could just dump it in some alternate trash dimension where it\'s not gonna bother anybody! Probably!</q>','Portal',10);
 		order=900;new Game.TieredUpgrade('Additional clock hands','Time machines are <b>twice</b> as efficient.<q>It seemed like a silly idea at first, but it turns out these have the strange ability to twist time in interesting new ways.</q>','Time machine',10);
@@ -9459,7 +9459,7 @@ Game.Launch=function()
 		order=525;new Game.TieredUpgrade('Rules of acquisition','Banks are <b>twice</b> as efficient.<q>Rule 387 : a cookie baked is a cookie kept.</q>','Bank',11);
 		order=550;new Game.TieredUpgrade('War of the gods','Temples are <b>twice</b> as efficient.<q>An interesting game; the only winning move is not to pray.</q>','Temple',11);
 		order=575;new Game.TieredUpgrade('Electricity','Wizard towers are <b>twice</b> as efficient.<q>Ancient magicks and forbidden hexes shroud this arcane knowledge, whose unfathomable power can mysteriously turn darkness into light and shock an elephant to death.</q>','Wizard tower',11);
-		order=600;new Game.TieredUpgrade('Universal alphabet','Shipments are <b>twice</b> as efficient.<q>You\'ve managed to chart a language that can be understood by any sentient species in the galaxy; its exciting vocabulary contains over 56 trillion words that sound and look like sparkly burps, forming intricate sentences that usually translate to something like "give us your cookies, or else".</q>','Shipment',11);
+		order=600;new Game.TieredUpgrade('Universal alphabet','spaceships are <b>twice</b> as efficient.<q>You\'ve managed to chart a language that can be understood by any sentient species in the galaxy; its exciting vocabulary contains over 56 trillion words that sound and look like sparkly burps, forming intricate sentences that usually translate to something like "give us your cookies, or else".</q>','spaceship',11);
 		order=700;new Game.TieredUpgrade('Public betterment','Alchemy labs are <b>twice</b> as efficient.<q>Why do we keep trying to change useless matter into cookies, or cookies into even better cookies? Clearly, the way of the future is to change the people who eat the cookies into people with a greater understanding, appreciation and respect for the cookies they\'re eating. Into the vat you go!</q>','Alchemy lab',11);
 		order=800;new Game.TieredUpgrade('Embedded microportals','Portals are <b>twice</b> as efficient.<q>We\'ve found out that if we bake the portals into the cookies themselves, we can transport people\'s taste buds straight into the taste dimension! Good thing your army of lawyers got rid of the FDA a while ago!</q>','Portal',11);
 		order=900;new Game.TieredUpgrade('Nostalgia','Time machines are <b>twice</b> as efficient.<q>Your time machine technicians insist that this is some advanced new time travel tech, and not just an existing emotion universal to mankind. Either way, you have to admit that selling people the same old cookies just because it reminds them of the good old times is an interesting prospect.</q>','Time machine',11);
@@ -9711,7 +9711,7 @@ Game.Launch=function()
 		new Game.TieredUpgrade('Fortune #006','Banks are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>The value of money means nothing to a pocket.</q>','Bank','fortune');
 		new Game.TieredUpgrade('Fortune #007','Temples are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Not all guides deserve worship.</q>','Temple','fortune');
 		new Game.TieredUpgrade('Fortune #008','Wizard towers are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Magic is about two things - showmanship, and rabbits.</q>','Wizard tower','fortune');
-		new Game.TieredUpgrade('Fortune #009','Shipments are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Every mile travelled expands the mind by just as much.</q>','Shipment','fortune');
+		new Game.TieredUpgrade('Fortune #009','spaceships are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Every mile travelled expands the mind by just as much.</q>','spaceship','fortune');
 		new Game.TieredUpgrade('Fortune #010','Alchemy labs are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Don\'t get used to yourself. You\'re gonna have to change.</q>','Alchemy lab','fortune');
 		new Game.TieredUpgrade('Fortune #011','Portals are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Every doorway is a gamble. Tread with care.</q>','Portal','fortune');
 		new Game.TieredUpgrade('Fortune #012','Time machines are <b>7%</b> more efficient and <b>7%</b> cheaper.<q>Do your future self a favor; they\'ll thank you for it.</q>','Time machine','fortune');
@@ -10133,9 +10133,9 @@ Game.Launch=function()
 		Game.TieredAchievement('Hollow the planet','Have <b>100</b> mines.','Mine',3);
 		
 		order=1500;
-		Game.TieredAchievement('Expedition','Have <b>1</b> shipment.','Shipment',1);
-		Game.TieredAchievement('Galactic highway','Have <b>50</b> shipments.','Shipment',2);
-		Game.TieredAchievement('Far far away','Have <b>100</b> shipments.','Shipment',3);
+		Game.TieredAchievement('Expedition','Have <b>1</b> spaceship.','spaceship',1);
+		Game.TieredAchievement('Galactic highway','Have <b>50</b> spaceships.','spaceship',2);
+		Game.TieredAchievement('Far far away','Have <b>100</b> spaceships.','spaceship',3);
 		
 		order=1600;
 		Game.TieredAchievement('Transmutation','Have <b>1</b> alchemy lab.','Alchemy lab',1);
@@ -10265,7 +10265,7 @@ Game.Launch=function()
 		order=1300;
 		Game.TieredAchievement('Can you dig it','Have <b>150</b> mines.','Mine',4);
 		order=1500;
-		Game.TieredAchievement('Type II civilization','Have <b>150</b> shipments.','Shipment',4);
+		Game.TieredAchievement('Type II civilization','Have <b>150</b> spaceships.','spaceship',4);
 		order=1600;
 		Game.TieredAchievement('Gild wars','Have <b>150</b> alchemy labs.','Alchemy lab',4);
 		order=1700;
@@ -10311,7 +10311,7 @@ Game.Launch=function()
 		order=1420;
 		Game.ProductionAchievement('The incredible machine','Factory',1);
 		order=1520;
-		Game.ProductionAchievement('And beyond','Shipment',1);
+		Game.ProductionAchievement('And beyond','spaceship',1);
 		order=1620;
 		Game.ProductionAchievement('Magnum Opus','Alchemy lab',1);
 		order=1720;
@@ -10336,7 +10336,7 @@ Game.Launch=function()
 		order=1200;Game.TieredAchievement('Homegrown','Have <b>200</b> farms.','Farm',5);
 		order=1400;Game.TieredAchievement('Technocracy','Have <b>200</b> factories.','Factory',5);
 		order=1300;Game.TieredAchievement('The center of the Earth','Have <b>200</b> mines.','Mine',5);
-		order=1500;Game.TieredAchievement('We come in peace','Have <b>200</b> shipments.','Shipment',5);
+		order=1500;Game.TieredAchievement('We come in peace','Have <b>200</b> spaceships.','spaceship',5);
 		order=1600;Game.TieredAchievement('The secrets of the universe','Have <b>200</b> alchemy labs.','Alchemy lab',5);
 		order=1700;Game.TieredAchievement('Realm of the Mad God','Have <b>200</b> portals.','Portal',5);
 		order=1800;Game.TieredAchievement('Forever and ever','Have <b>200</b> time machines.','Time machine',5);
@@ -10409,7 +10409,7 @@ Game.Launch=function()
 		order=1495;
 		Game.ProductionAchievement('Too many rabbits, not enough hats','Wizard tower',2);
 		order=1520;
-		Game.ProductionAchievement('The most precious cargo','Shipment',2);
+		Game.ProductionAchievement('The most precious cargo','spaceship',2);
 		order=1620;
 		Game.ProductionAchievement('The Aureate','Alchemy lab',2);
 		order=1720;
@@ -10444,7 +10444,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('Acquire currency','Have <b>250</b> banks.','Bank',6);
 		order=1450;Game.TieredAchievement('Zealotry','Have <b>250</b> temples.','Temple',6);
 		order=1475;Game.TieredAchievement('The wizarding world','Have <b>250</b> wizard towers.','Wizard tower',6);
-		order=1500;Game.TieredAchievement('Parsec-masher','Have <b>250</b> shipments.','Shipment',6);
+		order=1500;Game.TieredAchievement('Parsec-masher','Have <b>250</b> spaceships.','spaceship',6);
 		order=1600;Game.TieredAchievement('The work of a lifetime','Have <b>250</b> alchemy labs.','Alchemy lab',6);
 		order=1700;Game.TieredAchievement('A place lost in time','Have <b>250</b> portals.','Portal',6);
 		order=1800;Game.TieredAchievement('Heat death','Have <b>250</b> time machines.','Time machine',6);
@@ -10504,7 +10504,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('The nerve of war','Have <b>300</b> banks.','Bank',7);
 		order=1450;Game.TieredAchievement('Wololo','Have <b>300</b> temples.','Temple',7);
 		order=1475;Game.TieredAchievement('And now for my next trick, I\'ll need a volunteer from the audience','Have <b>300</b> wizard towers.','Wizard tower',7);
-		order=1500;Game.TieredAchievement('It\'s not delivery','Have <b>300</b> shipments.','Shipment',7);
+		order=1500;Game.TieredAchievement('It\'s not delivery','Have <b>300</b> spaceships.','spaceship',7);
 		order=1600;Game.TieredAchievement('Gold, Jerry! Gold!','Have <b>300</b> alchemy labs.','Alchemy lab',7);
 		order=1700;Game.TieredAchievement('Forbidden zone','Have <b>300</b> portals.','Portal',7);
 		order=1800;Game.TieredAchievement('cookie clicker forever and forever a hundred years cookie clicker, all day long forever, forever a hundred times, over and over cookie clicker adventures dot com','Have <b>300</b> time machines.','Time machine',7);
@@ -10548,7 +10548,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('And I need it now','Have <b>350</b> banks.','Bank',8);
 		order=1450;Game.TieredAchievement('Pray on the weak','Have <b>350</b> temples.','Temple',8);
 		order=1475;Game.TieredAchievement('It\'s a kind of magic','Have <b>350</b> wizard towers.','Wizard tower',8);
-		order=1500;Game.TieredAchievement('Make it so','Have <b>350</b> shipments.','Shipment',8);
+		order=1500;Game.TieredAchievement('Make it so','Have <b>350</b> spaceships.','spaceship',8);
 		order=1600;Game.TieredAchievement('All that glitters is gold','Have <b>350</b> alchemy labs.','Alchemy lab',8);
 		order=1700;Game.TieredAchievement('H̸̷͓̳̳̯̟͕̟͍͍̣͡ḛ̢̦̰̺̮̝͖͖̘̪͉͘͡ ̠̦͕̤̪̝̥̰̠̫̖̣͙̬͘ͅC̨̦̺̩̲̥͉̭͚̜̻̝̣̼͙̮̯̪o̴̡͇̘͎̞̲͇̦̲͞͡m̸̩̺̝̣̹̱͚̬̥̫̳̼̞̘̯͘ͅẹ͇̺̜́̕͢s̶̙̟̱̥̮̯̰̦͓͇͖͖̝͘͘͞','Have <b>350</b> portals.','Portal',8);
 		order=1800;Game.TieredAchievement('Way back then','Have <b>350</b> time machines.','Time machine',8);
@@ -10574,7 +10574,7 @@ Game.Launch=function()
 		order=1495;
 		Game.ProductionAchievement('Manafest destiny','Wizard tower',3);
 		order=1520;
-		Game.ProductionAchievement('Neither snow nor rain nor heat nor gloom of night','Shipment',3);
+		Game.ProductionAchievement('Neither snow nor rain nor heat nor gloom of night','spaceship',3);
 		order=1620;
 		Game.ProductionAchievement('I\'ve got the Midas touch','Alchemy lab',3);
 		order=1720;
@@ -10603,7 +10603,7 @@ Game.Launch=function()
 		order=1495;
 		new Game.Achievement('Motormouth','Reach level <b>10</b> wizard towers.',[17,26]);Game.Objects['Wizard tower'].levelAchiev10=Game.last;
 		order=1520;
-		new Game.Achievement('Been there done that','Reach level <b>10</b> shipments.',[5,26]);Game.Objects['Shipment'].levelAchiev10=Game.last;
+		new Game.Achievement('Been there done that','Reach level <b>10</b> spaceships.',[5,26]);Game.Objects['spaceship'].levelAchiev10=Game.last;
 		order=1620;
 		new Game.Achievement('Phlogisticated substances','Reach level <b>10</b> alchemy labs.',[6,26]);Game.Objects['Alchemy lab'].levelAchiev10=Game.last;
 		order=1720;
@@ -10655,7 +10655,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('Treacle tart economics','Have <b>400</b> banks.','Bank',9);
 		order=1450;Game.TieredAchievement('Holy cookies, grandma!','Have <b>400</b> temples.','Temple',9);
 		order=1475;Game.TieredAchievement('The Prestige','Have <b>400</b> wizard towers.<q>(Unrelated to the Cookie Clicker feature of the same name.)</q>','Wizard tower',9);
-		order=1500;Game.TieredAchievement('That\'s just peanuts to space','Have <b>400</b> shipments.','Shipment',9);
+		order=1500;Game.TieredAchievement('That\'s just peanuts to space','Have <b>400</b> spaceships.','spaceship',9);
 		order=1600;Game.TieredAchievement('Worth its weight in lead','Have <b>400</b> alchemy labs.','Alchemy lab',9);
 		order=1700;Game.TieredAchievement('What happens in the vortex stays in the vortex','Have <b>400</b> portals.','Portal',9);
 		order=1800;Game.TieredAchievement('Invited to yesterday\'s party','Have <b>400</b> time machines.','Time machine',9);
@@ -10669,7 +10669,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('Save your breath because that\'s all you\'ve got left','Have <b>450</b> banks.','Bank',10);
 		order=1450;Game.TieredAchievement('Vengeful and almighty','Have <b>450</b> temples.','Temple',10);
 		order=1475;Game.TieredAchievement('Spell it out for you','Have <b>450</b> wizard towers.','Wizard tower',10);
-		order=1500;Game.TieredAchievement('Space space space space space','Have <b>450</b> shipments.<q>It\'s too far away...</q>','Shipment',10);
+		order=1500;Game.TieredAchievement('Space space space space space','Have <b>450</b> spaceships.<q>It\'s too far away...</q>','spaceship',10);
 		order=1600;Game.TieredAchievement('Don\'t get used to yourself, you\'re gonna have to change','Have <b>450</b> alchemy labs.','Alchemy lab',10);
 		order=1700;Game.TieredAchievement('Objects in the mirror dimension are closer than they appear','Have <b>450</b> portals.','Portal',10);
 		order=1800;Game.TieredAchievement('Groundhog day','Have <b>450</b> time machines.','Time machine',10);
@@ -10742,7 +10742,7 @@ Game.Launch=function()
 		order=1425;Game.TieredAchievement('Get the show on, get paid','Have <b>500</b> banks.','Bank',11);
 		order=1450;Game.TieredAchievement('My world\'s on fire, how about yours','Have <b>500</b> temples.','Temple',11);
 		order=1475;Game.TieredAchievement('The meteor men beg to differ','Have <b>500</b> wizard towers.','Wizard tower',11);
-		order=1500;Game.TieredAchievement('Only shooting stars','Have <b>500</b> shipments.','Shipment',11);
+		order=1500;Game.TieredAchievement('Only shooting stars','Have <b>500</b> spaceships.','spaceship',11);
 		order=1600;Game.TieredAchievement('We could all use a little change','Have <b>500</b> alchemy labs.','Alchemy lab',11);//"all that glitters is gold" was already an achievement
 		order=1700;Game.TieredAchievement('Your brain gets smart but your head gets dumb','Have <b>500</b> portals.','Portal',11);
 		order=1800;Game.TieredAchievement('The years start coming','Have <b>500</b> time machines.','Time machine',11);
@@ -11769,9 +11769,9 @@ Game.Launch=function()
 				buy:function(){Game.Objects['Wizard tower'].sacrifice(100);},
 				costStr:function(){return '100 wizard towers';}},
 			{name:'Krumblor, cookie dragon',action:'Train Dragonflight<br><small>Aura : sugarcookies may trigger a Dragonflight</small>',pic:5,
-				cost:function(){return Game.Objects['Shipment'].amount>=100;},
-				buy:function(){Game.Objects['Shipment'].sacrifice(100);},
-				costStr:function(){return '100 shipments';}},
+				cost:function(){return Game.Objects['spaceship'].amount>=100;},
+				buy:function(){Game.Objects['spaceship'].sacrifice(100);},
+				costStr:function(){return '100 spaceships';}},
 			{name:'Krumblor, cookie dragon',action:'Train Ancestral Metamorphosis<br><small>Aura : sugarcookies give 10% more cookies</small>',pic:5,
 				cost:function(){return Game.Objects['Alchemy lab'].amount>=100;},
 				buy:function(){Game.Objects['Alchemy lab'].sacrifice(100);},
