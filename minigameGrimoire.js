@@ -36,7 +36,7 @@ M.launch=function()
 			},
 			'hand of fate':{
 				name:'Force the Hand of Fate',
-				desc:'Summon a random golden cookie. Each existing golden cookie makes this spell +15% more likely to backfire.',
+				desc:'Summon a random sugarcookie. Each existing sugar cookiemakes this spell +15% more likely to backfire.',
 				failDesc:'Summon an unlucky wrath cookie.',
 				icon:[22,11],
 				costMin:10,

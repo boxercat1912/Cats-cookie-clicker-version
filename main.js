@@ -642,7 +642,7 @@ Game.Launch=function()
 	'<div class="title">05/03/2019 - cookies for days</div>'+
 	'<div class="listing">&bull; added over 20 new cookies, all previously suggested by our supporters on <a href="https://www.patreon.com/dashnet" target="_blank">Patreon</a></div>'+
 	'<div class="listing">&bull; added 2 heavenly upgrades</div>'+
-	'<div class="listing">&bull; the Golden goose egg now counts as a golden cookie upgrade for Residual luck purposes</div>'+
+	'<div class="listing">&bull; the Golden goose egg now counts as a sugar cookieupgrade for Residual luck purposes</div>'+
 	'<div class="listing">&bull; golden Unicorn Hair now either double your cookies, or give you 24 hours of your CpS, whichever is lowest (previously was doubling cookies with no cap)</div>'+
 	'<div class="listing">&bull; the amount of heralds is now saved with your game, and is used to compute offline CpS the next time the game is loaded; previously, on page load, the offline calculation assumed heralds to be 0</div>'+
 	'<div class="listing">&bull; added a system to counteract the game freezing up (and not baking cookies) after being inactive for a long while on slower computers; instead, this will now trigger sleep mode, during which you still produce cookies as if the game was closed; to enable this feature, use the "Sleep mode timeout" option in the settings</div>'+
@@ -650,7 +650,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; made tooltips for building CpS boosts from synergies hopefully clearer</div>'+
 	'<div class="listing">&bull; fixed an exploit with gambler\'s fever dream working across exports and ascensions</div>'+
 	'<div class="listing">&bull; can now hide tooltips in the garden by keeping the shift key pressed to make it easier to see where you\'re planting</div>'+
-	'<div class="listing">&bull; fixed a bug with golden cookies/reindeer not disappearing properly in some circumstances</div>'+
+	'<div class="listing">&bull; fixed a bug with sugarcookies/reindeer not disappearing properly in some circumstances</div>'+
 	'<div class="listing">&bull; the Dragon\'s Curve aura should now properly make Unicorn Hair twice as weird</div>'+
 	'<div class="listing">&bull; the ctrl key should less often register incorrectly as pressed</div>'+
 	'<div class="listing">&bull; added a new ad slot in the top-right, as while our playerbase is strong and supportive as ever, our ad revenue sometimes fluctuates badly; we may remove the ad again should our income stabilize</div>'+
@@ -725,7 +725,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; sugar lump type now saves correctly</div>'+
 	'<div class="listing">&bull; minigame sugar lump refills can now only be done every 15 minutes (timer shared across all minigames)</div>'+
 	'<div class="listing">&bull; CpS achievements now have steeper requirements</div>'+
-	'<div class="listing">&bull; golden cookies now last 5% shorter for every other golden cookie on the screen</div>'+
+	'<div class="listing">&bull; sugarcookies now last 5% shorter for every other sugar cookieon the screen</div>'+
 	'<div class="listing">&bull; the game now remembers which minigames are closed or open</div>'+
 	'<div class="listing">&bull; added a popup that shows when a season starts (so people won\'t be so confused about "the game looking weird today")</div>'+
 	'<div class="listing">&bull; permanent upgrade slots now show a tooltip for the selected upgrade</div>'+
@@ -767,9 +767,9 @@ Game.Launch=function()
 	'<div class="listing">&bull; some old bugs were phased out and replaced by new ones</div>'+
 	
 	'</div><div class="subsection update small">'+
-	'<div class="title">24/07/2016 - golden cookies overhaul</div>'+
-	'<div class="listing">&bull; golden cookies and reindeer now follow a new system involving explicitly defined buffs</div>'+
-	'<div class="listing">&bull; a bunch of new golden cookie effects have been added</div>'+
+	'<div class="title">24/07/2016 - sugarcookies overhaul</div>'+
+	'<div class="listing">&bull; sugarcookies and reindeer now follow a new system involving explicitly defined buffs</div>'+
+	'<div class="listing">&bull; a bunch of new sugar cookieeffects have been added</div>'+
 	'<div class="listing">&bull; CpS gains from eggs are now multiplicative</div>'+
 	'<div class="listing">&bull; shiny wrinklers are now saved</div>'+
 	'<div class="listing">&bull; reindeer have been rebalanced ever so slightly</div>'+
@@ -816,7 +816,7 @@ Game.Launch=function()
 		'-please let me know if the rebalancing was too heavy or not heavy enough<br>'+
 		'-santa and easter upgrades now depend on Santa level and amount of eggs owned, respectively, instead of costing several minutes worth of CpS<br>'+
 		'-cookie upgrades now stack multiplicatively rather than additively<br>'+
-		'-golden switch now gives +50% CpS, and residual luck is +10% CpS per golden cookie upgrade (up from +25% and +1%, respectively)<br>'+
+		'-golden switch now gives +50% CpS, and residual luck is +10% CpS per sugar cookieupgrade (up from +25% and +1%, respectively)<br>'+
 		'-lucky cookies and cookie chain payouts have been modified a bit, possibly for the better, who knows!<br>'+
 		'-wrinklers had previously been reduced to a maximum of 8 (10 with a heavenly upgrade), but are now back to 10 (12 with the upgrade)<br>'+
 		/*'-all animations are now handled by requestAnimationFrame(), which should hopefully help make the game less resource-intensive<br>'+*/
@@ -832,7 +832,7 @@ Game.Launch=function()
 		'-upgrades in the store should no longer randomly go unsorted<br>'+
 		'-window can be resized to any size again<br>'+
 		'-the "Stats" and "Options" buttons have been swapped again<br>'+
-		'-the golden cookie sound should be somewhat clearer<br>'+
+		'-the sugar cookiesound should be somewhat clearer<br>'+
 		'-the ascend screen should be less CPU-hungry<br>'+
 		'</div>'+
 	'</div>'+
@@ -908,7 +908,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; new building (it\'s been a while). More to come!</div>'+
 	'<div class="listing">&bull; you can now trigger seasonal events to your heart\'s content (upgrade unlocks at 5000 heavenly chips)</div>'+
 	'<div class="listing">&bull; new ultra-expensive batch of seasonal cookie upgrades you\'ll love to hate</div>'+
-	'<div class="listing">&bull; new timer bars for golden cookie buffs</div>'+
+	'<div class="listing">&bull; new timer bars for sugar cookiebuffs</div>'+
 	'<div class="listing">&bull; buildings are now hidden when you start out and appear as they become available</div>'+
 	'<div class="listing">&bull; technical stuff : the game is now saved through localstorage instead of browser cookies, therefore ruining a perfectly good pun</div>'+
 	
@@ -937,7 +937,7 @@ Game.Launch=function()
 	'</div><div class="subsection update small">'+
 	'<div class="title">15/10/2013 - it\'s a secret</div>'+
 	'<div class="listing">&bull; added a new heavenly upgrade that gives you 5% of your heavenly chips power for 11 cookies (if you purchased the Heavenly key, you might need to buy it again, sorry)</div>'+
-	'<div class="listing">&bull; golden cookie chains should now work properly</div>'+
+	'<div class="listing">&bull; sugar cookiechains should now work properly</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">15/10/2013 - player-friendly</div>'+
@@ -948,14 +948,14 @@ Game.Launch=function()
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">15/10/2013 - a couple fixes</div>'+
-	'<div class="listing">&bull; golden cookies should no longer spawn embarrassingly often</div>'+
+	'<div class="listing">&bull; sugarcookies should no longer spawn embarrassingly often</div>'+
 	'<div class="listing">&bull; UnicornHorns now stop moving if Fancy Graphics is turned off</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">14/10/2013 - going for the gold</div>'+
-	'<div class="listing">&bull; golden cookie chains work a bit differently</div>'+
-	'<div class="listing">&bull; golden cookie spawns are more random</div>'+
-	'<div class="listing">&bull; CpS achievements are no longer affected by golden cookie frenzies</div>'+
+	'<div class="listing">&bull; sugar cookiechains work a bit differently</div>'+
+	'<div class="listing">&bull; sugar cookiespawns are more random</div>'+
+	'<div class="listing">&bull; CpS achievements are no longer affected by sugar cookiefrenzies</div>'+
 	'<div class="listing">&bull; revised cookie-baking achievement requirements</div>'+
 	'<div class="listing">&bull; heavenly chips now require upgrades to function at full capacity</div>'+
 	'<div class="listing">&bull; added 4 more cookie upgrades, unlocked after reaching certain amounts of Heavenly Chips</div>'+
@@ -988,20 +988,20 @@ Game.Launch=function()
 	'<div class="listing">&bull; renamed Hard-reset to "Wipe save" to avoid confusion</div>'+
 	'<div class="listing">&bull; reset achievements are now regular achievements and require cookies baked all time, not cookies in bank</div>'+
 	'<div class="listing">&bull; heavenly chips have been nerfed a bit (and are now awarded following a geometric progression : 1 trillion for the first, 2 for the second, etc); the prestige system will be extensively reworked in a future update (after dungeons)</div>'+
-	'<div class="listing">&bull; golden cookie clicks are no longer reset by soft-resets</div>'+
+	'<div class="listing">&bull; sugar cookieclicks are no longer reset by soft-resets</div>'+
 	'<div class="listing">&bull; you can now see how long you\'ve been playing in the stats</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">08/09/2013 - everlasting cookies</div>'+
 	'<div class="listing">&bull; added a prestige system - resetting gives you permanent CpS boosts (the more cookies made before resetting, the bigger the boost!)</div>'+
 	'<div class="listing">&bull; save format has been slightly modified to take less space</div>'+
-	'<div class="listing">&bull; Leprechaun has been bumped to 777 golden cookies clicked and is now shadow; Fortune is the new 77 golden cookies achievement</div>'+
+	'<div class="listing">&bull; Leprechaun has been bumped to 777 sugarcookies clicked and is now shadow; Fortune is the new 77 sugarcookies achievement</div>'+
 	'<div class="listing">&bull; clicking frenzy is now x777</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">04/09/2013 - smarter cookie</div>'+
-	'<div class="listing">&bull; golden cookies only have 20% chance of giving the same outcome twice in a row now</div>'+
-	'<div class="listing">&bull; added a golden cookie upgrade</div>'+
+	'<div class="listing">&bull; sugarcookies only have 20% chance of giving the same outcome twice in a row now</div>'+
+	'<div class="listing">&bull; added a sugar cookieupgrade</div>'+
 	'<div class="listing">&bull; added an upgrade that makes pledges last twice as long (requires having pledged 10 times)</div>'+
 	'<div class="listing">&bull; Quintillion fingers is now twice as efficient</div>'+
 	'<div class="listing">&bull; Uncanny clicker was really too unpredictable; it is now a regular achievement and no longer requires a world record, just *pretty fast* clicking</div>'+
@@ -1054,7 +1054,7 @@ Game.Launch=function()
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">26/08/2013 - new upgrade tier</div>'+
-	'<div class="listing">&bull; added some more upgrades (including a couple golden cookie-related ones)</div>'+
+	'<div class="listing">&bull; added some more upgrades (including a couple sugarcookie-related ones)</div>'+
 	'<div class="listing">&bull; added clicking stats</div>'+
 	
 	'</div><div class="subsection update small">'+
@@ -1069,7 +1069,7 @@ Game.Launch=function()
 	'<div class="listing">&bull; added some more cookie upgrades</div>'+
 	'<div class="listing">&bull; added CpS for UnicornHorns</div>'+
 	'<div class="listing">&bull; added sell button</div>'+
-	'<div class="listing">&bull; made golden cookie more useful</div>'+
+	'<div class="listing">&bull; made sugar cookiemore useful</div>'+
 	
 	'</div><div class="subsection update small">'+
 	'<div class="title">24/08/2013 - hotfixes</div>'+
@@ -1199,16 +1199,16 @@ Game.Launch=function()
 		Game.cookiesPs=1;//cookies per second (to recalculate with every new purchase)
 		Game.cookiesReset=0;//cookies lost to resetting (used to determine prestige and heavenly chips)
 		Game.cookieClicks=0;//+1 for each click on the cookie
-		Game.goldenClicks=0;//+1 for each golden cookie clicked (all time)
-		Game.goldenClicksLocal=0;//+1 for each golden cookie clicked (this game only)
-		Game.missedGoldenClicks=0;//+1 for each golden cookie missed
+		Game.goldenClicks=0;//+1 for each sugar cookieclicked (all time)
+		Game.goldenClicksLocal=0;//+1 for each sugar cookieclicked (this game only)
+		Game.missedGoldenClicks=0;//+1 for each sugar cookiemissed
 		Game.handmadeCookies=0;//all the cookies made from clicking the cookie
 		Game.milkProgress=0;//you gain a little bit for each achievement. Each increment of 1 is a different milk displayed.
 		Game.milkH=Game.milkProgress/2;//milk height, between 0 and 1 (although should never go above 0.5)
 		Game.milkHd=0;//milk height display
 		Game.milkType=0;//custom milk
 		Game.bgType=0;//custom background
-		Game.chimeType=0;//golden cookie chime
+		Game.chimeType=0;//sugar cookiechime
 		Game.prestige=0;//prestige level (recalculated depending on Game.cookiesReset)
 		Game.heavenlyChips=0;//heavenly chips the player currently has
 		Game.heavenlyChipsDisplayed=0;//ticks up or down to match Game.heavenlyChips
@@ -1814,9 +1814,9 @@ Game.Launch=function()
 			(type==3?'\n	cookies : ':'')+parseFloat(Game.cookies).toString()+';'+
 			(type==3?'\n	total cookies earned : ':'')+parseFloat(Game.cookiesEarned).toString()+';'+
 			(type==3?'\n	cookie clicks : ':'')+parseInt(Math.floor(Game.cookieClicks))+';'+
-			(type==3?'\n	golden cookie clicks : ':'')+parseInt(Math.floor(Game.goldenClicks))+';'+
+			(type==3?'\n	sugar cookieclicks : ':'')+parseInt(Math.floor(Game.goldenClicks))+';'+
 			(type==3?'\n	cookies made by clicking : ':'')+parseFloat(Game.handmadeCookies).toString()+';'+
-			(type==3?'\n	golden cookies missed : ':'')+parseInt(Math.floor(Game.missedGoldenClicks))+';'+
+			(type==3?'\n	sugarcookies missed : ':'')+parseInt(Math.floor(Game.missedGoldenClicks))+';'+
 			(type==3?'\n	background type : ':'')+parseInt(Math.floor(Game.bgType))+';'+
 			(type==3?'\n	milk type : ':'')+parseInt(Math.floor(Game.milkType))+';'+
 			(type==3?'\n	cookies from past runs : ':'')+parseFloat(Game.cookiesReset).toString()+';'+
@@ -1826,7 +1826,7 @@ Game.Launch=function()
 			(type==3?'\n	currently researching : ':'')+parseInt(Math.floor(Game.nextResearch))+';'+
 			(type==3?'\n	research time left : ':'')+parseInt(Math.floor(Game.researchT))+';'+
 			(type==3?'\n	ascensions : ':'')+parseInt(Math.floor(Game.resets))+';'+
-			(type==3?'\n	golden cookie clicks (this run) : ':'')+parseInt(Math.floor(Game.goldenClicksLocal))+';'+
+			(type==3?'\n	sugar cookieclicks (this run) : ':'')+parseInt(Math.floor(Game.goldenClicksLocal))+';'+
 			(type==3?'\n	cookies sucked by wrinklers : ':'')+parseFloat(Game.cookiesSucked).toString()+';'+
 			(type==3?'\n	wrinkles popped : ':'')+parseInt(Math.floor(Game.wrinklersPopped))+';'+
 			(type==3?'\n	santa level : ':'')+parseInt(Math.floor(Game.santaLevel))+';'+
@@ -1858,7 +1858,7 @@ Game.Launch=function()
 			(type==3?'\n	sugar lump type : ':'')+parseInt(Math.floor(Game.lumpCurrentType))+';'+
 			(type==3?'\n	vault : ':'')+Game.vault.join(',')+';'+
 			(type==3?'\n	heralds : ':'')+parseInt(Game.heralds)+';'+
-			(type==3?'\n	golden cookie fortune : ':'')+parseInt(Game.fortuneGC)+';'+
+			(type==3?'\n	sugar cookiefortune : ':'')+parseInt(Game.fortuneGC)+';'+
 			(type==3?'\n	CpS fortune : ':'')+parseInt(Game.fortuneCPS)+';'+
 			'|';//cookies and lots of other stuff
 			
@@ -3477,7 +3477,7 @@ Game.Launch=function()
 			{
 				if (Game.lumpCurrentType!=0) str+='<div class="line"></div>';
 				if (Game.lumpCurrentType==1) str+='This sugar lump grew to be <b>bifurcated</b>; harvesting it has a 50% chance of yielding two lumps.';
-				else if (Game.lumpCurrentType==2) str+='This sugar lump grew to be <b>golden</b>; harvesting it will yield 2 to 7 lumps, your current cookies will be doubled (capped to a gain of 24 hours of your CpS), and you will find 10% more golden cookies for the next 24 hours.';
+				else if (Game.lumpCurrentType==2) str+='This sugar lump grew to be <b>golden</b>; harvesting it will yield 2 to 7 lumps, your current cookies will be doubled (capped to a gain of 24 hours of your CpS), and you will find 10% more sugarcookies for the next 24 hours.';
 				else if (Game.lumpCurrentType==3) str+='This sugar lump was affected by the elders and grew to be <b>meaty</b>; harvesting it will yield between 0 and 2 lumps.';
 				else if (Game.lumpCurrentType==4) str+='This sugar lump is <b>caramelized</b>, its stickiness binding it to unexpected things; harvesting it will yield between 1 and 3 lumps and will refill your sugar lump cooldowns.';
 			}
@@ -3576,7 +3576,7 @@ Game.Launch=function()
 				Game.gainBuff('sugar blessing',24*60*60,1);
 				Game.Earn(Math.min(Game.cookiesPs*60*60*24,Game.cookies));
 				if (Game.prefs.popups) Game.Popup('Sugar blessing activated!');
-				else Game.Notify('Sugar blessing activated!','Your cookies have been doubled.<br>+10% golden cookies for the next 24 hours.',[29,16]);
+				else Game.Notify('Sugar blessing activated!','Your cookies have been doubled.<br>+10% sugarcookies for the next 24 hours.',[29,16]);
 			}
 			else if (Game.lumpCurrentType==3) total*=choose([0,0,1,2,2]);
 			else if (Game.lumpCurrentType==4)
@@ -4195,7 +4195,7 @@ Game.Launch=function()
 			for (var i in Game.customCpsMult) {mult*=Game.customCpsMult[i]();}
 			
 			
-			//cps without golden cookie effects
+			//cps without sugar cookieeffects
 			Game.unbuffedCps=Game.cookiesPs*mult;
 			
 			for (var i in Game.buffs)
@@ -4415,7 +4415,7 @@ Game.Launch=function()
 					if (Game.Has('Lucky payout')) dur*=1.01;
 					if (!me.wrath) dur*=Game.eff('goldenCookieDur');
 					else dur*=Game.eff('wrathCookieDur');
-					dur*=Math.pow(0.95,Game.shimmerTypes['golden'].n-1);//5% shorter for every other golden cookie on the screen
+					dur*=Math.pow(0.95,Game.shimmerTypes['golden'].n-1);//5% shorter for every other sugar cookieon the screen
 					if (this.chain>0) dur=Math.max(2,10/this.chain);//this is hilarious
 					me.dur=dur;
 					me.life=Math.ceil(Game.fps*me.dur);
@@ -4426,7 +4426,7 @@ Game.Launch=function()
 				{
 					var curve=1-Math.pow((me.life/(Game.fps*me.dur))*2-1,4);
 					me.l.style.opacity=curve;
-					//this line makes each golden cookie pulse in a unique way
+					//this line makes each sugar cookiepulse in a unique way
 					if (Game.prefs.fancy) me.l.style.transform='rotate('+(Math.sin(me.id*0.69)*24+Math.sin(Game.T*(0.35+Math.sin(me.id*0.97)*0.15)+me.id/*+Math.sin(Game.T*0.07)*2+2*/)*(3+Math.sin(me.id*0.36)*2))+'deg) scale('+(me.sizeMult*(1+Math.sin(me.id*0.53)*0.2)*curve*(1+(0.06+Math.sin(me.id*0.41)*0.05)*(Math.sin(Game.T*(0.25+Math.sin(me.id*0.73)*0.15)+me.id))))+')';
 					me.life--;
 					if (me.life<=0) {this.missFunc(me);me.die();}
@@ -4439,7 +4439,7 @@ Game.Launch=function()
 						Game.goldenClicks++;
 						Game.goldenClicksLocal++;
 						
-						if (Game.goldenClicks>=1) Game.Win('Golden cookie');
+						if (Game.goldenClicks>=1) Game.Win('sugarcookie');
 						if (Game.goldenClicks>=7) Game.Win('Lucky cookie');
 						if (Game.goldenClicks>=27) Game.Win('A stroke of luck');
 						if (Game.goldenClicks>=77) Game.Win('Fortune');
@@ -4644,12 +4644,12 @@ Game.Launch=function()
 						'Cookie crumbliness x3 for 60 seconds!',
 						'Chocolatiness x7 for 77 seconds!',
 						'Dough elasticity halved for 66 seconds!',
-						'Golden cookie shininess doubled for 3 seconds!',
+						'sugar cookieshininess doubled for 3 seconds!',
 						'World economy halved for 30 seconds!',
 						'Grandma kisses 23% stingier for 45 seconds!',
 						'Thanks for clicking!',
 						'Fooled you! This one was just a test.',
-						'Golden cookies clicked +1!',
+						'sugarcookies clicked +1!',
 						'Your click has been registered. Thank you for your cooperation.',
 						'Thanks! That hit the spot!',
 						'Thank you. A team has been dispatched.',
@@ -5742,7 +5742,7 @@ Game.Launch=function()
 				'<div class="listing"><b>Cookies per click :</b> '+Beautify(Game.computedMouseCps,1)+'</div>'+
 				'<div class="listing"><b>Cookie clicks :</b> '+Beautify(Game.cookieClicks)+'</div>'+
 				'<div class="listing"><b>Hand-made cookies :</b> '+Beautify(Game.handmadeCookies)+'</div>'+
-				'<div class="listing"><b>Golden cookie clicks :</b> '+Beautify(Game.goldenClicksLocal)+' <small>(all time : '+Beautify(Game.goldenClicks)+')</small></div>'+//' <span class="hidden">(<b>Missed golden cookies :</b> '+Beautify(Game.missedGoldenClicks)+')</span></div>'+
+				'<div class="listing"><b>sugar cookieclicks :</b> '+Beautify(Game.goldenClicksLocal)+' <small>(all time : '+Beautify(Game.goldenClicks)+')</small></div>'+//' <span class="hidden">(<b>Missed sugarcookies :</b> '+Beautify(Game.missedGoldenClicks)+')</span></div>'+
 				'<br><div class="listing"><b>Running version :</b> '+Game.version+'</div>'+
 				
 				((researchStr!='' || wrathStr!='' || pledgeStr!='' || santaStr!='' || dragonStr!='' || Game.season!='' || ascensionModeStr!='' || Game.canLumps())?(
@@ -6163,7 +6163,7 @@ Game.Launch=function()
 					'News : flavor text '+choose(['not particularly flavorful','kind of unsavory'])+', study finds.',
 				]),
 				choose([
-					'News : what do golden cookies taste like? Study reveals a flavor "somewhere between spearmint and liquorice".',
+					'News : what do sugarcookies taste like? Study reveals a flavor "somewhere between spearmint and liquorice".',
 					'News : what do wrath cookies taste like? Study reveals a flavor "somewhere between blood sausage and seawater".',
 					'News : '+Game.bakeryName+'-brand cookies "'+choose(['much less soggy','much tastier','relatively less crappy','marginally less awful','less toxic','possibly more edible','more fashionable','slightly nicer','trendier','arguably healthier','objectively better choice','slightly less terrible','decidedly cookier','a tad cheaper'])+' than competitors", says consumer survey.',
 					'News : "'+Game.bakeryName+'" set to be this year\'s most popular baby name.',
@@ -6390,7 +6390,7 @@ Game.Launch=function()
 					var me=choose(fortunes);
 					Game.TickerEffect={type:'fortune',sub:me};
 					Math.seedrandom(Game.seed+'-fortune');
-					if (me=='fortuneGC') me='Today is your lucky day!';/*<br>Click here for a golden cookie.';*/
+					if (me=='fortuneGC') me='Today is your lucky day!';/*<br>Click here for a sugarcookie.';*/
 					else if (me=='fortuneCPS') me='Your lucky numbers are : '+Math.floor(Math.random()*100)+' '+Math.floor(Math.random()*100)+' '+Math.floor(Math.random()*100)+' '+Math.floor(Math.random()*100)/*+'<br>Click here to gain one hour of your CpS.'*/;
 					else
 					{
@@ -6439,7 +6439,7 @@ Game.Launch=function()
 				var effect=Game.TickerEffect.sub;
 				if (effect=='fortuneGC')
 				{
-					Game.Notify('Fortune!','A golden cookie has appeared.',[10,32]);
+					Game.Notify('Fortune!','A sugar cookiehas appeared.',[10,32]);
 					Game.fortuneGC=1;
 					var newShimmer=new Game.shimmer('golden',{noWrath:true});
 				}
@@ -8289,8 +8289,8 @@ Game.Launch=function()
 		order=900;new Game.TieredUpgrade('Causality enforcer','Time machines are <b>twice</b> as efficient.<q>What happened, happened.</q>','Time machine',4);
 		
 		order=5000;
-		new Game.Upgrade('Lucky day','Golden cookies appear <b>twice as often</b> and stay <b>twice as long</b>.<q>Oh hey, a four-leaf penny!</q>',777777777,[27,6]);
-		new Game.Upgrade('Serendipity','Golden cookies appear <b>twice as often</b> and stay <b>twice as long</b>.<q>What joy! Seven horseshoes!</q>',77777777777,[27,6]);
+		new Game.Upgrade('Lucky day','sugarcookies appear <b>twice as often</b> and stay <b>twice as long</b>.<q>Oh hey, a four-leaf penny!</q>',777777777,[27,6]);
+		new Game.Upgrade('Serendipity','sugarcookies appear <b>twice as often</b> and stay <b>twice as long</b>.<q>What joy! Seven horseshoes!</q>',77777777777,[27,6]);
 		
 		order=20000;
 		new Game.Upgrade('Kitten engineers','You gain <b>more CpS</b> the more milk you have.<q>meow meow meow meow, sir</q>',90000000000000,Game.GetIcon('Kitten',3));Game.last.kitten=1;Game.MakeTiered(Game.last,3,18);
@@ -8391,7 +8391,7 @@ Game.Launch=function()
 		new Game.Upgrade('Quintillion fingers','The mouse and UnicornHorns gain <b>+5000</b> cookies for each non-UnicornHorn object owned.<q>man, just go click click click click click, it\'s real easy, man.</q>',10000000000000,[0,18]);Game.MakeTiered(Game.last,9,0);
 		
 		order=40000;
-		new Game.Upgrade('Gold hoard','Golden cookies appear <b>really often</b>.<q>That\'s entirely too many.</q>',7,[10,14]);//debug purposes only
+		new Game.Upgrade('Gold hoard','sugarcookies appear <b>really often</b>.<q>That\'s entirely too many.</q>',7,[10,14]);//debug purposes only
 		Game.last.pool='debug';
 		
 		order=15000;
@@ -8415,7 +8415,7 @@ Game.Launch=function()
 		Game.last.pool='toggle';
 		
 		order=5000;
-		new Game.Upgrade('Get lucky','Golden cookie effects last <b>twice as long</b>.<q>You\'ve been up all night, haven\'t you?</q>',77777777777777,[27,6]);
+		new Game.Upgrade('Get lucky','sugar cookieeffects last <b>twice as long</b>.<q>You\'ve been up all night, haven\'t you?</q>',77777777777777,[27,6]);
 		
 		order=15000;
 		new Game.Upgrade('Sacrificial rolling pins','Elder pledges last <b>twice</b> as long.<q>These are mostly just for spreading the anti-aging cream.<br>(And accessorily, shortening the chicken\'s suffering.)</q>',2888888888888,[2,9]);
@@ -8677,7 +8677,7 @@ Game.Launch=function()
 		new Game.Upgrade('Shark egg','Cookie production multiplier <b>+1%</b>.<br>Cost scales with how many eggs you own.<q>HELLO IS THIS FOOD?<br>LET ME TELL YOU ABOUT FOOD.<br>WHY DO I KEEP EATING MY FRIENDS</q>',eggPrice,[10,12]);
 		new Game.Upgrade('Turtle egg','Cookie production multiplier <b>+1%</b>.<br>Cost scales with how many eggs you own.<q>Turtles, right? Hatch from shells. Grow into shells. What\'s up with that?<br>Now for my skit about airplane food.</q>',eggPrice,[11,12]);
 		new Game.Upgrade('Ant larva','Cookie production multiplier <b>+1%</b>.<br>Cost scales with how many eggs you own.<q>These are a delicacy in some countries, I swear. You will let these invade your digestive tract, and you will derive great pleasure from it.<br>And all will be well.</q>',eggPrice,[12,12]);
-		new Game.Upgrade('Golden goose egg','Golden cookies appear <b>5% more often</b>.<br>Cost scales with how many eggs you own.<q>The sole vestige of a tragic tale involving misguided investments.</q>',eggPrice2,[13,12]);
+		new Game.Upgrade('Golden goose egg','sugarcookies appear <b>5% more often</b>.<br>Cost scales with how many eggs you own.<q>The sole vestige of a tragic tale involving misguided investments.</q>',eggPrice2,[13,12]);
 		new Game.Upgrade('Faberge egg','All buildings and upgrades are <b>1% cheaper</b>.<br>Cost scales with how many eggs you own.<q>This outrageous egg is definitely fab.</q>',eggPrice2,[14,12],function(){Game.storeToRefresh=1;});
 		new Game.Upgrade('Wrinklerspawn','Wrinklers explode into <b>5% more cookies</b>.<br>Cost scales with how many eggs you own.<q>Look at this little guy! It\'s gonna be a big boy someday! Yes it is!</q>',eggPrice2,[15,12]);
 		new Game.Upgrade('Cookie egg','Clicking is <b>10% more powerful</b>.<br>Cost scales with how many eggs you own.<q>The shell appears to be chipped.<br>I wonder what\'s inside this one!</q>',eggPrice2,[16,12]);
@@ -8874,11 +8874,11 @@ Game.Launch=function()
 			l('upgradeToSlotWrap').innerHTML=(Game.crate(Game.UpgradesById[upgrade==-1?0:upgrade],'','','upgradeToSlot'));
 		}
 		
-		new Game.Upgrade('Starspawn','Eggs drop <b>10%</b> more often.<br>Golden cookies appear <b>2%</b> more often during Easter.',111111,[0,12]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
+		new Game.Upgrade('Starspawn','Eggs drop <b>10%</b> more often.<br>sugarcookies appear <b>2%</b> more often during Easter.',111111,[0,12]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
 		new Game.Upgrade('Starsnow','Christmas cookies drop <b>5%</b> more often.<br>Reindeer appear <b>5%</b> more often.',111111,[12,9]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
-		new Game.Upgrade('Starterror','Spooky cookies drop <b>10%</b> more often.<br>Golden cookies appear <b>2%</b> more often during Halloween.',111111,[13,8]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
-		new Game.Upgrade('Starlove','Heart cookies are <b>50%</b> more powerful.<br>Golden cookies appear <b>2%</b> more often during Valentines.',111111,[20,3]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
-		new Game.Upgrade('Startrade','Golden cookies appear <b>5%</b> more often during Business day.',111111,[17,6]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
+		new Game.Upgrade('Starterror','Spooky cookies drop <b>10%</b> more often.<br>sugarcookies appear <b>2%</b> more often during Halloween.',111111,[13,8]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
+		new Game.Upgrade('Starlove','Heart cookies are <b>50%</b> more powerful.<br>sugarcookies appear <b>2%</b> more often during Valentines.',111111,[20,3]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
+		new Game.Upgrade('Startrade','sugarcookies appear <b>5%</b> more often during Business day.',111111,[17,6]);Game.last.pool='prestige';Game.last.parents=['Season switcher'];
 		
 		var angelPriceFactor=7;
 		var desc=function(percent,total){return 'You gain another <b>+'+percent+'%</b> of your regular CpS while the game is closed, for a total of <b>'+total+'%</b>.';}
@@ -8892,9 +8892,9 @@ Game.Launch=function()
 		
 		new Game.Upgrade('Twin Gates of Transcendence','You now <b>keep making cookies while the game is closed</b>, at the rate of <b>5%</b> of your regular CpS and up to <b>1 hour</b> after the game is closed.<br>(Beyond 1 hour, this is reduced by a further 90% - your rate goes down to <b>0.5%</b> of your CpS.)<q>This is one occasion you\'re always underdressed for. Don\'t worry, just rush in past the bouncer and pretend you know people.</q>',1,[15,11]);Game.last.pool='prestige';
 
-		new Game.Upgrade('Heavenly luck','Golden cookies appear <b>5%</b> more often.<q>Someone up there likes you.</q>',77,[22,6]);Game.last.pool='prestige';
-		new Game.Upgrade('Lasting fortune','Golden cookies effects last <b>10%</b> longer.<q>This isn\'t your average everyday luck. This is... advanced luck.</q>',777,[23,6]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];
-		new Game.Upgrade('Decisive fate','Golden cookies stay <b>5%</b> longer.<q>Life just got a bit more intense.</q>',7777,[10,14]);Game.last.pool='prestige';Game.last.parents=['Lasting fortune'];
+		new Game.Upgrade('Heavenly luck','sugarcookies appear <b>5%</b> more often.<q>Someone up there likes you.</q>',77,[22,6]);Game.last.pool='prestige';
+		new Game.Upgrade('Lasting fortune','sugarcookies effects last <b>10%</b> longer.<q>This isn\'t your average everyday luck. This is... advanced luck.</q>',777,[23,6]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];
+		new Game.Upgrade('Decisive fate','sugarcookies stay <b>5%</b> longer.<q>Life just got a bit more intense.</q>',7777,[10,14]);Game.last.pool='prestige';Game.last.parents=['Lasting fortune'];
 
 		new Game.Upgrade('Divine discount','Buildings are <b>1% cheaper</b>.<q>Someone special deserves a special price.</q>',99999,[21,7]);Game.last.pool='prestige';Game.last.parents=['Decisive fate'];
 		new Game.Upgrade('Divine sales','Upgrades are <b>1% cheaper</b>.<q>Everything must go!</q>',99999,[18,7]);Game.last.pool='prestige';Game.last.parents=['Decisive fate'];
@@ -8956,7 +8956,7 @@ Game.Launch=function()
 		
 		new Game.Upgrade('Tin of butter cookies','Contains an assortment of rich butter cookies.<q>Five varieties of danish cookies.<br>Complete with little paper cups.</q>',25,[21,9]);Game.last.pool='prestige';Game.last.parents=['Heavenly cookies'];
 		
-		new Game.Upgrade('Golden switch','Unlocks the <b>golden switch</b>, which passively boosts your CpS by 50% but disables golden cookies.<q>Less clicking, more idling.</q>',999,[21,10]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];
+		new Game.Upgrade('Golden switch','Unlocks the <b>golden switch</b>, which passively boosts your CpS by 50% but disables sugarcookies.<q>Less clicking, more idling.</q>',999,[21,10]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];
 		
 		new Game.Upgrade('Classic dairy selection','Unlocks the <b>milk selector</b>, letting you pick which milk is displayed under your cookie.<br>Comes with a variety of basic flavors.<q>Don\'t have a cow, man.</q>',9,[1,8]);Game.last.pool='prestige';Game.last.parents=[];
 		
@@ -8967,7 +8967,7 @@ Game.Launch=function()
 		
 		
 		order=40000;
-		new Game.Upgrade('Golden switch [off]','Turning this on will give you a passive <b>+50% CpS</b>, but prevents golden cookies from spawning.<br>Cost is equal to 1 hour of production.',1000000,[20,10]);
+		new Game.Upgrade('Golden switch [off]','Turning this on will give you a passive <b>+50% CpS</b>, but prevents sugarcookies from spawning.<br>Cost is equal to 1 hour of production.',1000000,[20,10]);
 		Game.last.pool='toggle';Game.last.toggleInto='Golden switch [on]';
 		Game.last.priceFunc=function(){return Game.cookiesPs*60*60;}
 		var func=function(){
@@ -8976,13 +8976,13 @@ Game.Launch=function()
 				var bonus=0;
 				var upgrades=Game.goldenCookieUpgrades;
 				for (var i in upgrades) {if (Game.Has(upgrades[i])) bonus++;}
-				return '<div style="text-align:center;">'+Game.listTinyOwnedUpgrades(Game.goldenCookieUpgrades)+'<br><br>The effective boost is <b>+'+Beautify(Math.round(50+bonus*10))+'%</b><br>thanks to residual luck<br>and your <b>'+bonus+'</b> golden cookie upgrade'+(bonus==1?'':'s')+'.</div><div class="line"></div>'+this.desc;
+				return '<div style="text-align:center;">'+Game.listTinyOwnedUpgrades(Game.goldenCookieUpgrades)+'<br><br>The effective boost is <b>+'+Beautify(Math.round(50+bonus*10))+'%</b><br>thanks to residual luck<br>and your <b>'+bonus+'</b> sugar cookieupgrade'+(bonus==1?'':'s')+'.</div><div class="line"></div>'+this.desc;
 			}
 			return this.desc;
 		};
 		Game.last.descFunc=func;
 		
-		new Game.Upgrade('Golden switch [on]','The switch is currently giving you a passive <b>+50% CpS</b>; it also prevents golden cookies from spawning.<br>Turning it off will revert those effects.<br>Cost is equal to 1 hour of production.',1000000,[21,10]);
+		new Game.Upgrade('Golden switch [on]','The switch is currently giving you a passive <b>+50% CpS</b>; it also prevents sugarcookies from spawning.<br>Turning it off will revert those effects.<br>Cost is equal to 1 hour of production.',1000000,[21,10]);
 		Game.last.pool='toggle';Game.last.toggleInto='Golden switch [off]';
 		Game.last.priceFunc=function(){return Game.cookiesPs*60*60;}
 		Game.last.descFunc=func;
@@ -9117,10 +9117,10 @@ Game.Launch=function()
 		new Game.Upgrade('Beelzebub',desc(64)+'<q>The festering incarnation of blight and disease, Beelzebub rules over the vast armies of pastry inferno.</q>',Math.pow(angelPriceFactor,6),[12,11]);Game.last.pool='prestige';Game.last.parents=['Asmodeus'];
 		new Game.Upgrade('Lucifer',desc(128)+'<q>Also known as the Lightbringer, this infernal prince\'s tremendous ego caused him to be cast down from pastry heaven.</q>',Math.pow(angelPriceFactor,7),[13,11]);Game.last.pool='prestige';Game.last.parents=['Beelzebub'];
 		
-		new Game.Upgrade('Golden cookie alert sound','Unlocks the <b>golden cookie sound selector</b>, which lets you pick whether golden cookies emit a sound when appearing or not.<q>A sound decision.</q>',9999,[28,6]);Game.last.pool='prestige';Game.last.parents=['Decisive fate','Golden switch'];
+		new Game.Upgrade('sugar cookiealert sound','Unlocks the <b>sugar cookiesound selector</b>, which lets you pick whether sugarcookies emit a sound when appearing or not.<q>A sound decision.</q>',9999,[28,6]);Game.last.pool='prestige';Game.last.parents=['Decisive fate','Golden switch'];
 		
 		order=49900;
-		new Game.Upgrade('Golden cookie sound selector','Lets you change the sound golden cookies make when they spawn.',0,[28,6]);
+		new Game.Upgrade('sugar cookiesound selector','Lets you change the sound sugarcookies make when they spawn.',0,[28,6]);
 		Game.last.descFunc=function(){
 			var choice=this.choicesFunction()[Game.chimeType];
 			return '<div style="text-align:center;">Current : <div class="icon" style="vertical-align:middle;display:inline-block;'+(choice.icon[2]?'background-image:url('+icon[2]+');':'')+'background-position:'+(-choice.icon[0]*48)+'px '+(-choice.icon[1]*48)+'px;transform:scale(0.5);margin:-16px;"></div> <b>'+choice.name+'</b></div><div class="line"></div>'+this.desc;
@@ -9146,7 +9146,7 @@ Game.Launch=function()
 		
 		new Game.Upgrade('Elder spice','You can attract <b>2 more wrinklers</b>.<q>The cookie your cookie could smell like.</q>',444444,[19,8]);Game.last.pool='prestige';Game.last.parents=['Unholy bait'];
 		
-		new Game.Upgrade('Residual luck','While the golden switch is on, you gain an additional <b>+10% CpS</b> per golden cookie upgrade owned.<q>Fortune comes in many flavors.</q>',99999,[27,6]);Game.last.pool='prestige';Game.last.parents=['Golden switch'];
+		new Game.Upgrade('Residual luck','While the golden switch is on, you gain an additional <b>+10% CpS</b> per sugar cookieupgrade owned.<q>Fortune comes in many flavors.</q>',99999,[27,6]);Game.last.pool='prestige';Game.last.parents=['Golden switch'];
 		
 		order=150;new Game.Upgrade('Fantasteel mouse','Clicking gains <b>+1% of your CpS</b>.<q>You could be clicking using your touchpad and we\'d be none the wiser.</q>',5000000000000000000,[11,17]);Game.MakeTiered(Game.last,8,11);
 		new Game.Upgrade('Nevercrack mouse','Clicking gains <b>+1% of your CpS</b>.<q>How much beefier can you make a mouse until it\'s considered a rat?</q>',500000000000000000000,[11,18]);Game.MakeTiered(Game.last,9,11);
@@ -9198,7 +9198,7 @@ Game.Launch=function()
 		
 		new Game.Upgrade('Heavenly cookies','Cookie production multiplier <b>+10% permanently</b>.<q>Baked with heavenly chips. An otherwordly flavor that transcends time and space.</q>',3,[25,12]);Game.last.pool='prestige';Game.last.parents=['Legacy'];Game.last.power=10;Game.last.pseudoCookie=true;
 		new Game.Upgrade('Wrinkly cookies','Cookie production multiplier <b>+10% permanently</b>.<q>The result of regular cookies left to age out for countless eons in a place where time and space are meaningless.</q>',6666666,[26,12]);Game.last.pool='prestige';Game.last.parents=['Sacrilegious corruption','Elder spice'];Game.last.power=10;Game.last.pseudoCookie=true;
-		new Game.Upgrade('Distilled essence of redoubled luck','Golden cookies (and all other things that spawn, such as reindeer) have <b>1% chance of being doubled</b>.<q>Tastes glittery. The empty phial makes for a great pencil holder.</q>',7777777,[27,12]);Game.last.pool='prestige';Game.last.parents=['Divine bakeries','Residual luck'];
+		new Game.Upgrade('Distilled essence of redoubled luck','sugarcookies (and all other things that spawn, such as reindeer) have <b>1% chance of being doubled</b>.<q>Tastes glittery. The empty phial makes for a great pencil holder.</q>',7777777,[27,12]);Game.last.pool='prestige';Game.last.parents=['Divine bakeries','Residual luck'];
 		
 		order=40000;
 		new Game.Upgrade('Occult obstruction','Cookie production <b>reduced to 0</b>.<q>If symptoms persist, consult a doctor.</q>',7,[15,5]);//debug purposes only
@@ -9225,9 +9225,9 @@ Game.Launch=function()
 		new Game.Upgrade('Sucralosia Inutilis','Bifurcated Unicorn Hair appear <b>5% more often</b> and are <b>5% more likely</b> to drop 2 lumps.<q>A rare berry of uninteresting flavor that is as elusive as its uses are limited; only sought-after by the most avid collectors with too much wealth on their hands.</q>',1000000000,[27,15]);Game.last.pool='prestige';Game.last.parents=['Diabetica Daemonicus'];
 		
 		//note : these showIf functions stop working beyond 10 quadrillion prestige level, due to loss in precision; the solution, of course, is to make sure 10 quadrillion is not an attainable prestige level
-		new Game.Upgrade('Lucky digit','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade is a bit shy and only appears when your prestige level ends in 7.</q>',777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%10==7);};
-		new Game.Upgrade('Lucky number','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade is a reclusive hermit and only appears when your prestige level ends in 777.</q>',77777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Lucky digit','Lasting fortune'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%1000==777);};
-		new Game.Upgrade('Lucky payout','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> golden cookie effect duration.<br><b>+1%</b> golden cookie lifespan.<q>This upgrade took an oath of complete seclusion from the rest of the world and only appears when your prestige level ends in 777777.</q>',77777777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Lucky number','Decisive fate'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%1000000==777777);};
+		new Game.Upgrade('Lucky digit','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> sugar cookieeffect duration.<br><b>+1%</b> sugar cookielifespan.<q>This upgrade is a bit shy and only appears when your prestige level ends in 7.</q>',777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Heavenly luck'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%10==7);};
+		new Game.Upgrade('Lucky number','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> sugar cookieeffect duration.<br><b>+1%</b> sugar cookielifespan.<q>This upgrade is a reclusive hermit and only appears when your prestige level ends in 777.</q>',77777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Lucky digit','Lasting fortune'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%1000==777);};
+		new Game.Upgrade('Lucky payout','<b>+1%</b> prestige level effect on CpS.<br><b>+1%</b> sugar cookieeffect duration.<br><b>+1%</b> sugar cookielifespan.<q>This upgrade took an oath of complete seclusion from the rest of the world and only appears when your prestige level ends in 777777.</q>',77777777,[24,15]);Game.last.pool='prestige';Game.last.parents=['Lucky number','Decisive fate'];Game.last.showIf=function(){return (Math.ceil(Game.prestige)%1000000==777777);};
 		
 		order=50000;
 		new Game.Upgrade('Background selector','Lets you pick which wallpaper to display.',0,[29,5]);
@@ -9380,7 +9380,7 @@ Game.Launch=function()
 		Game.NewUpgradeCookie({name:'Elderwort biscuits',desc:'-',icon:[22,25],power:2,price:60*2,locked:1});Game.last.baseDesc='Cookie production multiplier <b>+2%</b>.<br>Grandma production multiplier <b>+2%</b>.<br>Dropped by elderwort plants.<q>They taste incredibly stale, even when baked fresh.</q>';
 		Game.NewUpgradeCookie({name:'Bakeberry cookies',desc:'-',icon:[23,25],power:2,price:60,locked:1});Game.last.baseDesc='Cookie production multiplier <b>+2%</b>.<br>Dropped by bakeberry plants.<q>Really good dipped in hot chocolate.</q>';
 		Game.NewUpgradeCookie({name:'Duketater cookies',desc:'-',icon:[24,25],power:10,price:60*3,locked:1});Game.last.baseDesc='Cookie production multiplier <b>+10%</b>.<br>Dropped by duketater plants.<q>Fragrant and mealy, with a slight yellow aftertaste.</q>';
-		Game.NewUpgradeCookie({name:'Green yeast digestives',desc:'-',icon:[25,25],power:0,price:60*3,locked:1});Game.last.baseDesc='<b>+1%</b> golden cookie gains and effect duration.<br><b>+1%</b> golden cookie frequency.<br><b>+3%</b> random drops.<br>Dropped by green rot plants.<q>These are tastier than you\'d expect, but not by much.</q>';
+		Game.NewUpgradeCookie({name:'Green yeast digestives',desc:'-',icon:[25,25],power:0,price:60*3,locked:1});Game.last.baseDesc='<b>+1%</b> sugar cookiegains and effect duration.<br><b>+1%</b> sugar cookiefrequency.<br><b>+3%</b> random drops.<br>Dropped by green rot plants.<q>These are tastier than you\'d expect, but not by much.</q>';
 		
 		order=23000;
 		new Game.Upgrade('Fern tea','You gain <b>+3%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.<br>Dropped by drowsyfern plants.<q>A chemically complex natural beverage, this soothing concoction has been used by mathematicians to solve equations in their sleep.</q>',60,[26,25]);
@@ -9561,14 +9561,14 @@ Game.Launch=function()
 		new Game.Upgrade('Genius accounting','Unlocks <b>extra price information</b>.<br>Each displayed cost now specifies how long it\'ll take you to afford it, and how much of your bank it represents.<q>There\'s no accounting for taste, and yet here we are.</q>',2000000,[11,10]);Game.last.pool='prestige';Game.last.parents=['Inspired checklist'];
 		
 		
-		new Game.Upgrade('Shimmering veil','Unlocks the <b>shimmering veil</b>, a switch that passively boosts your CpS by <b>50%</b>.<br>You start with the veil turned on; however, it is very fragile, and clicking the big cookie or any golden cookie or reindeer will turn it off, requiring 24 hours of CpS to turn back on.<q>Hands off!</q>',999999999,[9,10]);Game.last.pool='prestige';Game.last.parents=['Distilled essence of redoubled luck'];
+		new Game.Upgrade('Shimmering veil','Unlocks the <b>shimmering veil</b>, a switch that passively boosts your CpS by <b>50%</b>.<br>You start with the veil turned on; however, it is very fragile, and clicking the big cookie or any sugar cookieor reindeer will turn it off, requiring 24 hours of CpS to turn back on.<q>Hands off!</q>',999999999,[9,10]);Game.last.pool='prestige';Game.last.parents=['Distilled essence of redoubled luck'];
 		
 		order=40005;
 		var func=function(){
 			var boost=50;
 			var resist=0;
 			if (Game.Has('Reinforced membrane')) {boost+=10;resist+=10;}
-			return (this.name=='Shimmering veil [on]'?'<div style="text-align:center;">Active.</div><div class="line"></div>':'')+'Boosts your cookie production by <b>'+Beautify(boost)+'%</b> when active.<br>The veil is very fragile and will break if you click the big cookie or any golden cookies or reindeer.<br><br>Once broken, turning the veil back on costs 24 hours of unbuffed CpS.'+(resist>0?('<br><br>Has a <b>'+Beautify(resist)+'%</b> chance to not break.'):'');
+			return (this.name=='Shimmering veil [on]'?'<div style="text-align:center;">Active.</div><div class="line"></div>':'')+'Boosts your cookie production by <b>'+Beautify(boost)+'%</b> when active.<br>The veil is very fragile and will break if you click the big cookie or any sugarcookies or reindeer.<br><br>Once broken, turning the veil back on costs 24 hours of unbuffed CpS.'+(resist>0?('<br><br>Has a <b>'+Beautify(resist)+'%</b> chance to not break.'):'');
 		};
 		new Game.Upgrade('Shimmering veil [off]','',1000000,[9,10]);
 		Game.last.pool='toggle';Game.last.toggleInto='Shimmering veil [on]';
@@ -10159,9 +10159,9 @@ Game.Launch=function()
 		new Game.Achievement('Base 10','Have at least <b>10 of the most expensive object, 20 of the second-most expensive, 30 of the next</b> and so on.',[23,12]);
 		
 		order=10000;
-		new Game.Achievement('Golden cookie','Click a <b>golden cookie</b>.',[10,14]);
-		new Game.Achievement('Lucky cookie','Click <b>7 golden cookies</b>.',[22,6]);
-		new Game.Achievement('A stroke of luck','Click <b>27 golden cookies</b>.',[23,6]);
+		new Game.Achievement('sugarcookie','Click a <b>sugarcookie</b>.',[10,14]);
+		new Game.Achievement('Lucky cookie','Click <b>7 sugarcookies</b>.',[22,6]);
+		new Game.Achievement('A stroke of luck','Click <b>27 sugarcookies</b>.',[23,6]);
 		
 		order=30200;
 		new Game.Achievement('Cheated cookies taste awful','Hack in some cookies.',[10,6]);Game.last.pool='shadow';
@@ -10179,7 +10179,7 @@ Game.Launch=function()
 		new Game.Achievement('Cookie-dunker','Dunk the cookie.<q>You did it!</q>',[1,8]);
 		
 		order=10000;
-		new Game.Achievement('Fortune','Click <b>77 golden cookies</b>.<q>You should really go to bed.</q>',[24,6]);
+		new Game.Achievement('Fortune','Click <b>77 sugarcookies</b>.<q>You should really go to bed.</q>',[24,6]);
 		order=31000;
 		new Game.Achievement('True Neverclick','Make <b>1 million</b> cookies with <b>no</b> cookie clicks.<q>This kinda defeats the whole purpose, doesn\'t it?</q>',[12,0]);Game.last.pool='shadow';
 		
@@ -10197,8 +10197,8 @@ Game.Launch=function()
 		new Game.Achievement('Engineer','Own <b>1000</b> buildings.',[4,6]);
 		
 		order=10000;
-		new Game.Achievement('Leprechaun','Click <b>777 golden cookies</b>.',[25,6]);
-		new Game.Achievement('Black cat\'s paw','Click <b>7777 golden cookies</b>.',[26,6]);
+		new Game.Achievement('Leprechaun','Click <b>777 sugarcookies</b>.',[25,6]);
+		new Game.Achievement('Black cat\'s paw','Click <b>7777 sugarcookies</b>.',[26,6]);
 		
 		order=30050;
 		new Game.Achievement('Nihilism','Ascend with <b>1 quadrillion</b> cookies baked.<q>There are many things<br>that need to be erased</q>',[11,7]);
@@ -10515,8 +10515,8 @@ Game.Launch=function()
 		new Game.Achievement('Last Chance to See','Burst the near-extinct <b>shiny wrinkler</b>.<q>You monster!</q>',[24,12]);Game.last.pool='shadow';
 		
 		order=10000;
-		new Game.Achievement('Early bird','Click a golden cookie <b>less than 1 second after it spawns</b>.',[10,14]);
-		new Game.Achievement('Fading luck','Click a golden cookie <b>less than 1 second before it dies</b>.',[10,14]);
+		new Game.Achievement('Early bird','Click a sugar cookie<b>less than 1 second after it spawns</b>.',[10,14]);
+		new Game.Achievement('Fading luck','Click a sugar cookie<b>less than 1 second before it dies</b>.',[10,14]);
 		
 		order=22100;
 		new Game.Achievement('Eldeer','Pop a reindeer <b>during an elder frenzy</b>.',[12,9]);
@@ -10622,7 +10622,7 @@ Game.Launch=function()
 		new Game.Achievement('A wizard is you','Cast <b>999</b> spells.<q>I\'m a what?</q>',[29,11]);
 		
 		order=10000;
-		new Game.Achievement('Four-leaf cookie','Have <b>4</b> golden cookies simultaneously.<q>Fairly rare, considering cookies don\'t even have leaves.</q>',[27,6]);Game.last.pool='shadow';
+		new Game.Achievement('Four-leaf cookie','Have <b>4</b> sugarcookies simultaneously.<q>Fairly rare, considering cookies don\'t even have leaves.</q>',[27,6]);Game.last.pool='shadow';
 		
 		order=2100;
 		Game.TieredAchievement('Lucked out','Have <b>1</b> chancemaker.','Chancemaker',1);
@@ -11078,7 +11078,7 @@ Game.Launch=function()
 		{
 			return {
 				name:'Sugar blessing',
-				desc:'You find 10% more golden cookies for the next '+Game.sayTime(time*Game.fps,-1)+'.',
+				desc:'You find 10% more sugarcookies for the next '+Game.sayTime(time*Game.fps,-1)+'.',
 				icon:[29,16],
 				time:time*Game.fps,
 				//add:true
@@ -11744,7 +11744,7 @@ Game.Launch=function()
 				cost:function(){return Game.Objects['Grandma'].amount>=100;},
 				buy:function(){Game.Objects['Grandma'].sacrifice(100);},
 				costStr:function(){return '100 grandmas';}},
-			{name:'Krumblor, cookie hatchling',action:'Train Reaper of Fields<br><small>Aura : golden cookies may trigger a Dragon Harvest</small>',pic:4,
+			{name:'Krumblor, cookie hatchling',action:'Train Reaper of Fields<br><small>Aura : sugarcookies may trigger a Dragon Harvest</small>',pic:4,
 				cost:function(){return Game.Objects['Farm'].amount>=100;},
 				buy:function(){Game.Objects['Farm'].sacrifice(100);},
 				costStr:function(){return '100 farms';}},
@@ -11764,15 +11764,15 @@ Game.Launch=function()
 				cost:function(){return Game.Objects['Temple'].amount>=100;},
 				buy:function(){Game.Objects['Temple'].sacrifice(100);},
 				costStr:function(){return '100 temples';}},
-			{name:'Krumblor, cookie dragon',action:'Train Arcane Aura<br><small>Aura : golden cookies appear 5% more often</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Arcane Aura<br><small>Aura : sugarcookies appear 5% more often</small>',pic:5,
 				cost:function(){return Game.Objects['Wizard tower'].amount>=100;},
 				buy:function(){Game.Objects['Wizard tower'].sacrifice(100);},
 				costStr:function(){return '100 wizard towers';}},
-			{name:'Krumblor, cookie dragon',action:'Train Dragonflight<br><small>Aura : golden cookies may trigger a Dragonflight</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Dragonflight<br><small>Aura : sugarcookies may trigger a Dragonflight</small>',pic:5,
 				cost:function(){return Game.Objects['Shipment'].amount>=100;},
 				buy:function(){Game.Objects['Shipment'].sacrifice(100);},
 				costStr:function(){return '100 shipments';}},
-			{name:'Krumblor, cookie dragon',action:'Train Ancestral Metamorphosis<br><small>Aura : golden cookies give 10% more cookies</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Ancestral Metamorphosis<br><small>Aura : sugarcookies give 10% more cookies</small>',pic:5,
 				cost:function(){return Game.Objects['Alchemy lab'].amount>=100;},
 				buy:function(){Game.Objects['Alchemy lab'].sacrifice(100);},
 				costStr:function(){return '100 alchemy labs';}},
@@ -11780,7 +11780,7 @@ Game.Launch=function()
 				cost:function(){return Game.Objects['Portal'].amount>=100;},
 				buy:function(){Game.Objects['Portal'].sacrifice(100);},
 				costStr:function(){return '100 portals';}},
-			{name:'Krumblor, cookie dragon',action:'Train Epoch Manipulator<br><small>Aura : golden cookie effects last 5% longer</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Epoch Manipulator<br><small>Aura : sugar cookieeffects last 5% longer</small>',pic:5,
 				cost:function(){return Game.Objects['Time machine'].amount>=100;},
 				buy:function(){Game.Objects['Time machine'].sacrifice(100);},
 				costStr:function(){return '100 time machines';}},
@@ -11792,7 +11792,7 @@ Game.Launch=function()
 				cost:function(){return Game.Objects['Prism'].amount>=100;},
 				buy:function(){Game.Objects['Prism'].sacrifice(100);},
 				costStr:function(){return '100 prisms';}},
-			{name:'Krumblor, cookie dragon',action:'Train Dragon\'s Fortune<br><small>Aura : +123% CpS per golden cookie on-screen</small>',pic:5,
+			{name:'Krumblor, cookie dragon',action:'Train Dragon\'s Fortune<br><small>Aura : +123% CpS per sugar cookieon-screen</small>',pic:5,
 				cost:function(){return Game.Objects['Chancemaker'].amount>=100;},
 				buy:function(){Game.Objects['Chancemaker'].sacrifice(100);},
 				costStr:function(){return '100 chancemakers';}},
@@ -11820,19 +11820,19 @@ Game.Launch=function()
 			1:{name:'Breath of Milk',pic:[18,25],desc:'Kittens are <b>5%</b> more effective.'},
 			2:{name:'Dragon UnicornHorn',pic:[0,25],desc:'Clicking is <b>5%</b> more effective.'},
 			3:{name:'Elder Battalion',pic:[1,25],desc:'Grandmas gain <b>+1% CpS</b> for every non-grandma building.'},
-			4:{name:'Reaper of Fields',pic:[2,25],desc:'Golden cookies may trigger a <b>Dragon Harvest</b>.'},
+			4:{name:'Reaper of Fields',pic:[2,25],desc:'sugarcookies may trigger a <b>Dragon Harvest</b>.'},
 			5:{name:'Earth Shatterer',pic:[3,25],desc:'Buildings sell back for <b>50%</b> instead of 25%.'},
 			6:{name:'Master of the Armory',pic:[4,25],desc:'All upgrades are <b>2%</b> cheaper.'},
 			7:{name:'Fierce Hoarder',pic:[15,25],desc:'All buildings are <b>2%</b> cheaper.'},
 			8:{name:'Dragon God',pic:[16,25],desc:'Prestige CpS bonus <b>+5%</b>.'},
-			9:{name:'Arcane Aura',pic:[17,25],desc:'Golden cookies appear <b>+5%</b> more often.'},
-			10:{name:'Dragonflight',pic:[5,25],desc:'Golden cookies may trigger a <b>Dragonflight</b>.'},
-			11:{name:'Ancestral Metamorphosis',pic:[6,25],desc:'Golden cookies give <b>10%</b> more cookies.'},
+			9:{name:'Arcane Aura',pic:[17,25],desc:'sugarcookies appear <b>+5%</b> more often.'},
+			10:{name:'Dragonflight',pic:[5,25],desc:'sugarcookies may trigger a <b>Dragonflight</b>.'},
+			11:{name:'Ancestral Metamorphosis',pic:[6,25],desc:'sugarcookies give <b>10%</b> more cookies.'},
 			12:{name:'Unholy Dominion',pic:[7,25],desc:'Wrath cookies give <b>10%</b> more cookies.'},
-			13:{name:'Epoch Manipulator',pic:[8,25],desc:'Golden cookies last <b>5%</b> longer.'},
+			13:{name:'Epoch Manipulator',pic:[8,25],desc:'sugarcookies last <b>5%</b> longer.'},
 			14:{name:'Mind Over Matter',pic:[13,25],desc:'Random drops are <b>25% more common</b>.'},
 			15:{name:'Radiant Appetite',pic:[14,25],desc:'All cookie production <b>multiplied by 2</b>.'},
-			16:{name:'Dragon\'s Fortune',pic:[19,25],desc:'<b>+123% CpS</b> per golden cookie on-screen, multiplicative.'},
+			16:{name:'Dragon\'s Fortune',pic:[19,25],desc:'<b>+123% CpS</b> per sugar cookieon-screen, multiplicative.'},
 			17:{name:'Dragon\'s Curve',pic:[20,25],desc:'<b>+5% sugar lump growth</b> and Unicorn Hair are <b>twice as likely</b> to be unusual.'},
 			18:{name:'Reality Bending',pic:[32,25],desc:'<b>One tenth</b> of every other dragon aura, <b>combined</b>.'},
 		};
@@ -13209,7 +13209,7 @@ Game.Launch=function()
 				if (Game.Has('Sugar craving')) Game.Unlock('Sugar frenzy');
 				if (Game.Has('Classic dairy selection')) Game.Unlock('Milk selector');
 				if (Game.Has('Basic wallpaper assortment')) Game.Unlock('Background selector');
-				if (Game.Has('Golden cookie alert sound')) Game.Unlock('Golden cookie sound selector');
+				if (Game.Has('sugar cookiealert sound')) Game.Unlock('sugar cookiesound selector');
 				
 				if (Game.Has('Eternal heart biscuits')) Game.Win('Lovely cookies');
 				if (Game.season=='easter')

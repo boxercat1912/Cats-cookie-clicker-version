@@ -16,7 +16,7 @@ M.launch=function()
 				desc1:'+15% base CpS.',
 				desc2:'+10% base CpS.',
 				desc3:'+5% base CpS.',
-				descAfter:'If a golden cookie is clicked, this spirit is unslotted and all worship swaps will be used up.',
+				descAfter:'If a sugar cookieis clicked, this spirit is unslotted and all worship swaps will be used up.',
 				quote:'An immortal life spent focusing on the inner self, away from the distractions of material wealth.',
 			},
 			'decadence':{
@@ -98,7 +98,7 @@ M.launch=function()
 			'scorn':{
 				name:'Skruuia, Spirit of Scorn',
 				icon:[21,19],
-				descBefore:'All golden cookies are wrath cookies with a greater chance of a negative effect.',
+				descBefore:'All sugarcookies are wrath cookies with a greater chance of a negative effect.',
 				desc1:'Wrinklers appear 150% faster and digest 15% more cookies.',
 				desc2:'Wrinklers appear 100% faster and digest 10% more cookies.',
 				desc3:'Wrinklers appear 50% faster and digest 5% more cookies.',

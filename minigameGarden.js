@@ -69,7 +69,7 @@ M.launch=function()
 				ageTickR:1.5,
 				mature:40,
 				children:['clover','goldenClover','shimmerlily'],
-				effsStr:'<div class="green">&bull; +1% golden cookie gains</div><div class="green">&bull; +0.1% golden cookie effect duration</div>',
+				effsStr:'<div class="green">&bull; +1% sugar cookiegains</div><div class="green">&bull; +0.1% sugar cookieeffect duration</div>',
 				q:'An ancient staple crop, famed for its golden sheen. Was once used to bake birthday cakes for kings and queens of old.',
 			},
 			'clover':{
@@ -81,7 +81,7 @@ M.launch=function()
 				ageTickR:1.5,
 				mature:35,
 				children:['goldenClover','greenRot','shimmerlily'],
-				effsStr:'<div class="green">&bull; +1% golden cookie frequency</div>',
+				effsStr:'<div class="green">&bull; +1% sugar cookiefrequency</div>',
 				q:'<i>Trifolium repens</i>, a fairly mundane variety of clover with a tendency to produce four leaves. Such instances are considered lucky by some.',
 			},
 			'goldenClover':{
@@ -93,7 +93,7 @@ M.launch=function()
 				ageTickR:12,
 				mature:50,
 				children:[],
-				effsStr:'<div class="green">&bull; +3% golden cookie frequency</div>',
+				effsStr:'<div class="green">&bull; +3% sugar cookiefrequency</div>',
 				q:'A variant of the ordinary clover that traded its chlorophyll for pure organic gold. Tragically short-lived, this herb is an evolutionary dead-end - but at least it looks pretty.',
 			},
 			'shimmerlily':{
@@ -105,7 +105,7 @@ M.launch=function()
 				ageTickR:6,
 				mature:70,
 				children:['elderwort','whiskerbloom','chimerose','cheapcap'],
-				effsStr:'<div class="green">&bull; +1% golden cookie gains</div><div class="green">&bull; +1% golden cookie frequency</div><div class="green">&bull; +1% random drops</div>',
+				effsStr:'<div class="green">&bull; +1% sugar cookiegains</div><div class="green">&bull; +1% sugar cookiefrequency</div><div class="green">&bull; +1% random drops</div>',
 				q:'These little flowers are easiest to find at dawn, as the sunlight refracting in dew drops draws attention to their pure-white petals.',
 			},
 			'elderwort':{
@@ -187,7 +187,7 @@ M.launch=function()
 				mature:25,
 				detailsStr:'Predictable growth',
 				children:['whiskerbloom','tidygrass'],
-				effsStr:'<div class="green">&bull; +1% golden cookie gains</div><div class="green">&bull; harvest when mature for +3 minutes of CpS (max. 3% of bank)</div><div class="green">&bull; predictable growth</div>',
+				effsStr:'<div class="green">&bull; +1% sugar cookiegains</div><div class="green">&bull; harvest when mature for +3 minutes of CpS (max. 3% of bank)</div><div class="green">&bull; predictable growth</div>',
 				q:'A pale, even sweeter variant of the chocoroot. Often impedes travelers with its twisty branches.',
 				onHarvest:function(x,y,age)
 				{
@@ -297,7 +297,7 @@ M.launch=function()
 				ageTickR:0.1,
 				mature:30,
 				children:[],
-				effsStr:'<div class="green">&bull; +3% CpS</div><div class="red">&bull; -5% cookies per click</div><div class="red">&bull; -10% golden cookie frequency</div>',
+				effsStr:'<div class="green">&bull; +3% CpS</div><div class="red">&bull; -5% cookies per click</div><div class="red">&bull; -10% sugar cookiefrequency</div>',
 				q:'Traditionally used to brew a tea that guarantees a good night of sleep.',
 				onHarvest:function(x,y,age)
 				{
@@ -338,7 +338,7 @@ M.launch=function()
 				mature:80,
 				noContam:true,
 				children:['duketater','queenbeetLump','shriekbulb'],
-				effsStr:'<div class="green">&bull; +0.3% golden cookie effect duration</div><div class="red">&bull; -2% CpS</div><div class="green">&bull; harvest when mature for +1 hour of CpS (max. 4% of bank)</div>',
+				effsStr:'<div class="green">&bull; +0.3% sugar cookieeffect duration</div><div class="red">&bull; -2% CpS</div><div class="green">&bull; harvest when mature for +1 hour of CpS (max. 4% of bank)</div>',
 				q:'A delicious taproot used to prepare high-grade white sugar. Entire countries once went to war over these.',
 				onHarvest:function(x,y,age)
 				{
@@ -487,7 +487,7 @@ M.launch=function()
 				ageTickR:25,
 				mature:50,
 				children:[],
-				effsStr:'<div class="green">&bull; +2% golden cookie frequency</div><div class="red">&bull; -5% golden cookie gains</div><div class="red">&bull; -2% golden cookie duration</div><div class="red">&bull; -2% golden cookie effect duration</div>',
+				effsStr:'<div class="green">&bull; +2% sugar cookiefrequency</div><div class="red">&bull; -5% sugar cookiegains</div><div class="red">&bull; -2% sugar cookieduration</div><div class="red">&bull; -2% sugar cookieeffect duration</div>',
 				q:'Named for its ability to fool mushroom pickers. The fool\'s bolete is not actually poisonous, it\'s just extremely bland.',
 			},
 			'wrinklegill':{
@@ -513,7 +513,7 @@ M.launch=function()
 				ageTickR:13,
 				mature:65,
 				children:['keenmoss','foolBolete'],
-				effsStr:'<div class="green">&bull; +0.5% golden cookie duration</div><div class="green">&bull; +1% golden cookie frequency</div><div class="green">&bull; +1% random drops</div>',
+				effsStr:'<div class="green">&bull; +0.5% sugar cookieduration</div><div class="green">&bull; +1% sugar cookiefrequency</div><div class="green">&bull; +1% random drops</div>',
 				q:'This short-lived mold is also known as "emerald pebbles", and is considered by some as a pseudo-gem that symbolizes good fortune.',
 				onHarvest:function(x,y,age)
 				{
@@ -942,10 +942,10 @@ M.launch=function()
 							click:{n:'cookies/click'},
 							UnicornHornCps:{n:'UnicornHorn CpS'},
 							grandmaCps:{n:'grandma CpS'},
-							goldenCookieGain:{n:'golden cookie gains'},
-							goldenCookieFreq:{n:'golden cookie frequency'},
-							goldenCookieDur:{n:'golden cookie duration'},
-							goldenCookieEffDur:{n:'golden cookie effect duration'},
+							goldenCookieGain:{n:'sugar cookiegains'},
+							goldenCookieFreq:{n:'sugar cookiefrequency'},
+							goldenCookieDur:{n:'sugar cookieduration'},
+							goldenCookieEffDur:{n:'sugar cookieeffect duration'},
 							wrathCookieGain:{n:'wrath cookie gains'},
 							wrathCookieFreq:{n:'wrath cookie frequency'},
 							wrathCookieDur:{n:'wrath cookie duration'},
